@@ -73,7 +73,8 @@ if (!$_SESSION["Cid"]) {  //check session
                         .half-circle {
                                 width: 165px;
                                 height: 350px;
-                                border-top-left-radius: 150px;  /* 100px of height + 10px of border */
+                                border-top-left-radius: 150px;
+                                /* 100px of height + 10px of border */
                                 border-bottom-left-radius: 150px;
                                 border: 3px solid ForestGreen;
                                 overflow: hidden;
@@ -89,7 +90,7 @@ if (!$_SESSION["Cid"]) {  //check session
 
                         }
 
-                        .circle-top {
+                        .circle-top1 {
                                 width: 152px;
                                 height: 175px;
                                 border-top-right-radius: 150px;
@@ -97,11 +98,57 @@ if (!$_SESSION["Cid"]) {  //check session
                                 border: 3px solid Orange;
                                 background-color: whitesmoke;
                                 margin-left: -5px;
-                               
+
                                 padding-right: 12px;
                         }
 
-                        .circle-bottom {
+                        .circle-bottom1 {
+                                width: 152px;
+                                height: 175px;
+                                border-bottom-right-radius: 150px;
+                                overflow: hidden;
+                                border: 3px solid Brown;
+                                background-color: whitesmoke;
+                                margin-left: -5px;
+                                padding-right: 12px;
+                        }
+
+                        .circle-top2 {
+                                width: 152px;
+                                height: 175px;
+                                border-top-right-radius: 150px;
+                                overflow: hidden;
+                                border: 3px solid Orange;
+                                background-color: whitesmoke;
+                                margin-left: -5px;
+
+                                padding-right: 12px;
+                        }
+
+                        .circle-bottom2 {
+                                width: 152px;
+                                height: 175px;
+                                border-bottom-right-radius: 150px;
+                                overflow: hidden;
+                                border: 3px solid Brown;
+                                background-color: whitesmoke;
+                                margin-left: -5px;
+                                padding-right: 12px;
+                        }
+
+                        .circle-top3 {
+                                width: 152px;
+                                height: 175px;
+                                border-top-right-radius: 150px;
+                                overflow: hidden;
+                                border: 3px solid Orange;
+                                background-color: whitesmoke;
+                                margin-left: -5px;
+
+                                padding-right: 12px;
+                        }
+
+                        .circle-bottom3 {
                                 width: 152px;
                                 height: 175px;
                                 border-bottom-right-radius: 150px;
@@ -157,297 +204,298 @@ if (!$_SESSION["Cid"]) {  //check session
 
                                                         </div>
                                                         <div class="card-body">
-                                                                <!-- Form Start -->
+                                                                <div class="container">
+                                                                        <!-- Form Start -->
 
-                                                                <?php
-                                                                foreach ($db->to_Obj($sql) as $rows) {
-                                                                        ////ไม่กินนม 
-                                                                        if ($rows['DrinkMike'] == '0') {
-                                                                                if ($rows['RecommendKcal'] >= '1200' && $rows['RecommendKcal'] <= '1400') {
-                                                                ?>
+                                                                        <?php
+                                                                        foreach ($db->to_Obj($sql) as $rows) {
+                                                                                ////ไม่กินนม 
+                                                                                if ($rows['DrinkMike'] == '0') {
+                                                                                        if ($rows['RecommendKcal'] >= '1200' && $rows['RecommendKcal'] <= '1400') {
+                                                                        ?>
 
-                                                                                        <script src="assets/js/Drinkmilk0/1200/showfood.js"></script>
-                                                                                        <script src="assets/js/Drinkmilk0/1200/food.js"></script>
-                                                                                        <div id="chartContainer" style="height: 300px; width: 100%;"></div>
-                                                                                        <!--<img src="https://media.healthyfood.com/wp-content/uploads/2017/03/The-perfect-plate-500x500.jpg" style="width: 300px;"><br> -->
-                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2" style="color: black;" id="Rice" value="6">ข้าว (แป้ง) 6 ทัพพี</a><br><br>
-                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal3" style="color: black;">เนื้อสัตว์ น้อยกว่าหรือเท่ากับ แป้ง</a><br><br>
-                                                                                        <a href="#" style="color: black;">ผักครึ่งจาน</a><br><br>
-                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: black;">ผลไม้ 1 ส่วน</a><br><br>
+                                                                                                <script src="assets/js/Drinkmilk0/1200/showfood.js"></script>
+                                                                                                <script src="assets/js/Drinkmilk0/1200/food.js"></script>
+                                                                                                <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+                                                                                                <!--<img src="https://media.healthyfood.com/wp-content/uploads/2017/03/The-perfect-plate-500x500.jpg" style="width: 300px;"><br> -->
+                                                                                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2" style="color: black;" id="Rice" value="6">ข้าว (แป้ง) 6 ทัพพี</a><br><br>
+                                                                                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal3" style="color: black;">เนื้อสัตว์ น้อยกว่าหรือเท่ากับ แป้ง</a><br><br>
+                                                                                                <a href="#" style="color: black;">ผักครึ่งจาน</a><br><br>
+                                                                                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: black;">ผลไม้ 1 ส่วน</a><br><br>
 
-                                                                                <?php
-                                                                                } else if ($rows['RecommendKcal'] > '1400' && $rows['RecommendKcal'] <= '1600') {
-                                                                                ?>
-                                                                                        <script src="assets/js/Drinkmilk0/1400/showfood.js"></script>
-                                                                                        <script src="assets/js/Drinkmilk0/1400/food.js"></script>
-                                                                                        <div id="chartContainer" style="height: 300px; width: 100%;"></div>
-                                                                                        <!--<img src="https://media.healthyfood.com/wp-content/uploads/2017/03/The-perfect-plate-500x500.jpg" style="width: 300px;"><br> -->
-                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2" style="color: black;" id="Rice" value="6">ข้าว (แป้ง) 7 ทัพพี</a><br><br>
-                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal3" style="color: black;">เนื้อสัตว์ น้อยกว่าหรือเท่ากับ แป้ง</a><br><br>
-                                                                                        <a href="#" style="color: black;">ผักครึ่งจาน</a><br><br>
-                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: black;">ผลไม้ 1 ส่วน</a><br><br>
-                                                                                <?php
-                                                                                } else if ($rows['RecommendKcal'] > '1600' && $rows['RecommendKcal'] <= '1800') {
-                                                                                ?>
-                                                                                        <script src="assets/js/Drinkmilk0/1600/showfood.js"></script>
-                                                                                        <script src="assets/js/Drinkmilk0/1600/food.js"></script>
-                                                                                        <div id="chartContainer" style="height: 300px; width: 100%;"></div>
-                                                                                        <!--<img src="https://media.healthyfood.com/wp-content/uploads/2017/03/The-perfect-plate-500x500.jpg" style="width: 300px;"><br> -->
-                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2" style="color: black;" id="Rice" value="6">ข้าว (แป้ง) 8 ทัพพี</a><br><br>
-                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal3" style="color: black;">เนื้อสัตว์ น้อยกว่าหรือเท่ากับ แป้ง</a><br><br>
-                                                                                        <a href="#" style="color: black;">ผักครึ่งจาน</a><br><br>
-                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: black;">ผลไม้ 2 ส่วน</a><br><br>
-                                                                                <?php
-                                                                                } else if ($rows['RecommendKcal'] > '1800' && $rows['RecommendKcal'] <= '2000') {
-                                                                                ?>
-                                                                                        <script src="assets/js/Drinkmilk0/1800/showfood.js"></script>
-                                                                                        <script src="assets/js/Drinkmilk0/1800/food.js"></script>
-                                                                                        <div id="chartContainer" style="height: 300px; width: 100%;"></div>
-                                                                                        <!--<img src="https://media.healthyfood.com/wp-content/uploads/2017/03/The-perfect-plate-500x500.jpg" style="width: 300px;"><br> -->
-                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2" style="color: black;" id="Rice" value="6">ข้าว (แป้ง) 9 ทัพพี</a><br><br>
-                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal3" style="color: black;">เนื้อสัตว์ น้อยกว่าหรือเท่ากับ แป้ง</a><br><br>
-                                                                                        <a href="#" style="color: black;">ผักครึ่งจาน</a><br><br>
-                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: black;">ผลไม้ 3 ส่วน</a><br><br>
-                                                                                <?php
-                                                                                } else if ($rows['RecommendKcal'] > '2000' && $rows['RecommendKcal'] <= '2200') {
-                                                                                ?>
-                                                                                        <script src="assets/js/Drinkmilk0/2000/showfood.js"></script>
-                                                                                        <script src="assets/js/Drinkmilk0/2000/food.js"></script>
-                                                                                        <div id="chartContainer" style="height: 300px; width: 100%;"></div>
-                                                                                        <!--<img src="https://media.healthyfood.com/wp-content/uploads/2017/03/The-perfect-plate-500x500.jpg" style="width: 300px;"><br> -->
-                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2" style="color: black;" id="Rice" value="6">ข้าว (แป้ง) 9 ทัพพี</a><br><br>
-                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal3" style="color: black;">เนื้อสัตว์ น้อยกว่าหรือเท่ากับ แป้ง</a><br><br>
-                                                                                        <a href="#" style="color: black;">ผักครึ่งจาน</a><br><br>
-                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: black;">ผลไม้ 4 ส่วน</a><br><br>
-                                                                                <?php
-                                                                                } else if ($rows['RecommendKcal'] > '2200' && $rows['RecommendKcal'] <= '2400') {
-                                                                                ?>
-                                                                                        <script src="assets/js/Drinkmilk0/2200/showfood.js"></script>
-                                                                                        <script src="assets/js/Drinkmilk0/2200/food.js"></script>
-                                                                                        <div id="chartContainer" style="height: 300px; width: 100%;"></div>
-                                                                                        <!--<img src="https://media.healthyfood.com/wp-content/uploads/2017/03/The-perfect-plate-500x500.jpg" style="width: 300px;"><br> -->
-                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2" style="color: black;" id="Rice" value="6">ข้าว (แป้ง) 11 ทัพพี</a><br><br>
-                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal3" style="color: black;">เนื้อสัตว์ น้อยกว่าหรือเท่ากับ แป้ง</a><br><br>
-                                                                                        <a href="#" style="color: black;">ผักครึ่งจาน</a><br><br>
-                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: black;">ผลไม้ 4 ส่วน</a><br><br>
-                                                                                <?php
-                                                                                } else if ($rows['RecommendKcal'] > '2400' && $rows['RecommendKcal'] <= '2600') {
-                                                                                ?>
-                                                                                        <script src="assets/js/Drinkmilk0/2400/showfood.js"></script>
-                                                                                        <script src="assets/js/Drinkmilk0/2400/food.js"></script>
-                                                                                        <div id="chartContainer" style="height: 300px; width: 100%;"></div>
-                                                                                        <!--<img src="https://media.healthyfood.com/wp-content/uploads/2017/03/The-perfect-plate-500x500.jpg" style="width: 300px;"><br> -->
-                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2" style="color: black;" id="Rice" value="6">ข้าว (แป้ง) 12 ทัพพี</a><br><br>
-                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal3" style="color: black;">เนื้อสัตว์ น้อยกว่าหรือเท่ากับ แป้ง</a><br><br>
-                                                                                        <a href="#" style="color: black;">ผักครึ่งจาน</a><br><br>
-                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: black;">ผลไม้ 4 ส่วน</a><br><br>
-                                                                                <?php
-                                                                                } else if ($rows['RecommendKcal'] > '2600') {
-                                                                                ?>
-                                                                                        <script src="assets/js/Drinkmilk0/2600/showfood.js"></script>
-                                                                                        <script src="assets/js/Drinkmilk0/2600/food.js"></script>
-                                                                                        <div id="chartContainer" style="height: 300px; width: 100%;"></div>
-                                                                                        <!--<img src="https://media.healthyfood.com/wp-content/uploads/2017/03/The-perfect-plate-500x500.jpg" style="width: 300px;"><br> -->
-                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2" style="color: black;" id="Rice" value="6">ข้าว (แป้ง) 12 ทัพพี</a><br><br>
-                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal3" style="color: black;">เนื้อสัตว์ น้อยกว่าหรือเท่ากับ แป้ง</a><br><br>
-                                                                                        <a href="#" style="color: black;">ผักครึ่งจาน</a><br><br>
-                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: black;">ผลไม้ 5 ส่วน</a><br><br>
-                                                                                <?php
+                                                                                        <?php
+                                                                                        } else if ($rows['RecommendKcal'] > '1400' && $rows['RecommendKcal'] <= '1600') {
+                                                                                        ?>
+                                                                                                <script src="assets/js/Drinkmilk0/1400/showfood.js"></script>
+                                                                                                <script src="assets/js/Drinkmilk0/1400/food.js"></script>
+                                                                                                <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+                                                                                                <!--<img src="https://media.healthyfood.com/wp-content/uploads/2017/03/The-perfect-plate-500x500.jpg" style="width: 300px;"><br> -->
+                                                                                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2" style="color: black;" id="Rice" value="6">ข้าว (แป้ง) 7 ทัพพี</a><br><br>
+                                                                                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal3" style="color: black;">เนื้อสัตว์ น้อยกว่าหรือเท่ากับ แป้ง</a><br><br>
+                                                                                                <a href="#" style="color: black;">ผักครึ่งจาน</a><br><br>
+                                                                                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: black;">ผลไม้ 1 ส่วน</a><br><br>
+                                                                                        <?php
+                                                                                        } else if ($rows['RecommendKcal'] > '1600' && $rows['RecommendKcal'] <= '1800') {
+                                                                                        ?>
+                                                                                                <script src="assets/js/Drinkmilk0/1600/showfood.js"></script>
+                                                                                                <script src="assets/js/Drinkmilk0/1600/food.js"></script>
+                                                                                                <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+                                                                                                <!--<img src="https://media.healthyfood.com/wp-content/uploads/2017/03/The-perfect-plate-500x500.jpg" style="width: 300px;"><br> -->
+                                                                                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2" style="color: black;" id="Rice" value="6">ข้าว (แป้ง) 8 ทัพพี</a><br><br>
+                                                                                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal3" style="color: black;">เนื้อสัตว์ น้อยกว่าหรือเท่ากับ แป้ง</a><br><br>
+                                                                                                <a href="#" style="color: black;">ผักครึ่งจาน</a><br><br>
+                                                                                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: black;">ผลไม้ 2 ส่วน</a><br><br>
+                                                                                        <?php
+                                                                                        } else if ($rows['RecommendKcal'] > '1800' && $rows['RecommendKcal'] <= '2000') {
+                                                                                        ?>
+                                                                                                <script src="assets/js/Drinkmilk0/1800/showfood.js"></script>
+                                                                                                <script src="assets/js/Drinkmilk0/1800/food.js"></script>
+                                                                                                <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+                                                                                                <!--<img src="https://media.healthyfood.com/wp-content/uploads/2017/03/The-perfect-plate-500x500.jpg" style="width: 300px;"><br> -->
+                                                                                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2" style="color: black;" id="Rice" value="6">ข้าว (แป้ง) 9 ทัพพี</a><br><br>
+                                                                                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal3" style="color: black;">เนื้อสัตว์ น้อยกว่าหรือเท่ากับ แป้ง</a><br><br>
+                                                                                                <a href="#" style="color: black;">ผักครึ่งจาน</a><br><br>
+                                                                                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: black;">ผลไม้ 3 ส่วน</a><br><br>
+                                                                                        <?php
+                                                                                        } else if ($rows['RecommendKcal'] > '2000' && $rows['RecommendKcal'] <= '2200') {
+                                                                                        ?>
+                                                                                                <script src="assets/js/Drinkmilk0/2000/showfood.js"></script>
+                                                                                                <script src="assets/js/Drinkmilk0/2000/food.js"></script>
+                                                                                                <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+                                                                                                <!--<img src="https://media.healthyfood.com/wp-content/uploads/2017/03/The-perfect-plate-500x500.jpg" style="width: 300px;"><br> -->
+                                                                                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2" style="color: black;" id="Rice" value="6">ข้าว (แป้ง) 9 ทัพพี</a><br><br>
+                                                                                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal3" style="color: black;">เนื้อสัตว์ น้อยกว่าหรือเท่ากับ แป้ง</a><br><br>
+                                                                                                <a href="#" style="color: black;">ผักครึ่งจาน</a><br><br>
+                                                                                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: black;">ผลไม้ 4 ส่วน</a><br><br>
+                                                                                        <?php
+                                                                                        } else if ($rows['RecommendKcal'] > '2200' && $rows['RecommendKcal'] <= '2400') {
+                                                                                        ?>
+                                                                                                <script src="assets/js/Drinkmilk0/2200/showfood.js"></script>
+                                                                                                <script src="assets/js/Drinkmilk0/2200/food.js"></script>
+                                                                                                <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+                                                                                                <!--<img src="https://media.healthyfood.com/wp-content/uploads/2017/03/The-perfect-plate-500x500.jpg" style="width: 300px;"><br> -->
+                                                                                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2" style="color: black;" id="Rice" value="6">ข้าว (แป้ง) 11 ทัพพี</a><br><br>
+                                                                                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal3" style="color: black;">เนื้อสัตว์ น้อยกว่าหรือเท่ากับ แป้ง</a><br><br>
+                                                                                                <a href="#" style="color: black;">ผักครึ่งจาน</a><br><br>
+                                                                                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: black;">ผลไม้ 4 ส่วน</a><br><br>
+                                                                                        <?php
+                                                                                        } else if ($rows['RecommendKcal'] > '2400' && $rows['RecommendKcal'] <= '2600') {
+                                                                                        ?>
+                                                                                                <script src="assets/js/Drinkmilk0/2400/showfood.js"></script>
+                                                                                                <script src="assets/js/Drinkmilk0/2400/food.js"></script>
+                                                                                                <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+                                                                                                <!--<img src="https://media.healthyfood.com/wp-content/uploads/2017/03/The-perfect-plate-500x500.jpg" style="width: 300px;"><br> -->
+                                                                                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2" style="color: black;" id="Rice" value="6">ข้าว (แป้ง) 12 ทัพพี</a><br><br>
+                                                                                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal3" style="color: black;">เนื้อสัตว์ น้อยกว่าหรือเท่ากับ แป้ง</a><br><br>
+                                                                                                <a href="#" style="color: black;">ผักครึ่งจาน</a><br><br>
+                                                                                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: black;">ผลไม้ 4 ส่วน</a><br><br>
+                                                                                        <?php
+                                                                                        } else if ($rows['RecommendKcal'] > '2600') {
+                                                                                        ?>
+                                                                                                <script src="assets/js/Drinkmilk0/2600/showfood.js"></script>
+                                                                                                <script src="assets/js/Drinkmilk0/2600/food.js"></script>
+                                                                                                <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+                                                                                                <!--<img src="https://media.healthyfood.com/wp-content/uploads/2017/03/The-perfect-plate-500x500.jpg" style="width: 300px;"><br> -->
+                                                                                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2" style="color: black;" id="Rice" value="6">ข้าว (แป้ง) 12 ทัพพี</a><br><br>
+                                                                                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal3" style="color: black;">เนื้อสัตว์ น้อยกว่าหรือเท่ากับ แป้ง</a><br><br>
+                                                                                                <a href="#" style="color: black;">ผักครึ่งจาน</a><br><br>
+                                                                                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: black;">ผลไม้ 5 ส่วน</a><br><br>
+                                                                                        <?php
+                                                                                        }
+                                                                                }
+                                                                                ////กินนม 1 แก้ว
+                                                                                else if ($rows['DrinkMike'] == '1') {
+                                                                                        if ($rows['RecommendKcal'] >= '1200' && $rows['RecommendKcal'] <= '1400') {
+                                                                                        ?>
+                                                                                                <script src="assets/js/Drinkmilk1/1200/showfood.js"></script>
+                                                                                                <script src="assets/js/Drinkmilk1/1200/food.js"></script>
+                                                                                                <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+                                                                                                <!--<img src="https://media.healthyfood.com/wp-content/uploads/2017/03/The-perfect-plate-500x500.jpg" style="width: 300px;"><br> -->
+                                                                                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2" style="color: black;" id="Rice">ข้าว (แป้ง) 6 ทัพพี</a><br><br>
+                                                                                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal3" style="color: black;">เนื้อสัตว์ น้อยกว่าหรือเท่ากับฟ แป้ง</a><br><br>
+                                                                                                <a href="#" style="color: black;">ผักครึ่งจาน</a><br><br>
+                                                                                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: black;">ผลไม้ 1 ส่วน</a><br><br>
+
+
+                                                                                        <?php
+                                                                                        } else if ($rows['RecommendKcal'] > '1400' && $rows['RecommendKcal'] <= '1600') {
+                                                                                        ?>
+
+                                                                                                <script src="assets/js/Drinkmilk1/1400/food.js"></script>
+                                                                                                <img src="assets/img/D1-1400.jpeg" width="100%"style="max-width:550px;"><br>
+                                                                                                <!--<img src="https://media.healthyfood.com/wp-content/uploads/2017/03/The-perfect-plate-500x500.jpg" style="width: 300px;"><br> -->
+                                                                                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2" style="color: black;" id="Rice">ข้าว (แป้ง) 7 ทัพพี</a><br><br>
+                                                                                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal3" style="color: black;">เนื้อสัตว์ น้อยกว่าหรือเท่ากับ แป้ง</a><br><br>
+                                                                                                <a href="#" style="color: black;">ผักครึ่งจาน</a><br><br>
+                                                                                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: black;">ผลไม้ 1 ส่วน</a><br><br>
+                                                                                        <?php
+                                                                                        } else if ($rows['RecommendKcal'] > '1600' && $rows['RecommendKcal'] <= '1800') {
+                                                                                        ?>
+                                                                                                <script src="assets/js/Drinkmilk1/1400/showfood.js"></script>
+                                                                                                <script src="assets/js/Drinkmilk1/1400/food.js"></script>
+                                                                                                <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+                                                                                                <!--<img src="https://media.healthyfood.com/wp-content/uploads/2017/03/The-perfect-plate-500x500.jpg" style="width: 300px;"><br> -->
+                                                                                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2" style="color: black;" id="Rice">ข้าว (แป้ง) 8 ทัพพี</a><br><br>
+                                                                                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal3" style="color: black;">เนื้อสัตว์ น้อยกว่าหรือเท่ากับ แป้ง</a><br><br>
+                                                                                                <a href="#" style="color: black;">ผักครึ่งจาน</a><br><br>
+                                                                                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: black;">ผลไม้ 2 ส่วน</a><br><br>
+                                                                                        <?php
+                                                                                        } else if ($rows['RecommendKcal'] > '1800' && $rows['RecommendKcal'] <= '2000') {
+                                                                                        ?>
+                                                                                                <script src="assets/js/Drinkmilk1/1800/showfood.js"></script>
+                                                                                                <script src="assets/js/Drinkmilk1/1800/food.js"></script>
+                                                                                                <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+                                                                                                <!--<img src="https://media.healthyfood.com/wp-content/uploads/2017/03/The-perfect-plate-500x500.jpg" style="width: 300px;"><br> -->
+                                                                                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2" style="color: black;" id="Rice">ข้าว (แป้ง) 9 ทัพพี</a><br><br>
+                                                                                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal3" style="color: black;">เนื้อสัตว์ น้อยกว่าหรือเท่ากับ แป้ง</a><br><br>
+                                                                                                <a href="#" style="color: black;">ผักครึ่งจาน</a><br><br>
+                                                                                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: black;">ผลไม้ 3 ส่วน</a><br><br>
+                                                                                        <?php
+                                                                                        } else if ($rows['RecommendKcal'] > '2000' && $rows['RecommendKcal'] <= '2200') {
+                                                                                        ?>
+                                                                                                <script src="assets/js/Drinkmilk1/2000/showfood.js"></script>
+                                                                                                <script src="assets/js/Drinkmilk1/2000/food.js"></script>
+                                                                                                <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+                                                                                                <!--<img src="https://media.healthyfood.com/wp-content/uploads/2017/03/The-perfect-plate-500x500.jpg" style="width: 300px;"><br> -->
+                                                                                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2" style="color: black;" id="Rice">ข้าว (แป้ง) 9 ทัพพี</a><br><br>
+                                                                                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal3" style="color: black;">เนื้อสัตว์ น้อยกว่าหรือเท่ากับ แป้ง</a><br><br>
+                                                                                                <a href="#" style="color: black;">ผักครึ่งจาน</a><br><br>
+                                                                                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: black;">ผลไม้ 4 ส่วน</a><br><br>
+
+                                                                                        <?php
+                                                                                        } else if ($rows['RecommendKcal'] > '2200' && $rows['RecommendKcal'] <= '2400') {
+                                                                                        ?>
+                                                                                                <script src="assets/js/Drinkmilk1/2200/showfood.js"></script>
+                                                                                                <script src="assets/js/Drinkmilk1/2200/food.js"></script>
+                                                                                                <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+                                                                                                <!--<img src="https://media.healthyfood.com/wp-content/uploads/2017/03/The-perfect-plate-500x500.jpg" style="width: 300px;"><br> -->
+                                                                                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2" style="color: black;" id="Rice">ข้าว (แป้ง) 11 ทัพพี</a><br><br>
+                                                                                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal3" style="color: black;">เนื้อสัตว์ น้อยกว่าหรือเท่ากับ แป้ง</a><br><br>
+                                                                                                <a href="#" style="color: black;">ผักครึ่งจาน</a><br><br>
+                                                                                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: black;">ผลไม้ 4 ส่วน</a><br><br>
+                                                                                        <?php
+                                                                                        } else if ($rows['RecommendKcal'] > '2400' && $rows['RecommendKcal'] <= '2600') {
+                                                                                        ?>
+                                                                                                <script src="assets/js/Drinkmilk1/2400/showfood.js"></script>
+                                                                                                <script src="assets/js/Drinkmilk1/2400/food.js"></script>
+                                                                                                <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+                                                                                                <!--<img src="https://media.healthyfood.com/wp-content/uploads/2017/03/The-perfect-plate-500x500.jpg" style="width: 300px;"><br> -->
+                                                                                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2" style="color: black;" id="Rice">ข้าว (แป้ง) 12 ทัพพี</a><br><br>
+                                                                                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal3" style="color: black;">เนื้อสัตว์ น้อยกว่าหรือเท่ากับ แป้ง</a><br><br>
+                                                                                                <a href="#" style="color: black;">ผักครึ่งจาน</a><br><br>
+                                                                                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: black;">ผลไม้ 4 ส่วน</a><br><br>
+                                                                                        <?php
+                                                                                        } else if ($rows['RecommendKcal'] > '2600') {
+                                                                                        ?>
+                                                                                                <script src="assets/js/Drinkmilk1/2600/showfood.js"></script>
+                                                                                                <script src="assets/js/Drinkmilk1/2600/food.js"></script>
+                                                                                                <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+                                                                                                <!--<img src="https://media.healthyfood.com/wp-content/uploads/2017/03/The-perfect-plate-500x500.jpg" style="width: 300px;"><br> -->
+                                                                                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2" style="color: black;" id="Rice">ข้าว (แป้ง) 12 ทัพพี</a><br><br>
+                                                                                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal3" style="color: black;">เนื้อสัตว์ น้อยกว่าหรือเท่ากับ แป้ง</a><br><br>
+                                                                                                <a href="#" style="color: black;">ผักครึ่งจาน</a><br><br>
+                                                                                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: black;">ผลไม้ 5 ส่วน</a><br><br>
+                                                                                        <?php
+                                                                                        }
+                                                                                }
+                                                                                ////กินนม 2 แก้ว
+                                                                                else {
+                                                                                        if ($rows['RecommendKcal'] >= '1200' && $rows['RecommendKcal'] <= '1400') {
+                                                                                        ?>
+
+                                                                                                <script src="assets/js/Drinkmilk2/1200/showfood.js"></script>
+                                                                                                <script src="assets/js/Drinkmilk2/1200/food.js"></script>
+                                                                                                <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+                                                                                                <!--<img src="https://media.healthyfood.com/wp-content/uploads/2017/03/The-perfect-plate-500x500.jpg" style="width: 300px;"><br> -->
+                                                                                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2" style="color: black;" id="Rice">ข้าว (แป้ง) 4 ทัพพี</a><br><br>
+                                                                                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal3" style="color: black;">เนื้อสัตว์ น้อยกว่าหรือเท่ากับ แป้ง</a><br><br>
+                                                                                                <a href="#" style="color: black;">ผักครึ่งจาน</a><br><br>
+                                                                                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: black;">ผลไม้ 1 ส่วน</a><br><br>
+
+                                                                                        <?php
+                                                                                        } else if ($rows['RecommendKcal'] > '1400' && $rows['RecommendKcal'] <= '1600') {
+                                                                                        ?>
+                                                                                                <script src="assets/js/Drinkmilk2/1400/showfood.js"></script>
+                                                                                                <script src="assets/js/Drinkmilk2/1400/food.js"></script>
+                                                                                                <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+                                                                                                <!--<img src="https://media.healthyfood.com/wp-content/uploads/2017/03/The-perfect-plate-500x500.jpg" style="width: 300px;"><br> -->
+                                                                                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2" style="color: black;" id="Rice">ข้าว (แป้ง) 5 ทัพพี</a><br><br>
+                                                                                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal3" style="color: black;">เนื้อสัตว์ น้อยกว่าหรือเท่ากับ แป้ง</a><br><br>
+                                                                                                <a href="#" style="color: black;">ผักครึ่งจาน</a><br><br>
+                                                                                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: black;">ผลไม้ 1 ส่วน</a><br><br>
+                                                                                        <?php
+                                                                                        } else if ($rows['RecommendKcal'] > '1600' && $rows['RecommendKcal'] <= '1800') {
+                                                                                        ?>
+                                                                                                <script src="assets/js/Drinkmilk2/1600/showfood.js"></script>
+                                                                                                <script src="assets/js/Drinkmilk2/1600/food.js"></script>
+                                                                                                <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+                                                                                                <!--<img src="https://media.healthyfood.com/wp-content/uploads/2017/03/The-perfect-plate-500x500.jpg" style="width: 300px;"><br> -->
+                                                                                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2" style="color: black;" id="Rice">ข้าว (แป้ง) 7 ทัพพี</a><br><br>
+                                                                                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal3" style="color: black;">เนื้อสัตว์ น้อยกว่าหรือเท่ากับ แป้ง</a><br><br>
+                                                                                                <a href="#" style="color: black;">ผักครึ่งจาน</a><br><br>
+                                                                                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: black;">ผลไม้ 1 ส่วน</a><br><br>
+                                                                                        <?php
+                                                                                        } else if ($rows['RecommendKcal'] > '1800' && $rows['RecommendKcal'] <= '2000') {
+                                                                                        ?>
+                                                                                                <script src="assets/js/Drinkmilk2/1800/showfood.js"></script>
+                                                                                                <script src="assets/js/Drinkmilk2/1800/food.js"></script>
+                                                                                                <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+                                                                                                <!--<img src="https://media.healthyfood.com/wp-content/uploads/2017/03/The-perfect-plate-500x500.jpg" style="width: 300px;"><br> -->
+                                                                                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2" style="color: black;" id="Rice">ข้าว (แป้ง) 9 ทัพพี</a><br><br>
+                                                                                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal3" style="color: black;">เนื้อสัตว์ น้อยกว่าหรือเท่ากับ แป้ง</a><br><br>
+                                                                                                <a href="#" style="color: black;">ผักครึ่งจาน</a><br><br>
+                                                                                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: black;">ผลไม้ 2 ส่วน</a><br><br>
+                                                                                        <?php
+                                                                                        } else if ($rows['RecommendKcal'] > '2000' && $rows['RecommendKcal'] <= '2200') {
+                                                                                        ?>
+                                                                                                <script src="assets/js/Drinkmilk2/2000/showfood.js"></script>
+                                                                                                <script src="assets/js/Drinkmilk2/2000/food.js"></script>
+                                                                                                <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+                                                                                                <!--<img src="https://media.healthyfood.com/wp-content/uploads/2017/03/The-perfect-plate-500x500.jpg" style="width: 300px;"><br> -->
+                                                                                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2" style="color: black;" id="Rice">ข้าว (แป้ง) 9 ทัพพี</a><br><br>
+                                                                                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal3" style="color: black;">เนื้อสัตว์ น้อยกว่าหรือเท่ากับ แป้ง</a><br><br>
+                                                                                                <a href="#" style="color: black;">ผักครึ่งจาน</a><br><br>
+                                                                                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: black;">ผลไม้ 3 ส่วน</a><br><br>
+                                                                                        <?php
+                                                                                        } else if ($rows['RecommendKcal'] > '2200' && $rows['RecommendKcal'] <= '2400') {
+                                                                                        ?>
+                                                                                                <script src="assets/js/Drinkmilk2/2200/showfood.js"></script>
+                                                                                                <script src="assets/js/Drinkmilk2/2200/food.js"></script>
+                                                                                                <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+                                                                                                <!--<img src="https://media.healthyfood.com/wp-content/uploads/2017/03/The-perfect-plate-500x500.jpg" style="width: 300px;"><br> -->
+                                                                                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2" style="color: black;" id="Rice">ข้าว (แป้ง) 10 ทัพพี</a><br><br>
+                                                                                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal3" style="color: black;">เนื้อสัตว์ น้อยกว่าหรือเท่ากับ แป้ง</a><br><br>
+                                                                                                <a href="#" style="color: black;">ผักครึ่งจาน</a><br><br>
+                                                                                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: black;">ผลไม้ 4 ส่วน</a><br><br>
+                                                                                        <?php
+                                                                                        } else if ($rows['RecommendKcal'] > '2400' && $rows['RecommendKcal'] <= '2600') {
+                                                                                        ?>
+                                                                                                <script src="assets/js/Drinkmilk2/2400/showfood.js"></script>
+                                                                                                <script src="assets/js/Drinkmilk2/2400/food.js"></script>
+                                                                                                <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+                                                                                                <!--<img src="https://media.healthyfood.com/wp-content/uploads/2017/03/The-perfect-plate-500x500.jpg" style="width: 300px;"><br> -->
+                                                                                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2" style="color: black;" id="Rice">ข้าว (แป้ง) 11 ทัพพี</a><br><br>
+                                                                                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal3" style="color: black;">เนื้อสัตว์ น้อยกว่าหรือเท่ากับ แป้ง</a><br><br>
+                                                                                                <a href="#" style="color: black;">ผักครึ่งจาน</a><br><br>
+                                                                                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: black;">ผลไม้ 4 ส่วน</a><br><br>
+                                                                                        <?php
+                                                                                        } else if ($rows['RecommendKcal'] > '2600') {
+                                                                                        ?>
+                                                                                                <script src="assets/js/Drinkmilk2/2600/showfood.js"></script>
+                                                                                                <script src="assets/js/Drinkmilk2/2600/food.js"></script>
+                                                                                                <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+                                                                                                <!--<img src="https://media.healthyfood.com/wp-content/uploads/2017/03/The-perfect-plate-500x500.jpg" style="width: 300px;"><br> -->
+                                                                                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2" style="color: black;" id="Rice">ข้าว (แป้ง) 12 ทัพพี</a><br><br>
+                                                                                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal3" style="color: black;">เนื้อสัตว์ น้อยกว่าหรือเท่ากับ แป้ง</a><br><br>
+                                                                                                <a href="#" style="color: black;">ผักครึ่งจาน</a><br><br>
+                                                                                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: black;">ผลไม้ 5 ส่วน</a><br><br>
+                                                                        <?php
+                                                                                        }
                                                                                 }
                                                                         }
-                                                                        ////กินนม 1 แก้ว
-                                                                        else if ($rows['DrinkMike'] == '1') {
-                                                                                if ($rows['RecommendKcal'] >= '1200' && $rows['RecommendKcal'] <= '1400') {
-                                                                                ?>
-                                                                                        <script src="assets/js/Drinkmilk1/1200/showfood.js"></script>
-                                                                                        <script src="assets/js/Drinkmilk1/1200/food.js"></script>
-                                                                                        <div id="chartContainer" style="height: 300px; width: 100%;"></div>
-                                                                                        <!--<img src="https://media.healthyfood.com/wp-content/uploads/2017/03/The-perfect-plate-500x500.jpg" style="width: 300px;"><br> -->
-                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2" style="color: black;" id="Rice">ข้าว (แป้ง) 6 ทัพพี</a><br><br>
-                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal3" style="color: black;">เนื้อสัตว์ น้อยกว่าหรือเท่ากับฟ แป้ง</a><br><br>
-                                                                                        <a href="#" style="color: black;">ผักครึ่งจาน</a><br><br>
-                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: black;">ผลไม้ 1 ส่วน</a><br><br>
-
-
-                                                                                <?php
-                                                                                } else if ($rows['RecommendKcal'] > '1400' && $rows['RecommendKcal'] <= '1600') {
-                                                                                ?>
-
-                                                                                        <script src="assets/js/Drinkmilk1/1400/food.js"></script>
-                                                                                        <img src="assets/img/D1-1400.jpeg" width="350px"><br>
-                                                                                        <!--<img src="https://media.healthyfood.com/wp-content/uploads/2017/03/The-perfect-plate-500x500.jpg" style="width: 300px;"><br> -->
-                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2" style="color: black;" id="Rice">ข้าว (แป้ง) 7 ทัพพี</a><br><br>
-                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal3" style="color: black;">เนื้อสัตว์ น้อยกว่าหรือเท่ากับ แป้ง</a><br><br>
-                                                                                        <a href="#" style="color: black;">ผักครึ่งจาน</a><br><br>
-                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: black;">ผลไม้ 1 ส่วน</a><br><br>
-                                                                                <?php
-                                                                                } else if ($rows['RecommendKcal'] > '1600' && $rows['RecommendKcal'] <= '1800') {
-                                                                                ?>
-                                                                                        <script src="assets/js/Drinkmilk1/1400/showfood.js"></script>
-                                                                                        <script src="assets/js/Drinkmilk1/1400/food.js"></script>
-                                                                                        <div id="chartContainer" style="height: 300px; width: 100%;"></div>
-                                                                                        <!--<img src="https://media.healthyfood.com/wp-content/uploads/2017/03/The-perfect-plate-500x500.jpg" style="width: 300px;"><br> -->
-                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2" style="color: black;" id="Rice">ข้าว (แป้ง) 8 ทัพพี</a><br><br>
-                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal3" style="color: black;">เนื้อสัตว์ น้อยกว่าหรือเท่ากับ แป้ง</a><br><br>
-                                                                                        <a href="#" style="color: black;">ผักครึ่งจาน</a><br><br>
-                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: black;">ผลไม้ 2 ส่วน</a><br><br>
-                                                                                <?php
-                                                                                } else if ($rows['RecommendKcal'] > '1800' && $rows['RecommendKcal'] <= '2000') {
-                                                                                ?>
-                                                                                        <script src="assets/js/Drinkmilk1/1800/showfood.js"></script>
-                                                                                        <script src="assets/js/Drinkmilk1/1800/food.js"></script>
-                                                                                        <div id="chartContainer" style="height: 300px; width: 100%;"></div>
-                                                                                        <!--<img src="https://media.healthyfood.com/wp-content/uploads/2017/03/The-perfect-plate-500x500.jpg" style="width: 300px;"><br> -->
-                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2" style="color: black;" id="Rice">ข้าว (แป้ง) 9 ทัพพี</a><br><br>
-                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal3" style="color: black;">เนื้อสัตว์ น้อยกว่าหรือเท่ากับ แป้ง</a><br><br>
-                                                                                        <a href="#" style="color: black;">ผักครึ่งจาน</a><br><br>
-                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: black;">ผลไม้ 3 ส่วน</a><br><br>
-                                                                                <?php
-                                                                                } else if ($rows['RecommendKcal'] > '2000' && $rows['RecommendKcal'] <= '2200') {
-                                                                                ?>
-                                                                                        <script src="assets/js/Drinkmilk1/2000/showfood.js"></script>
-                                                                                        <script src="assets/js/Drinkmilk1/2000/food.js"></script>
-                                                                                        <div id="chartContainer" style="height: 300px; width: 100%;"></div>
-                                                                                        <!--<img src="https://media.healthyfood.com/wp-content/uploads/2017/03/The-perfect-plate-500x500.jpg" style="width: 300px;"><br> -->
-                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2" style="color: black;" id="Rice">ข้าว (แป้ง) 9 ทัพพี</a><br><br>
-                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal3" style="color: black;">เนื้อสัตว์ น้อยกว่าหรือเท่ากับ แป้ง</a><br><br>
-                                                                                        <a href="#" style="color: black;">ผักครึ่งจาน</a><br><br>
-                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: black;">ผลไม้ 4 ส่วน</a><br><br>
-
-                                                                                <?php
-                                                                                } else if ($rows['RecommendKcal'] > '2200' && $rows['RecommendKcal'] <= '2400') {
-                                                                                ?>
-                                                                                        <script src="assets/js/Drinkmilk1/2200/showfood.js"></script>
-                                                                                        <script src="assets/js/Drinkmilk1/2200/food.js"></script>
-                                                                                        <div id="chartContainer" style="height: 300px; width: 100%;"></div>
-                                                                                        <!--<img src="https://media.healthyfood.com/wp-content/uploads/2017/03/The-perfect-plate-500x500.jpg" style="width: 300px;"><br> -->
-                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2" style="color: black;" id="Rice">ข้าว (แป้ง) 11 ทัพพี</a><br><br>
-                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal3" style="color: black;">เนื้อสัตว์ น้อยกว่าหรือเท่ากับ แป้ง</a><br><br>
-                                                                                        <a href="#" style="color: black;">ผักครึ่งจาน</a><br><br>
-                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: black;">ผลไม้ 4 ส่วน</a><br><br>
-                                                                                <?php
-                                                                                } else if ($rows['RecommendKcal'] > '2400' && $rows['RecommendKcal'] <= '2600') {
-                                                                                ?>
-                                                                                        <script src="assets/js/Drinkmilk1/2400/showfood.js"></script>
-                                                                                        <script src="assets/js/Drinkmilk1/2400/food.js"></script>
-                                                                                        <div id="chartContainer" style="height: 300px; width: 100%;"></div>
-                                                                                        <!--<img src="https://media.healthyfood.com/wp-content/uploads/2017/03/The-perfect-plate-500x500.jpg" style="width: 300px;"><br> -->
-                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2" style="color: black;" id="Rice">ข้าว (แป้ง) 12 ทัพพี</a><br><br>
-                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal3" style="color: black;">เนื้อสัตว์ น้อยกว่าหรือเท่ากับ แป้ง</a><br><br>
-                                                                                        <a href="#" style="color: black;">ผักครึ่งจาน</a><br><br>
-                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: black;">ผลไม้ 4 ส่วน</a><br><br>
-                                                                                <?php
-                                                                                } else if ($rows['RecommendKcal'] > '2600') {
-                                                                                ?>
-                                                                                        <script src="assets/js/Drinkmilk1/2600/showfood.js"></script>
-                                                                                        <script src="assets/js/Drinkmilk1/2600/food.js"></script>
-                                                                                        <div id="chartContainer" style="height: 300px; width: 100%;"></div>
-                                                                                        <!--<img src="https://media.healthyfood.com/wp-content/uploads/2017/03/The-perfect-plate-500x500.jpg" style="width: 300px;"><br> -->
-                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2" style="color: black;" id="Rice">ข้าว (แป้ง) 12 ทัพพี</a><br><br>
-                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal3" style="color: black;">เนื้อสัตว์ น้อยกว่าหรือเท่ากับ แป้ง</a><br><br>
-                                                                                        <a href="#" style="color: black;">ผักครึ่งจาน</a><br><br>
-                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: black;">ผลไม้ 5 ส่วน</a><br><br>
-                                                                                <?php
-                                                                                }
-                                                                        }
-                                                                        ////กินนม 2 แก้ว
-                                                                        else {
-                                                                                if ($rows['RecommendKcal'] >= '1200' && $rows['RecommendKcal'] <= '1400') {
-                                                                                ?>
-
-                                                                                        <script src="assets/js/Drinkmilk2/1200/showfood.js"></script>
-                                                                                        <script src="assets/js/Drinkmilk2/1200/food.js"></script>
-                                                                                        <div id="chartContainer" style="height: 300px; width: 100%;"></div>
-                                                                                        <!--<img src="https://media.healthyfood.com/wp-content/uploads/2017/03/The-perfect-plate-500x500.jpg" style="width: 300px;"><br> -->
-                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2" style="color: black;" id="Rice">ข้าว (แป้ง) 4 ทัพพี</a><br><br>
-                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal3" style="color: black;">เนื้อสัตว์ น้อยกว่าหรือเท่ากับ แป้ง</a><br><br>
-                                                                                        <a href="#" style="color: black;">ผักครึ่งจาน</a><br><br>
-                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: black;">ผลไม้ 1 ส่วน</a><br><br>
-
-                                                                                <?php
-                                                                                } else if ($rows['RecommendKcal'] > '1400' && $rows['RecommendKcal'] <= '1600') {
-                                                                                ?>
-                                                                                        <script src="assets/js/Drinkmilk2/1400/showfood.js"></script>
-                                                                                        <script src="assets/js/Drinkmilk2/1400/food.js"></script>
-                                                                                        <div id="chartContainer" style="height: 300px; width: 100%;"></div>
-                                                                                        <!--<img src="https://media.healthyfood.com/wp-content/uploads/2017/03/The-perfect-plate-500x500.jpg" style="width: 300px;"><br> -->
-                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2" style="color: black;" id="Rice">ข้าว (แป้ง) 5 ทัพพี</a><br><br>
-                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal3" style="color: black;">เนื้อสัตว์ น้อยกว่าหรือเท่ากับ แป้ง</a><br><br>
-                                                                                        <a href="#" style="color: black;">ผักครึ่งจาน</a><br><br>
-                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: black;">ผลไม้ 1 ส่วน</a><br><br>
-                                                                                <?php
-                                                                                } else if ($rows['RecommendKcal'] > '1600' && $rows['RecommendKcal'] <= '1800') {
-                                                                                ?>
-                                                                                        <script src="assets/js/Drinkmilk2/1600/showfood.js"></script>
-                                                                                        <script src="assets/js/Drinkmilk2/1600/food.js"></script>
-                                                                                        <div id="chartContainer" style="height: 300px; width: 100%;"></div>
-                                                                                        <!--<img src="https://media.healthyfood.com/wp-content/uploads/2017/03/The-perfect-plate-500x500.jpg" style="width: 300px;"><br> -->
-                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2" style="color: black;" id="Rice">ข้าว (แป้ง) 7 ทัพพี</a><br><br>
-                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal3" style="color: black;">เนื้อสัตว์ น้อยกว่าหรือเท่ากับ แป้ง</a><br><br>
-                                                                                        <a href="#" style="color: black;">ผักครึ่งจาน</a><br><br>
-                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: black;">ผลไม้ 1 ส่วน</a><br><br>
-                                                                                <?php
-                                                                                } else if ($rows['RecommendKcal'] > '1800' && $rows['RecommendKcal'] <= '2000') {
-                                                                                ?>
-                                                                                        <script src="assets/js/Drinkmilk2/1800/showfood.js"></script>
-                                                                                        <script src="assets/js/Drinkmilk2/1800/food.js"></script>
-                                                                                        <div id="chartContainer" style="height: 300px; width: 100%;"></div>
-                                                                                        <!--<img src="https://media.healthyfood.com/wp-content/uploads/2017/03/The-perfect-plate-500x500.jpg" style="width: 300px;"><br> -->
-                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2" style="color: black;" id="Rice">ข้าว (แป้ง) 9 ทัพพี</a><br><br>
-                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal3" style="color: black;">เนื้อสัตว์ น้อยกว่าหรือเท่ากับ แป้ง</a><br><br>
-                                                                                        <a href="#" style="color: black;">ผักครึ่งจาน</a><br><br>
-                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: black;">ผลไม้ 2 ส่วน</a><br><br>
-                                                                                <?php
-                                                                                } else if ($rows['RecommendKcal'] > '2000' && $rows['RecommendKcal'] <= '2200') {
-                                                                                ?>
-                                                                                        <script src="assets/js/Drinkmilk2/2000/showfood.js"></script>
-                                                                                        <script src="assets/js/Drinkmilk2/2000/food.js"></script>
-                                                                                        <div id="chartContainer" style="height: 300px; width: 100%;"></div>
-                                                                                        <!--<img src="https://media.healthyfood.com/wp-content/uploads/2017/03/The-perfect-plate-500x500.jpg" style="width: 300px;"><br> -->
-                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2" style="color: black;" id="Rice">ข้าว (แป้ง) 9 ทัพพี</a><br><br>
-                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal3" style="color: black;">เนื้อสัตว์ น้อยกว่าหรือเท่ากับ แป้ง</a><br><br>
-                                                                                        <a href="#" style="color: black;">ผักครึ่งจาน</a><br><br>
-                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: black;">ผลไม้ 3 ส่วน</a><br><br>
-                                                                                <?php
-                                                                                } else if ($rows['RecommendKcal'] > '2200' && $rows['RecommendKcal'] <= '2400') {
-                                                                                ?>
-                                                                                        <script src="assets/js/Drinkmilk2/2200/showfood.js"></script>
-                                                                                        <script src="assets/js/Drinkmilk2/2200/food.js"></script>
-                                                                                        <div id="chartContainer" style="height: 300px; width: 100%;"></div>
-                                                                                        <!--<img src="https://media.healthyfood.com/wp-content/uploads/2017/03/The-perfect-plate-500x500.jpg" style="width: 300px;"><br> -->
-                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2" style="color: black;" id="Rice">ข้าว (แป้ง) 10 ทัพพี</a><br><br>
-                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal3" style="color: black;">เนื้อสัตว์ น้อยกว่าหรือเท่ากับ แป้ง</a><br><br>
-                                                                                        <a href="#" style="color: black;">ผักครึ่งจาน</a><br><br>
-                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: black;">ผลไม้ 4 ส่วน</a><br><br>
-                                                                                <?php
-                                                                                } else if ($rows['RecommendKcal'] > '2400' && $rows['RecommendKcal'] <= '2600') {
-                                                                                ?>
-                                                                                        <script src="assets/js/Drinkmilk2/2400/showfood.js"></script>
-                                                                                        <script src="assets/js/Drinkmilk2/2400/food.js"></script>
-                                                                                        <div id="chartContainer" style="height: 300px; width: 100%;"></div>
-                                                                                        <!--<img src="https://media.healthyfood.com/wp-content/uploads/2017/03/The-perfect-plate-500x500.jpg" style="width: 300px;"><br> -->
-                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2" style="color: black;" id="Rice">ข้าว (แป้ง) 11 ทัพพี</a><br><br>
-                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal3" style="color: black;">เนื้อสัตว์ น้อยกว่าหรือเท่ากับ แป้ง</a><br><br>
-                                                                                        <a href="#" style="color: black;">ผักครึ่งจาน</a><br><br>
-                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: black;">ผลไม้ 4 ส่วน</a><br><br>
-                                                                                <?php
-                                                                                } else if ($rows['RecommendKcal'] > '2600') {
-                                                                                ?>
-                                                                                        <script src="assets/js/Drinkmilk2/2600/showfood.js"></script>
-                                                                                        <script src="assets/js/Drinkmilk2/2600/food.js"></script>
-                                                                                        <div id="chartContainer" style="height: 300px; width: 100%;"></div>
-                                                                                        <!--<img src="https://media.healthyfood.com/wp-content/uploads/2017/03/The-perfect-plate-500x500.jpg" style="width: 300px;"><br> -->
-                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2" style="color: black;" id="Rice">ข้าว (แป้ง) 12 ทัพพี</a><br><br>
-                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal3" style="color: black;">เนื้อสัตว์ น้อยกว่าหรือเท่ากับ แป้ง</a><br><br>
-                                                                                        <a href="#" style="color: black;">ผักครึ่งจาน</a><br><br>
-                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: black;">ผลไม้ 5 ส่วน</a><br><br>
-                                                                <?php
-                                                                                }
-                                                                        }
-                                                                }
-                                                                ?>
+                                                                        ?>
+                                                                </div>
                                                         </div>
-
 
 
                                                         <?php
@@ -545,9 +593,9 @@ if (!$_SESSION["Cid"]) {  //check session
                                                                                 </div>
                                                                                 <div class="col-md-5">
                                                                                         <div class="input-group w-auto justify-content-end align-items-center">
-                                                                                                <input type="button" value="-" class="button-minus border rounded-circle  icon-shape icon-sm mx-1 " data-field="quantity" id="decremR1">
-                                                                                                <input type="text" step="1" max="10" value="0" class="quantity-field border-0 text-center w-25" name="quantity" id="DiffRice1" onInput="addFood();" value="0">
-                                                                                                <input type="button" value="+" class="button-plus border rounded-circle icon-shape icon-sm " data-field="quantity" id="incremR1">
+                                                                                                <input type="button" value="-" class="button-minus border rounded-circle  icon-shape icon-sm mx-1 " data-field="DiffRice1" id="decremR1">
+                                                                                                <input type="text" step="1" max="10" value="0" class="quantity-field border-0 text-center w-25" name="DiffRice1" id="DiffRice1" onInput="addFood();" value="0">
+                                                                                                <input type="button" value="+" class="button-plus border rounded-circle icon-shape icon-sm " data-field="DiffRice1" id="incremR1">
                                                                                         </div>
                                                                                 </div>
 
@@ -560,74 +608,90 @@ if (!$_SESSION["Cid"]) {  //check session
                                                                                 <div class="col-md-4">
                                                                                         <label for="DiffRice1" class="form-label">เนื้อสัตว์</label>
                                                                                 </div>
-                                                                               
+
                                                                                 <div class="col-md-5">
                                                                                         <div class="input-group w-auto justify-content-end align-items-center">
-                                                                                                <input type="button" value="-" class="button-minus border rounded-circle  icon-shape icon-sm mx-1 " data-field="quantity" id="decremM1">
-                                                                                                <input type="text" step="1" max="10" value="0" class="quantity-field border-0 text-center w-25" name="quantity" id="DiffMeet1" onInput="addFood();" value="0">
-                                                                                                <input type="button" value="+" class="button-plus border rounded-circle icon-shape icon-sm " data-field="quantity" id="incremM1">
+                                                                                                <input type="button" value="-" class="button-minus border rounded-circle  icon-shape icon-sm mx-1 " data-field="DiffMeet1" id="decremM1">
+                                                                                                <input type="text" step="1" max="10" value="0" class="quantity-field border-0 text-center w-25" name="DiffMeet1" id="DiffMeet1" onInput="addFood();" value="0">
+                                                                                                <input type="button" value="+" class="button-plus border rounded-circle icon-shape icon-sm " data-field="DiffMeet1" id="incremM1">
                                                                                         </div>
                                                                                 </div>
                                                                                 <div class="col-md-3">
-                                                                                        <input class="form-control" type="number" value="" size="20" name="totalMeet" id="totalMeet" readonly>
+                                                                                        <input class="form-control" type="number" value="" size="20" name="totalMeet1" id="totalMeet1" readonly>
                                                                                 </div>
                                                                         </div>
-                                                                        
+
                                                                         <div class="row row-cols-3 row-cols-lg-5 g-2 g-lg-3">
                                                                                 <div class="col-md-4">
                                                                                         <label for="DiffRice1" class="form-label">ผลไม้</label>
                                                                                 </div>
-                                                                               
+
                                                                                 <div class="col-md-5">
                                                                                         <div class="input-group w-auto justify-content-end align-items-center">
-                                                                                                <input type="button" value="-" class="button-minus border rounded-circle  icon-shape icon-sm mx-1 " data-field="quantity" id="decrem">
-                                                                                                <input type="text" step="1" max="10" value="0" class="quantity-field border-0 text-center w-25" name="quantity" id="DiffFriut1" onInput="addFood();" value="0">
-                                                                                                <input type="button" value="+" class="button-plus border rounded-circle icon-shape icon-sm " data-field="quantity" id="increm">
+                                                                                                <input type="button" value="-" class="button-minus border rounded-circle  icon-shape icon-sm mx-1 " data-field="DiffFriut1" id="decremFruit1">
+                                                                                                <input type="text" step="1" max="10" value="0" class="quantity-field border-0 text-center w-25" name="DiffFriut1" id="DiffFriut1" onInput="addFood();" value="0">
+                                                                                                <input type="button" value="+" class="button-plus border rounded-circle icon-shape icon-sm " data-field="DiffFriut1" id="incremFruit1">
                                                                                         </div>
                                                                                 </div>
                                                                                 <div class="col-md-3">
-                                                                                        <input class="form-control" type="number" value="" size="20" name="totalFriut" id="totalFriut" readonly>
+                                                                                        <input class="form-control" type="number" value="" size="20" name="totalFriut1" id="totalFriut1" readonly>
                                                                                 </div>
                                                                         </div>
-                                                                        <div class="row">
+
+                                                                        <div class="row row-cols-3 row-cols-lg-5 g-2 g-lg-3">
+                                                                                <div class="col-md-4">
+                                                                                        <label for="DiffRice1" class="form-label">นม</label>
+                                                                                </div>
+
+                                                                                <div class="col-md-5">
+                                                                                        <div class="input-group w-auto justify-content-end align-items-center">
+                                                                                                <input type="button" value="-" class="button-minus border rounded-circle  icon-shape icon-sm mx-1 " data-field="DiffMilk1" id="decremMilk1">
+                                                                                                <input type="text" step="1" max="10" value="0" class="quantity-field border-0 text-center w-25" name="DiffMilk1" id="DiffMilk1" onInput="addFood();" value="0">
+                                                                                                <input type="button" value="+" class="button-plus border rounded-circle icon-shape icon-sm " data-field="DiffMilk1" id="incremMilk1">
+                                                                                        </div>
+                                                                                </div>
+                                                                                <div class="col-md-3">
+                                                                                        <input class="form-control" type="number" value="" size="20" name="totalMilk1" id="totalMilk1" readonly>
+                                                                                </div>
+                                                                        </div>
+                                                                        <div class="d-grid gap-2">
                                                                                 <div class="circle">
                                                                                         <div class="half-circle">
-                                                                                                <img id="scream" width="100%" height="100%" src="https://www.thaihealth.or.th/data/content/2017/04/36104/cms/newscms_thaihealth_c_bginpqsuz179.jpg" alt="The Scream">
+                                                                                                <img id="scream" width="350px" height="100%" src="https://ichef.bbci.co.uk/news/640/cpsprodpb/0E1B/production/_113111630_fruitandveg.jpg" alt="The Scream">
 
                                                                                         </div>
                                                                                         <div class="half-circle-right">
-                                                                                                <div class="circle-top">
+                                                                                                <div class="circle-top1">
 
                                                                                                 </div>
-                                                                                                <div class="circle-bottom">
+                                                                                                <div class="circle-bottom1">
 
 
                                                                                                 </div>
                                                                                         </div>
+                                                                                </div>
+
+                                                                                <div class="d-flex justify-content-start">
+                                                                                        <div class="me-auto ps-5 bd-highlight">
+                                                                                                <div class="Fruit1">
+
+                                                                                                </div>
+                                                                                        </div>
+                                                                                        <div class="pe-5 bd-highlight">
+                                                                                                <div class="Milk1">
+
+                                                                                                </div>
+                                                                                        </div>
+
+
+
                                                                                 </div>
                                                                         </div>
                                                                 </div>
                                                         </div>
                                                 </div>
                                         </div>
-                                        <!-- Modal4 -->
-                                        <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                                <div class="modal-dialog modal-dialog-centered">
-                                                        <div class="modal-content">
-                                                                <div class="modal-header">
-                                                                        <h5 class="modal-title" id="exampleModalLabel"><b>กำหนดอาหารมื้อเช้า</h5>
-                                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                                </div>
-                                                                <div class="modal-body">
 
-                                                                </div>
-                                                                <div class="modal-footer">
-                                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ปิด</button>
-                                                                </div>
-                                                        </div>
-                                                </div>
-                                        </div>
-                                        <!-- END MODAL 4 -->
                                 </div>
 
                         </section><!-- End Hero -->
@@ -643,73 +707,112 @@ if (!$_SESSION["Cid"]) {  //check session
 
                                                         </div>
                                                         <div class="card-body">
-                                                                <div class="app-paper2">
-
-                                                                        <input type="radio" name="DrinkMike" id="9" class="hidebx" value="0" data-bs-toggle="modal" data-bs-target="#exampleModal5">
-                                                                        <label for="9" class="lbl-radio">
-                                                                                <div class="display-box">
-                                                                                        <div class="size">กำหนดอาหารมื้อกลางวัน</div>
+                                                                <div class="d-grid gap-4">
+                                                                        <div class="row row-cols-3 row-cols-lg-5 g-2 g-lg-3">
+                                                                                <div class="col-md-4">
+                                                                                        <label for="DiffRice1" class="form-label">ข้าว/แป้ง</label>
                                                                                 </div>
-                                                                        </label>
-                                                                        <div id="chartContainer2" style="height: 300px; width: 100%;"></div>
-                                                                </div>
-
-                                                        </div>
-                                                </div>
-                                        </div>
-                                        <!-- Modal5 -->
-                                        <div class="modal fade" id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                                <div class="modal-dialog modal-dialog-centered">
-                                                        <div class="modal-content">
-                                                                <div class="modal-header">
-                                                                        <h5 class="modal-title" id="exampleModalLabel"><b>กำหนดอาหารมื้อกลางวัน</h5>
-                                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                                </div>
-                                                                <div class="modal-body">
-                                                                        <div class="row">
-                                                                                <label for="DiffRice1" class="form-label">ข้าว/แป้ง</label>
-                                                                                <div class="col-md-6">
-                                                                                        <input class="form-control" type="number" value="" size="20" name="DiffRice2" id="DiffRice2" placeholder="ข้าว/แป้ง" onInput="addFood2();">
+                                                                                <div class="col-md-5">
+                                                                                        <div class="input-group w-auto justify-content-end align-items-center">
+                                                                                                <input type="button" value="-" class="button-minus border rounded-circle  icon-shape icon-sm mx-1 " data-field="DiffRice2" id="decremR2">
+                                                                                                <input type="text" step="1" max="10" value="0" class="quantity-field border-0 text-center w-25" name="DiffRice2" id="DiffRice2" onInput="addFood();" value="0">
+                                                                                                <input type="button" value="+" class="button-plus border rounded-circle icon-shape icon-sm " data-field="DiffRice2" id="incremR2">
+                                                                                        </div>
                                                                                 </div>
-                                                                                <div class="col-md-6">
+
+                                                                                <div class="col-md-3">
                                                                                         <input class="form-control" type="number" value="" size="20" name="totalRice2" id="totalRice2" readonly>
                                                                                 </div>
+
                                                                         </div>
-                                                                        <div class="row">
-                                                                                <label for="DiffRice1" class="form-label">เนื้อสัตว์</label>
-                                                                                <div class="col-md-6">
-                                                                                        <input class="form-control" type="number" value="" size="20" name="DiffMeet2" id="DiffMeet2" placeholder="เนื้อสัตว์" onInput="addFood2();">
+                                                                        <div class="row row-cols-3 row-cols-lg-5 g-2 g-lg-3">
+                                                                                <div class="col-md-4">
+                                                                                        <label for="DiffRice1" class="form-label">เนื้อสัตว์</label>
                                                                                 </div>
-                                                                                <div class="col-md-6">
+
+                                                                                <div class="col-md-5">
+                                                                                        <div class="input-group w-auto justify-content-end align-items-center">
+                                                                                                <input type="button" value="-" class="button-minus border rounded-circle  icon-shape icon-sm mx-1 " data-field="DiffMeet2" id="decremM2">
+                                                                                                <input type="text" step="1" max="10" value="0" class="quantity-field border-0 text-center w-25" name="DiffMeet2" id="DiffMeet2" onInput="addFood();" value="0">
+                                                                                                <input type="button" value="+" class="button-plus border rounded-circle icon-shape icon-sm " data-field="DiffMeet2" id="incremM2">
+                                                                                        </div>
+                                                                                </div>
+                                                                                <div class="col-md-3">
                                                                                         <input class="form-control" type="number" value="" size="20" name="totalMeet2" id="totalMeet2" readonly>
                                                                                 </div>
                                                                         </div>
-                                                                        <div class="row">
-                                                                                <label for="DiffRice1" class="form-label">ผัก</label>
-                                                                                <div class="col-md-6">
-                                                                                        <input class="form-control" type="number" value="" size="20" name="DiffVeg2" id="DiffVeg2" placeholder="ผัก" onInput="addFood2();">
+
+                                                                        <div class="row row-cols-3 row-cols-lg-5 g-2 g-lg-3">
+                                                                                <div class="col-md-4">
+                                                                                        <label for="DiffRice1" class="form-label">ผลไม้</label>
                                                                                 </div>
-                                                                                <div class="col-md-6">
-                                                                                        <input class="form-control" type="number" value="" size="20" name="totalVeg2" id="totalVeg2" readonly>
+
+                                                                                <div class="col-md-5">
+                                                                                        <div class="input-group w-auto justify-content-end align-items-center">
+                                                                                                <input type="button" value="-" class="button-minus border rounded-circle  icon-shape icon-sm mx-1 " data-field="DiffFriut2" id="decremFruit2">
+                                                                                                <input type="text" step="1" max="10" value="0" class="quantity-field border-0 text-center w-25" name="DiffFriut2" id="DiffFriut2" onInput="addFood();" value="0">
+                                                                                                <input type="button" value="+" class="button-plus border rounded-circle icon-shape icon-sm " data-field="DiffFriut2" id="incremFruit2">
+                                                                                        </div>
                                                                                 </div>
-                                                                        </div>
-                                                                        <div class="row">
-                                                                                <label for="DiffRice1" class="form-label">ผลไม้</label>
-                                                                                <div class="col-md-6">
-                                                                                        <input class="form-control" type="number" value="" size="20" name="DiffFriut2" id="DiffFriut2" placeholder="ผลไม้" onInput="addFood2();">
-                                                                                </div>
-                                                                                <div class="col-md-6">
+                                                                                <div class="col-md-3">
                                                                                         <input class="form-control" type="number" value="" size="20" name="totalFriut2" id="totalFriut2" readonly>
                                                                                 </div>
                                                                         </div>
-                                                                </div>
-                                                                <div class="modal-footer">
-                                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ปิด</button>
+
+                                                                        <div class="row row-cols-3 row-cols-lg-5 g-2 g-lg-3">
+                                                                                <div class="col-md-4">
+                                                                                        <label for="DiffRice1" class="form-label">นม</label>
+                                                                                </div>
+
+                                                                                <div class="col-md-5">
+                                                                                        <div class="input-group w-auto justify-content-end align-items-center">
+                                                                                                <input type="button" value="-" class="button-minus border rounded-circle  icon-shape icon-sm mx-1 " data-field="DiffMilk2" id="decremMilk2">
+                                                                                                <input type="text" step="1" max="10" value="0" class="quantity-field border-0 text-center w-25" name="DiffMilk2" id="DiffMilk2" onInput="addFood();" value="0">
+                                                                                                <input type="button" value="+" class="button-plus border rounded-circle icon-shape icon-sm " data-field="DiffMilk2" id="incremMilk2">
+                                                                                        </div>
+                                                                                </div>
+                                                                                <div class="col-md-3">
+                                                                                        <input class="form-control" type="number" value="" size="20" name="totalMilk2" id="totalMilk2" readonly>
+                                                                                </div>
+                                                                        </div>
+                                                                        <div class="d-grid gap-2">
+                                                                                <div class="circle">
+                                                                                        <div class="half-circle">
+                                                                                                <img id="scream" width="350px" height="100%" src="https://ichef.bbci.co.uk/news/640/cpsprodpb/0E1B/production/_113111630_fruitandveg.jpg" alt="The Scream">
+
+                                                                                        </div>
+                                                                                        <div class="half-circle-right">
+                                                                                                <div class="circle-top2">
+
+                                                                                                </div>
+                                                                                                <div class="circle-bottom2">
+
+
+                                                                                                </div>
+                                                                                        </div>
+                                                                                </div>
+
+                                                                                <div class="d-flex justify-content-start">
+                                                                                        <div class="me-auto ps-5 bd-highlight">
+                                                                                                <div class="Fruit2">
+
+                                                                                                </div>
+                                                                                        </div>
+                                                                                        <div class="pe-5 bd-highlight">
+                                                                                                <div class="Milk2">
+
+                                                                                                </div>
+                                                                                        </div>
+
+
+
+                                                                                </div>
+                                                                        </div>
                                                                 </div>
                                                         </div>
                                                 </div>
                                         </div>
-                                        <!-- END MODAL 5 -->
+
                                 </div>
                         </section><!-- End Hero -->
 
@@ -724,73 +827,112 @@ if (!$_SESSION["Cid"]) {  //check session
 
                                                         </div>
                                                         <div class="card-body">
-                                                                <div class="app-paper2">
-
-                                                                        <input type="radio" name="DrinkMike" id="10" class="hidebx" value="0" data-bs-toggle="modal" data-bs-target="#exampleModal6">
-                                                                        <label for="10" class="lbl-radio">
-                                                                                <div class="display-box">
-                                                                                        <div class="size">กำหนดอาหารมื้อเย็น</div>
+                                                                <div class="d-grid gap-4">
+                                                                        <div class="row row-cols-3 row-cols-lg-5 g-2 g-lg-3">
+                                                                                <div class="col-md-4">
+                                                                                        <label for="DiffRice1" class="form-label">ข้าว/แป้ง</label>
                                                                                 </div>
-                                                                        </label>
-                                                                        <div id="chartContainer3" style="height: 300px; width: 100%;"></div>
-                                                                </div>
-
-                                                        </div>
-                                                </div>
-                                        </div>
-                                        <!-- Modal5 -->
-                                        <div class="modal fade" id="exampleModal6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                                <div class="modal-dialog modal-dialog-centered">
-                                                        <div class="modal-content">
-                                                                <div class="modal-header">
-                                                                        <h5 class="modal-title" id="exampleModalLabel"><b>กำหนดอาหารมื้อเย็น</h5>
-                                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                                </div>
-                                                                <div class="modal-body">
-                                                                        <div class="row">
-                                                                                <label for="DiffRice1" class="form-label">ข้าว/แป้ง</label>
-                                                                                <div class="col-md-6">
-                                                                                        <input class="form-control" type="number" value="" size="20" name="DiffRice3" id="DiffRice3" placeholder="ข้าว/แป้ง" onInput="addFood3();">
+                                                                                <div class="col-md-5">
+                                                                                        <div class="input-group w-auto justify-content-end align-items-center">
+                                                                                                <input type="button" value="-" class="button-minus border rounded-circle  icon-shape icon-sm mx-1 " data-field="DiffRice3" id="decremR3">
+                                                                                                <input type="text" step="1" max="10" value="0" class="quantity-field border-0 text-center w-25" name="DiffRice3" id="DiffRice3" onInput="addFood();" value="0">
+                                                                                                <input type="button" value="+" class="button-plus border rounded-circle icon-shape icon-sm " data-field="DiffRice3" id="incremR3">
+                                                                                        </div>
                                                                                 </div>
-                                                                                <div class="col-md-6">
+
+                                                                                <div class="col-md-3">
                                                                                         <input class="form-control" type="number" value="" size="20" name="totalRice3" id="totalRice3" readonly>
                                                                                 </div>
+
                                                                         </div>
-                                                                        <div class="row">
-                                                                                <label for="DiffRice1" class="form-label">เนื้อสัตว์</label>
-                                                                                <div class="col-md-6">
-                                                                                        <input class="form-control" type="number" value="" size="20" name="DiffMeet3" id="DiffMee3" placeholder="เนื้อสัตว์" onInput="addFood3();">
+                                                                        <div class="row row-cols-3 row-cols-lg-5 g-2 g-lg-3">
+                                                                                <div class="col-md-4">
+                                                                                        <label for="DiffRice1" class="form-label">เนื้อสัตว์</label>
                                                                                 </div>
-                                                                                <div class="col-md-6">
+
+                                                                                <div class="col-md-5">
+                                                                                        <div class="input-group w-auto justify-content-end align-items-center">
+                                                                                                <input type="button" value="-" class="button-minus border rounded-circle  icon-shape icon-sm mx-1 " data-field="DiffMeet3" id="decremM3">
+                                                                                                <input type="text" step="1" max="10" value="0" class="quantity-field border-0 text-center w-25" name="DiffMeet3" id="DiffMeet3" onInput="addFood();" value="0">
+                                                                                                <input type="button" value="+" class="button-plus border rounded-circle icon-shape icon-sm " data-field="DiffMeet3" id="incremM3">
+                                                                                        </div>
+                                                                                </div>
+                                                                                <div class="col-md-3">
                                                                                         <input class="form-control" type="number" value="" size="20" name="totalMeet3" id="totalMeet3" readonly>
                                                                                 </div>
                                                                         </div>
-                                                                        <div class="row">
-                                                                                <label for="DiffRice1" class="form-label">ผัก</label>
-                                                                                <div class="col-md-6">
-                                                                                        <input class="form-control" type="number" value="" size="20" name="DiffVeg3" id="DiffVeg3" placeholder="ผัก" onInput="addFood3();">
+
+                                                                        <div class="row row-cols-3 row-cols-lg-5 g-2 g-lg-3">
+                                                                                <div class="col-md-4">
+                                                                                        <label for="DiffRice1" class="form-label">ผลไม้</label>
                                                                                 </div>
-                                                                                <div class="col-md-6">
-                                                                                        <input class="form-control" type="number" value="" size="20" name="totalVeg3" id="totalVeg3" readonly>
+
+                                                                                <div class="col-md-5">
+                                                                                        <div class="input-group w-auto justify-content-end align-items-center">
+                                                                                                <input type="button" value="-" class="button-minus border rounded-circle  icon-shape icon-sm mx-1 " data-field="DiffFriut3" id="decremFruit3">
+                                                                                                <input type="text" step="1" max="10" value="0" class="quantity-field border-0 text-center w-25" name="DiffFriut3" id="DiffFriut3" onInput="addFood();" value="0">
+                                                                                                <input type="button" value="+" class="button-plus border rounded-circle icon-shape icon-sm " data-field="DiffFriut3" id="incremFruit3">
+                                                                                        </div>
                                                                                 </div>
-                                                                        </div>
-                                                                        <div class="row">
-                                                                                <label for="DiffRice1" class="form-label">ผลไม้</label>
-                                                                                <div class="col-md-6">
-                                                                                        <input class="form-control" type="number" value="" size="20" name="DiffFriut3" id="DiffFriut3" placeholder="ผลไม้" onInput="addFood3();">
-                                                                                </div>
-                                                                                <div class="col-md-6">
+                                                                                <div class="col-md-3">
                                                                                         <input class="form-control" type="number" value="" size="20" name="totalFriut3" id="totalFriut3" readonly>
                                                                                 </div>
                                                                         </div>
-                                                                </div>
-                                                                <div class="modal-footer">
-                                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ปิด</button>
+
+                                                                        <div class="row row-cols-3 row-cols-lg-5 g-2 g-lg-3">
+                                                                                <div class="col-md-4">
+                                                                                        <label for="DiffRice1" class="form-label">นม</label>
+                                                                                </div>
+
+                                                                                <div class="col-md-5">
+                                                                                        <div class="input-group w-auto justify-content-end align-items-center">
+                                                                                                <input type="button" value="-" class="button-minus border rounded-circle  icon-shape icon-sm mx-1 " data-field="DiffMilk3" id="decremMilk3">
+                                                                                                <input type="text" step="1" max="10" value="0" class="quantity-field border-0 text-center w-25" name="DiffMilk3" id="DiffMilk3" onInput="addFood();" value="0">
+                                                                                                <input type="button" value="+" class="button-plus border rounded-circle icon-shape icon-sm " data-field="DiffMilk3" id="incremMilk3">
+                                                                                        </div>
+                                                                                </div>
+                                                                                <div class="col-md-3">
+                                                                                        <input class="form-control" type="number" value="" size="20" name="totalMilk3" id="totalMilk3" readonly>
+                                                                                </div>
+                                                                        </div>
+                                                                        <div class="d-grid gap-2">
+                                                                                <div class="circle">
+                                                                                        <div class="half-circle">
+                                                                                                <img id="scream" width="350px" height="100%" src="https://ichef.bbci.co.uk/news/640/cpsprodpb/0E1B/production/_113111630_fruitandveg.jpg" alt="The Scream">
+
+                                                                                        </div>
+                                                                                        <div class="half-circle-right">
+                                                                                                <div class="circle-top3">
+
+                                                                                                </div>
+                                                                                                <div class="circle-bottom3">
+
+
+                                                                                                </div>
+                                                                                        </div>
+                                                                                </div>
+
+                                                                                <div class="d-flex justify-content-start">
+                                                                                        <div class="me-auto ps-5 bd-highlight">
+                                                                                                <div class="Fruit3">
+
+                                                                                                </div>
+                                                                                        </div>
+                                                                                        <div class="pe-5 bd-highlight">
+                                                                                                <div class="Milk3">
+
+                                                                                                </div>
+                                                                                        </div>
+
+
+
+                                                                                </div>
+                                                                        </div>
                                                                 </div>
                                                         </div>
                                                 </div>
                                         </div>
-                                        <!-- END MODAL 5 -->
+
                                 </div>
                 </form>
                 <!-- End Form -->
@@ -814,6 +956,7 @@ if (!$_SESSION["Cid"]) {  //check session
                 <!-- Template Main JS File -->
 
                 <script src="assets/js/main.js"></script>
+                <script src="assets/js/Drinkmilk1/1400/fo"></script>
                 <script>
                         function incrementValue(e) {
                                 e.preventDefault();
@@ -850,13 +993,13 @@ if (!$_SESSION["Cid"]) {  //check session
                                 decrementValue(e);
                         });
 
-
+                        //Start Step1
                         $(function() {
                                 $('#incremR1').on('click', function() {
                                         let imageToADD = 1;
                                         var src = 'assets/img/ทัพพีข้าว.png'
-                                        var img = $("<img src='" + src + "'  width=\"50\" height=\"40\" id=\"imageR_" + imageToADD + "\">");
-                                        $('.circle-top').append(img);
+                                        var img = $("<img src='" + src + "'  width=\"50\" height=\"40\" id=\"imageR1_" + imageToADD + "\">");
+                                        $('.circle-top1').append(img);
                                         imageToADD++;
                                 });
                         })
@@ -865,8 +1008,26 @@ if (!$_SESSION["Cid"]) {  //check session
                                 $('#incremM1').on('click', function() {
                                         let imageToADD = 1;
                                         var src = 'assets/img/ไก่.png'
-                                        var img = $("<img src='" + src + "'  width=\"50\" height=\"40\" id=\"imageM_" + imageToADD + "\">");
-                                        $('.circle-bottom').append(img);
+                                        var img = $("<img src='" + src + "'  width=\"50\" height=\"40\" id=\"imageM1_" + imageToADD + "\">");
+                                        $('.circle-bottom1').append(img);
+                                        imageToADD++;
+                                });
+                        })
+                        $(function() {
+                                $('#incremFruit1').on('click', function() {
+                                        let imageToADD = 1;
+                                        var src = 'assets/img/Single_apple.png'
+                                        var img = $("<img src='" + src + "'  width=\"100\" height=\"60%\" id=\"imageFruit1_" + imageToADD + "\">");
+                                        $('.Fruit1').append(img);
+                                        imageToADD++;
+                                });
+                        })
+                        $(function() {
+                                $('#incremMilk1').on('click', function() {
+                                        let imageToADD = 1;
+                                        var src = 'assets/img/Milk.png'
+                                        var img = $("<img src='" + src + "'  width=\"150\" height=\"60%\" id=\"imageMilk1_" + imageToADD + "\">");
+                                        $('.Milk1').append(img);
                                         imageToADD++;
                                 });
                         })
@@ -875,14 +1036,151 @@ if (!$_SESSION["Cid"]) {  //check session
 
                         document.getElementById("decremR1").onclick = function() {
                                 let imageToDelete = 1;
-                                $("#imageR_" + imageToDelete).remove();
+                                $("#imageR1_" + imageToDelete).remove();
                                 imageToDelete++;
                         }
                         document.getElementById("decremM1").onclick = function() {
                                 let imageToDelete = 1;
-                                $("#imageM_" + imageToDelete).remove();
+                                $("#imageM1_" + imageToDelete).remove();
                                 imageToDelete++;
                         }
+                        document.getElementById("decremFruit1").onclick = function() {
+                                let imageToDelete = 1;
+                                $("#imageFruit1_" + imageToDelete).remove();
+                                imageToDelete++;
+                        }
+                        document.getElementById("decremMilk1").onclick = function() {
+                                let imageToDelete = 1;
+                                $("#imageMilk1_" + imageToDelete).remove();
+                                imageToDelete++;
+                        }
+                        //End Step1
+
+                        //Start Step2
+                        $(function() {
+                                $('#incremR2').on('click', function() {
+                                        let imageToADD = 1;
+                                        var src = 'assets/img/ทัพพีข้าว.png'
+                                        var img = $("<img src='" + src + "'  width=\"50\" height=\"40\" id=\"imageR2_" + imageToADD + "\">");
+                                        $('.circle-top2').append(img);
+                                        imageToADD++;
+                                });
+                        })
+
+                        $(function() {
+                                $('#incremM2').on('click', function() {
+                                        let imageToADD = 1;
+                                        var src = 'assets/img/ไก่.png'
+                                        var img = $("<img src='" + src + "'  width=\"50\" height=\"40\" id=\"imageM2_" + imageToADD + "\">");
+                                        $('.circle-bottom2').append(img);
+                                        imageToADD++;
+                                });
+                        })
+                        $(function() {
+                                $('#incremFruit2').on('click', function() {
+                                        let imageToADD = 1;
+                                        var src = 'assets/img/Single_apple.png'
+                                        var img = $("<img src='" + src + "'  width=\"100\" height=\"60%\" id=\"imageFruit2_" + imageToADD + "\">");
+                                        $('.Fruit2').append(img);
+                                        imageToADD++;
+                                });
+                        })
+                        $(function() {
+                                $('#incremMilk2').on('click', function() {
+                                        let imageToADD = 1;
+                                        var src = 'assets/img/Milk.png'
+                                        var img = $("<img src='" + src + "'  width=\"150\" height=\"60%\" id=\"imageMilk2_" + imageToADD + "\">");
+                                        $('.Milk2').append(img);
+                                        imageToADD++;
+                                });
+                        })
+
+
+
+                        document.getElementById("decremR2").onclick = function() {
+                                let imageToDelete = 1;
+                                $("#imageR2_" + imageToDelete).remove();
+                                imageToDelete++;
+                        }
+                        document.getElementById("decremM2").onclick = function() {
+                                let imageToDelete = 1;
+                                $("#imageM2_" + imageToDelete).remove();
+                                imageToDelete++;
+                        }
+                        document.getElementById("decremFruit2").onclick = function() {
+                                let imageToDelete = 1;
+                                $("#imageFruit2_" + imageToDelete).remove();
+                                imageToDelete++;
+                        }
+                        document.getElementById("decremMilk2").onclick = function() {
+                                let imageToDelete = 1;
+                                $("#imageMilk2_" + imageToDelete).remove();
+                                imageToDelete++;
+                        }
+                        //End Step2
+
+                        //Start Step3
+                        $(function() {
+                                $('#incremR3').on('click', function() {
+                                        let imageToADD = 1;
+                                        var src = 'assets/img/ทัพพีข้าว.png'
+                                        var img = $("<img src='" + src + "'  width=\"50\" height=\"40\" id=\"imageR3_" + imageToADD + "\">");
+                                        $('.circle-top3').append(img);
+                                        imageToADD++;
+                                });
+                        })
+
+                        $(function() {
+                                $('#incremM3').on('click', function() {
+                                        let imageToADD = 1;
+                                        var src = 'assets/img/ไก่.png'
+                                        var img = $("<img src='" + src + "'  width=\"50\" height=\"40\" id=\"imageM3_" + imageToADD + "\">");
+                                        $('.circle-bottom3').append(img);
+                                        imageToADD++;
+                                });
+                        })
+                        $(function() {
+                                $('#incremFruit3').on('click', function() {
+                                        let imageToADD = 1;
+                                        var src = 'assets/img/Single_apple.png'
+                                        var img = $("<img src='" + src + "'  width=\"100\" height=\"60%\" id=\"imageFruit3_" + imageToADD + "\">");
+                                        $('.Fruit3').append(img);
+                                        imageToADD++;
+                                });
+                        })
+                        $(function() {
+                                $('#incremMilk3').on('click', function() {
+                                        let imageToADD = 1;
+                                        var src = 'assets/img/Milk.png'
+                                        var img = $("<img src='" + src + "'  width=\"150\" height=\"60%\" id=\"imageMilk3_" + imageToADD + "\">");
+                                        $('.Milk3').append(img);
+                                        imageToADD++;
+                                });
+                        })
+
+
+
+                        document.getElementById("decremR3").onclick = function() {
+                                let imageToDelete = 1;
+                                $("#imageR3_" + imageToDelete).remove();
+                                imageToDelete++;
+                        }
+                        document.getElementById("decremM3").onclick = function() {
+                                let imageToDelete = 1;
+                                $("#imageM3_" + imageToDelete).remove();
+                                imageToDelete++;
+                        }
+                        document.getElementById("decremFruit3").onclick = function() {
+                                let imageToDelete = 1;
+                                $("#imageFruit3_" + imageToDelete).remove();
+                                imageToDelete++;
+                        }
+                        document.getElementById("decremMilk3").onclick = function() {
+                                let imageToDelete = 1;
+                                $("#imageMilk3_" + imageToDelete).remove();
+                                imageToDelete++;
+                        }
+                        //End Step3
                 </script>
 
 

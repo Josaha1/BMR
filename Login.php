@@ -61,7 +61,7 @@
   </header><!-- End Header -->
 
     <!-- ======= Hero Section ======= -->
-    <section id="counts" class="hero d-flex align-items-center">
+    <section id="hero" class="hero d-flex align-items-center">
       <div class="container">
         <div class="row">
           <div class="card text-center">

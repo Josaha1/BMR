@@ -1,5 +1,6 @@
 
 
+
 function addFood() {
   var A = 7;
   var C = 4;
@@ -7,13 +8,13 @@ function addFood() {
   var B = 6;
   var DiffRice1 = parseFloat(document.AddFood.DiffRice1.value);
   var DiffMeet1 = parseFloat(document.AddFood.DiffMeet1.value);
-  var DiffVeg1 = parseFloat(document.AddFood.DiffVeg1.value);
+
   var DiffFriut1 = parseFloat(document.AddFood.DiffFriut1.value);
 
-  document.AddFood.totalRice.value = Math.round(A - DiffRice1);
-  document.AddFood.totalMeet.value = Math.round(B - DiffMeet1);
-  document.AddFood.totalVeg.value = Math.round(C - DiffVeg1);
-  document.AddFood.totalFriut.value = Math.round(D - DiffFriut1);
+  document.AddFood.totalRice1.value = Math.round(A - DiffRice1);
+  document.AddFood.totalMeet1.value = Math.round(B - DiffMeet1);
+  document.AddFood.totalVeg1.value = Math.round(C - DiffVeg1);
+  document.AddFood.totalFriut11.value = Math.round(D - DiffFriut1);
   document.AddFood.totalRice2.value = Math.round(A - DiffRice2);
   document.AddFood.totalMeet2.value = Math.round(B - DiffMeet2);
   document.AddFood.totalVeg2.value = Math.round(C - DiffVeg2);
@@ -23,7 +24,7 @@ function addFood() {
 }
 function addFood2() {
   var ricetotal = document.AddFood.totalRice.value;
-  var Meettotal = document.AddFood.totalMeet.value;
+  var Meettotal = document.AddFood.totalMeet1.value;
   var Vegtotal = document.AddFood.totalVeg.value;
   var friuttotal = document.AddFood.totalFriut.value;
   var DiffRice2 = document.AddFood.DiffRice2.value;
