@@ -1,0 +1,303 @@
+.body {
+  background-color: white;
+}
+.hero {
+  background: white;
+}
+.hero .card1 {
+  background: rgb(254, 240, 214);
+  background: linear-gradient(
+    90deg,
+    rgba(254, 240, 214, 1) 0%,
+    rgba(255, 249, 236, 1) 100%
+  );
+
+  border-radius: 30px;
+}
+
+.hero .card1 .card1-header {
+  padding-top: 20px;
+  font-size: 14px;
+}
+
+.hero .card1 .card-body {
+  color: black;
+}
+.hero .card1 .card1-content {
+  background-color: #fff;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  align-items: center;
+  padding-left: 15px;
+  padding-right: 10px;
+  border-radius: 30px;
+  margin-bottom: 20px;
+  box-shadow: 0px 4px 12px -4px rgba(0, 0, 0, 0.35);
+}
+.lbl-radio {
+  text-align: center;
+  box-shadow: 0px 4px 12px -4px rgba(0, 0, 0, 0.35);
+  padding: 20px;
+  border: 1px solid #fff;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+  border-radius: 10px;
+  background-color: white;
+  color: black;
+}
+.hero .card1 button {
+  background-color: #e3b257;
+  color: white;
+  border: none;
+  width: 100%;
+  max-width: 475px;
+  margin-left: 0;
+  box-shadow: 0px 4px 12px -4px rgba(0, 0, 0, 0.35);
+}
+.hero .card1 .content2 {
+  border-radius: 30px;
+  box-shadow: 0px 4px 12px -4px rgba(0, 0, 0, 0.35);
+}
+.hero .card1 .content2 :read-only {
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+  text-align: center;
+}
+.hero .card1 h1 {
+  color: #012970;
+  font-size: 22px;
+  
+}
+.hero .card1 p {
+  color: #012970;
+  font-size: 15px;
+  padding-top: 15px;
+  padding-left: 20px;
+  text-align: justify;
+  width: 95%;
+  text-justify: inter-word;
+  
+}
+.content2 {
+  font-size: 50px;
+  background-color: white;
+  text-align: center;
+  margin-top: 20px;
+  max-width: 475px;
+  
+  align-items: center;
+}
+
+.hero .card2 {
+  background: rgb(250, 207, 207);
+  background: linear-gradient(
+    90deg,
+    rgba(250, 207, 207, 1) 0%,
+    rgba(254, 237, 237, 1) 100%
+  );
+  border-radius: 30px;
+}
+.hero .card2 button {
+  background-color: #cc6363;
+  color: white;
+  border: none;
+  width: 100%;
+  max-width: 475px;
+  margin-left: 0;
+  box-shadow: 0px 4px 12px -4px rgba(0, 0, 0, 0.35);
+}
+.hero .card2 .content2 {
+  border-radius: 30px;
+  box-shadow: 0px 4px 12px -4px rgba(0, 0, 0, 0.35);
+}
+.hero .card2 .content2 :read-only {
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+  text-align: center;
+}
+.hero .card2 .card2-header {
+  padding-top: 20px;
+  padding-left: 10px;
+  border-radius: 30px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+.hero .card2 h1 {
+  color: #012970;
+  font-size: 22px;
+  
+}
+.hero .card2 p {
+  color: #012970;
+  font-size: 15px;
+  padding-top: 15px;
+  padding-left: 20px;
+  text-align: justify;
+  width: 95%;
+  text-justify: inter-word;
+  
+}
+
+.hero .card3 {
+  background: rgb(217, 207, 222);
+  background: linear-gradient(
+    90deg,
+    rgba(217, 207, 222, 1) 0%,
+    rgba(244, 236, 247, 1) 100%
+  );
+  border-radius: 30px;
+}
+.hero .card3 .card3-header {
+  padding-top: 20px;
+  padding-left: 10px;
+  border-radius: 30px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+.hero .card3 h2 {
+  color: #012970;
+  font-size: 22px;
+  font-weight:bold;
+  
+}
+.hero .card3 p {
+  color: #012970;
+  font-size: 15px;
+  padding-top: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: justify;
+  width: 100%;
+  text-justify: inter-word;
+  
+}
+
+.hero .card3 .card3-content {
+  background-color: #fff;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  align-items: center;
+  padding-left: 15px;
+  padding-right: 10px;
+  border-radius: 30px;
+  margin-bottom: 20px;
+  box-shadow: 0px 4px 12px -4px rgba(0, 0, 0, 0.35);
+}
+.hero .card3 button {
+  background-color: #966bac;
+  color: white;
+  border: none;
+  width: 100%;
+  max-width: 475px;
+  margin-left: 0;
+  box-shadow: 0px 4px 12px -4px rgba(0, 0, 0, 0.35);
+}
+.hero .card3 .content2 {
+  border-radius: 30px;
+  box-shadow: 0px 4px 12px -4px rgba(0, 0, 0, 0.35);
+}
+.hero .card3 .content2 :read-only {
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+  text-align: center;
+}
+.hero .card3 .card3-header {
+  padding-top: 20px;
+  padding-left: 10px;
+  border-radius: 30px;
+  margin-bottom: 20px;
+}
+.hero .card3 .card1-content {
+  background-color: #fff;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  border-radius: 30px;
+  margin-bottom: 20px;
+  box-shadow: 0px 4px 12px -4px rgba(0, 0, 0, 0.35);
+}
+
+.hero .card4 {
+  background: rgb(190, 228, 242);
+  background: linear-gradient(
+    90deg,
+    rgba(190, 228, 242, 1) 0%,
+    rgba(235, 250, 255, 1) 100%
+  );
+  border-radius: 30px;
+}
+.hero .card4 h1{
+  font-size: 22px;
+}
+.hero .card5 {
+  background: rgb(250, 207, 207);
+  background: linear-gradient(
+    90deg,
+    rgba(250, 207, 207, 1) 0%,
+    rgba(254, 237, 237, 1) 100%
+  );
+  border-radius: 30px;
+}
+.hero .card5 .card5-content {
+  background-color: #fff;
+  padding-top: 20px;
+  padding-bottom: 20px;
+ 
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 30px;
+  margin-bottom: 20px;
+  box-shadow: 0px 4px 12px -4px rgba(0, 0, 0, 0.35);
+}
+.hero .card6 {
+  background: rgb(217, 207, 222);
+  background: linear-gradient(
+    90deg,
+    rgba(217, 207, 222, 1) 0%,
+    rgba(244, 236, 247, 1) 100%
+  );
+  border-radius: 30px;
+}
+.hero .card6 .card6-content {
+  background-color: #fff;
+  padding-top: 20px;
+  padding-bottom: 20px;
+ 
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 30px;
+  margin-bottom: 20px;
+  box-shadow: 0px 4px 12px -4px rgba(0, 0, 0, 0.35);
+}
+.hero .card7 {
+  background: rgb(190, 228, 242);
+  background: linear-gradient(
+    90deg,
+    rgba(190, 228, 242, 1) 0%,
+    rgba(235, 250, 255, 1) 100%
+  );
+  border-radius: 30px;
+}
+.hero .card7 .card7-content {
+  background-color: #fff;
+  padding-top: 20px;
+  padding-bottom: 20px;
+ 
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 30px;
+  margin-bottom: 20px;
+  box-shadow: 0px 4px 12px -4px rgba(0, 0, 0, 0.35);
+}
+.foot button{
+
+  color: white;
+  border: none;
+  width: 100%;
+  max-width: 305px;
+
+  box-shadow: 0px 4px 12px -4px rgba(0, 0, 0, 0.35);
+}
