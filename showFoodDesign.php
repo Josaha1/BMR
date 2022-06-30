@@ -76,14 +76,17 @@ if (!$_SESSION["Cid"]) {  //check session
                         .half-circle {
                                 width: 145px;
                                 height: 320px;
+                                -webkit-border-top-left-radius: 150px;
+                                -webkit-border-bottom-left-radius: 150px;
+                                -moz-border-radius-topleft: 150px;
+                                -moz-border-radius-bottomleft: 150px;
                                 border-top-left-radius: 150px;
-                                /* 100px of height + 10px of border */
                                 border-bottom-left-radius: 150px;
                                 border: 3px solid ForestGreen;
                                 overflow: hidden;
                                 border-right: 0;
                                 display: inline-block;
-                                background-color: whitesmoke;
+
                                 object-fit: cover;
 
                         }
@@ -96,10 +99,12 @@ if (!$_SESSION["Cid"]) {  //check session
                         .circle-top1 {
                                 width: 135px;
                                 height: 160px;
+                                -webkit-border-top-right-radius: 150px;
+                                -moz-border-radius-topright: 150px;
                                 border-top-right-radius: 150px;
                                 overflow: hidden;
                                 border: 3px solid Orange;
-                                background-color: whitesmoke;
+
                                 margin-left: -5px;
 
                                 padding-right: 12px;
@@ -108,21 +113,27 @@ if (!$_SESSION["Cid"]) {  //check session
                         .circle-bottom1 {
                                 width: 135px;
                                 height: 160px;
+                                -webkit-border-bottom-right-radius: 150px;
+                                -moz-border-radius-bottomright: 150px;
                                 border-bottom-right-radius: 150px;
                                 overflow: hidden;
-                                border: 3px solid Brown;
-                                background-color: whitesmoke;
+                                overflow: hidden;
+                                border: 3px solid brown;
+
                                 margin-left: -5px;
+
                                 padding-right: 12px;
                         }
 
                         .circle-top2 {
                                 width: 135px;
                                 height: 160px;
+                                -webkit-border-top-right-radius: 150px;
+                                -moz-border-radius-topright: 150px;
                                 border-top-right-radius: 150px;
                                 overflow: hidden;
                                 border: 3px solid Orange;
-                                background-color: whitesmoke;
+
                                 margin-left: -5px;
 
                                 padding-right: 12px;
@@ -131,10 +142,12 @@ if (!$_SESSION["Cid"]) {  //check session
                         .circle-bottom2 {
                                 width: 135px;
                                 height: 160px;
+                                -webkit-border-bottom-right-radius: 150px;
+                                -moz-border-radius-bottomright: 150px;
                                 border-bottom-right-radius: 150px;
                                 overflow: hidden;
                                 border: 3px solid Brown;
-                                background-color: whitesmoke;
+
                                 margin-left: -5px;
                                 padding-right: 12px;
                         }
@@ -142,10 +155,12 @@ if (!$_SESSION["Cid"]) {  //check session
                         .circle-top3 {
                                 width: 135px;
                                 height: 160px;
+                                -webkit-border-top-right-radius: 150px;
+                                -moz-border-radius-topright: 150px;
                                 border-top-right-radius: 150px;
                                 overflow: hidden;
                                 border: 3px solid Orange;
-                                background-color: whitesmoke;
+
                                 margin-left: -5px;
 
                                 padding-right: 12px;
@@ -154,12 +169,50 @@ if (!$_SESSION["Cid"]) {  //check session
                         .circle-bottom3 {
                                 width: 135px;
                                 height: 160px;
+                                -webkit-border-bottom-right-radius: 150px;
+                                -moz-border-radius-bottomright: 150px;
                                 border-bottom-right-radius: 150px;
                                 overflow: hidden;
                                 border: 3px solid Brown;
-                                background-color: whitesmoke;
+
                                 margin-left: -5px;
                                 padding-right: 12px;
+                        }
+
+                        .circle-top1 img {
+                                z-index: -1
+                        }
+
+                        .circle-top1 {
+                                z-index: 1;
+                        }
+
+
+
+                        #middleTop {
+                                width: 130px;
+                                height: 160px;
+                                -webkit-border-top-right-radius: 150px;
+                                -moz-border-radius-topright: 150px;
+                                border-top-right-radius: 150px;
+                                overflow: hidden;
+                        }
+
+                        #middleBottom {
+                                width: 130px;
+                                height: 160px;
+                                -webkit-border-bottom-right-radius: 10px;
+                                -moz-border-radius-bottomright: 150px;
+                                border-bottom-right-radius: 150px;
+                                overflow: hidden;
+
+                        }
+
+                        #box {
+
+                                width: 300px;
+                                height: 300px;
+
                         }
                 </style>
 
@@ -215,8 +268,50 @@ if (!$_SESSION["Cid"]) {  //check session
                                                                         foreach ($db->to_Obj($sql) as $rows) {
                                                                                 ////ไม่กินนม 
                                                                                 if ($rows['DrinkMike'] == '0') {
-                                                                                        if ($rows['RecommendKcal'] >= '1200' && $rows['RecommendKcal'] < '1400') {
+                                                                                        if ($rows['RecommendKcal'] < '1200') {
                                                                         ?>
+                                                                                                <script src="assets/js/Drinkmilk0/1200/food.js"></script>
+
+                                                                                                <img src="assets/img/D1-1400.jpeg" width="100%" style="max-width:500px;"><br>
+                                                                                                <div class="d-flex justify-content-center">
+                                                                                                        <div class="d-grid gap-1">
+                                                                                                                <div class="row">
+                                                                                                                        <div class="col">
+                                                                                                                                <div class="input-group mb-3">
+                                                                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2" style="color: black;" id="Rice">ข้าว (แป้ง)/ทัพพี <input class="form-control md-3" type="text" value="" size="20" name="totalRice1" id="totalRice1" readonly style="background-color: #fff;"> </a> <br>
+                                                                                                                                </div>
+                                                                                                                        </div>
+                                                                                                                        <div class="col">
+                                                                                                                                <div class="input-group mb-3">
+                                                                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal3" style="color: black;">เนื้อสัตว์ <input class="form-control" type="text" value="" size="20" name="totalMeet1" id="totalMeet1" readonly style="background-color: #fff;"></a>
+                                                                                                                                </div>
+                                                                                                                        </div>
+                                                                                                                </div>
+                                                                                                                <div class="row">
+                                                                                                                        <div class="col">
+                                                                                                                                <div class="input-group mb-3">
+                                                                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: black;">ผลไม้/ส่วน <input class="form-control" type="text" value="" size="20" name="totalFruit1" id="totalFruit1" readonly style="background-color: #fff;"></a><br>
+                                                                                                                                </div>
+                                                                                                                        </div>
+                                                                                                                        <div class="col">
+                                                                                                                                <div class="input-group mb-3">
+                                                                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: black;">นม/แก้ว <input class="form-control" type="text" value="" size="20" name="totalMilk1" id="totalMilk1" readonly style="background-color: #fff;"></a><br>
+                                                                                                                                </div>
+                                                                                                                        </div>
+
+                                                                                                                </div>
+                                                                                                                <div class="col">
+                                                                                                                        <div class="input-group mb-3">
+                                                                                                                                <a href="#" style="color: black;">ผัก <input class="form-control" type="number" value="" size="20" placeholder="ครึ่งจาน" readonly style="background-color: #fff;"></a><br>
+                                                                                                                        </div>
+                                                                                                                </div>
+                                                                                                        </div>
+                                                                                                </div>
+
+
+                                                                                        <?php
+                                                                                        } else  if ($rows['RecommendKcal'] >= '1200' && $rows['RecommendKcal'] < '1400') {
+                                                                                        ?>
 
                                                                                                 <script src="assets/js/Drinkmilk0/1200/food.js"></script>
 
@@ -541,7 +636,7 @@ if (!$_SESSION["Cid"]) {  //check session
                                                                                 }
                                                                                 ////กินนม 1 แก้ว
                                                                                 else if ($rows['DrinkMike'] == '1') {
-                                                                                        if ($rows['RecommendKcal'] >= '1200' && $rows['RecommendKcal'] < '1400') {
+                                                                                        if ($rows['RecommendKcal'] < '1200') {
                                                                                         ?>
                                                                                                 <script src="assets/js/Drinkmilk1/1200/food.js"></script>
 
@@ -580,6 +675,48 @@ if (!$_SESSION["Cid"]) {  //check session
                                                                                                                 </div>
                                                                                                         </div>
                                                                                                 </div>
+                                                                                        <?php
+                                                                                        } else if ($rows['RecommendKcal'] >= '1200' && $rows['RecommendKcal'] < '1400') {
+                                                                                        ?>
+                                                                                                <script src="assets/js/Drinkmilk1/1200/food.js"></script>
+
+                                                                                                <img src="assets/img/D1-1400.jpeg" width="100%" style="max-width:500px;"><br>
+                                                                                                <div class="d-flex justify-content-center">
+                                                                                                        <div class="d-grid gap-1">
+                                                                                                                <div class="row">
+                                                                                                                        <div class="col">
+                                                                                                                                <div class="input-group mb-3">
+                                                                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2" style="color: black;" id="Rice">ข้าว (แป้ง)/ทัพพี <input class="form-control md-3" type="text" value="" size="20" name="totalRice1" id="totalRice1" readonly style="background-color: #fff;"> </a> <br>
+                                                                                                                                </div>
+                                                                                                                        </div>
+                                                                                                                        <div class="col">
+                                                                                                                                <div class="input-group mb-3">
+                                                                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal3" style="color: black;">เนื้อสัตว์ <input class="form-control" type="text" value="" size="20" name="totalMeet1" id="totalMeet1" readonly style="background-color: #fff;"></a>
+                                                                                                                                </div>
+                                                                                                                        </div>
+                                                                                                                </div>
+                                                                                                                <div class="row">
+                                                                                                                        <div class="col">
+                                                                                                                                <div class="input-group mb-3">
+                                                                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: black;">ผลไม้/ส่วน <input class="form-control" type="text" value="" size="20" name="totalFruit1" id="totalFruit1" readonly style="background-color: #fff;"></a><br>
+                                                                                                                                </div>
+                                                                                                                        </div>
+                                                                                                                        <div class="col">
+                                                                                                                                <div class="input-group mb-3">
+                                                                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: black;">นม/แก้ว <input class="form-control" type="text" value="" size="20" name="totalMilk1" id="totalMilk1" readonly style="background-color: #fff;"></a><br>
+                                                                                                                                </div>
+                                                                                                                        </div>
+
+                                                                                                                </div>
+                                                                                                                <div class="col">
+                                                                                                                        <div class="input-group mb-3">
+                                                                                                                                <a href="#" style="color: black;">ผัก <input class="form-control" type="number" value="" size="20" placeholder="ครึ่งจาน" readonly style="background-color: #fff;"></a><br>
+                                                                                                                        </div>
+                                                                                                                </div>
+                                                                                                        </div>
+                                                                                                </div>
+
+
 
 
                                                                                         <?php
@@ -872,6 +1009,48 @@ if (!$_SESSION["Cid"]) {  //check session
                                                                                 }
                                                                                 ////กินนม 2 แก้ว
                                                                                 else {
+
+                                                                                        if ($rows['RecommendKcal'] < '1200') {
+                                                                                        ?>
+                                                                                                <script src="assets/js/Drinkmilk2/1200/food.js"></script>
+
+                                                                                                <img src="assets/img/D1-1400.jpeg" width="100%" style="max-width:500px;"><br>
+                                                                                                <div class="d-flex justify-content-center">
+                                                                                                        <div class="d-grid gap-1">
+                                                                                                                <div class="row">
+                                                                                                                        <div class="col">
+                                                                                                                                <div class="input-group mb-3">
+                                                                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2" style="color: black;" id="Rice">ข้าว (แป้ง)/ทัพพี <input class="form-control md-3" type="text" value="" size="20" name="totalRice1" id="totalRice1" readonly style="background-color: #fff;"> </a> <br>
+                                                                                                                                </div>
+                                                                                                                        </div>
+                                                                                                                        <div class="col">
+                                                                                                                                <div class="input-group mb-3">
+                                                                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal3" style="color: black;">เนื้อสัตว์ <input class="form-control" type="text" value="" size="20" name="totalMeet1" id="totalMeet1" readonly style="background-color: #fff;"></a>
+                                                                                                                                </div>
+                                                                                                                        </div>
+                                                                                                                </div>
+                                                                                                                <div class="row">
+                                                                                                                        <div class="col">
+                                                                                                                                <div class="input-group mb-3">
+                                                                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: black;">ผลไม้/ส่วน <input class="form-control" type="text" value="" size="20" name="totalFruit1" id="totalFruit1" readonly style="background-color: #fff;"></a><br>
+                                                                                                                                </div>
+                                                                                                                        </div>
+                                                                                                                        <div class="col">
+                                                                                                                                <div class="input-group mb-3">
+                                                                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: black;">นม/แก้ว <input class="form-control" type="text" value="" size="20" name="totalMilk1" id="totalMilk1" readonly style="background-color: #fff;"></a><br>
+                                                                                                                                </div>
+                                                                                                                        </div>
+
+                                                                                                                </div>
+                                                                                                                <div class="col">
+                                                                                                                        <div class="input-group mb-3">
+                                                                                                                                <a href="#" style="color: black;">ผัก <input class="form-control" type="number" value="" size="20" placeholder="ครึ่งจาน" readonly style="background-color: #fff;"></a><br>
+                                                                                                                        </div>
+                                                                                                                </div>
+                                                                                                        </div>
+                                                                                                </div>
+                                                                                        <?php
+                                                                                        }
                                                                                         if ($rows['RecommendKcal'] >= '1200' && $rows['RecommendKcal'] < '1400') {
                                                                                         ?>
 
@@ -1201,11 +1380,16 @@ if (!$_SESSION["Cid"]) {  //check session
 
                                                                 </div>
                                                                 <div class="d-flex justify-content-center">
-                                                                        <b>
-                                                                                <div class="row">
-                                                                                        <p>ปริมาณพลังงานที่ต้องการ <?php echo ($rows['RecommendKcal']); ?> </p>
-                                                                                </div>
-                                                                        </b>
+
+                                                                        <div class="row row-cols-12">
+                                                                                <p>
+                                                                                        <b>
+                                                                                                <div class="col md-9">ปริมาณพลังงานที่ต้องการ</div>
+                                                                                                <div class="col md-3"> <?php echo ($rows['RecommendKcal']); ?></div>
+                                                                                        </b>
+                                                                                </p>
+                                                                        </div>
+
                                                                 </div>
                                                         </div>
                                                 </div>
@@ -1360,18 +1544,28 @@ if (!$_SESSION["Cid"]) {  //check session
 
                                                                                 </div>
                                                                                 <div class="d-grid gap-2">
-                                                                                        <div class="circle">
+                                                                                        <div class="circle" style="display: flex;flex-wrap: nowrap;justify-content: center;">
                                                                                                 <div class="half-circle">
                                                                                                         <img id="scream" width="350px" height="100%" src="https://ichef.bbci.co.uk/news/640/cpsprodpb/0E1B/production/_113111630_fruitandveg.jpg" alt="The Scream" style="object-fit: cover;">
 
                                                                                                 </div>
+
+
                                                                                                 <div class="half-circle-right">
-                                                                                                        <div class="circle-top1">
+                                                                                                        <div id="middleTop">
+                                                                                                                <div id="box">
+                                                                                                                        <div class="circle-top1">
 
+                                                                                                                        </div>
+                                                                                                                </div>
                                                                                                         </div>
-                                                                                                        <div class="circle-bottom1">
+                                                                                                        <div id="middleBottom">
+                                                                                                                <div id="box">
+                                                                                                                        <div class="circle-bottom1">
 
 
+                                                                                                                        </div>
+                                                                                                                </div>
                                                                                                         </div>
                                                                                                 </div>
                                                                                         </div>
@@ -1476,18 +1670,26 @@ if (!$_SESSION["Cid"]) {  //check session
 
                                                                                 </div>
                                                                                 <div class="d-grid gap-2">
-                                                                                        <div class="circle">
+                                                                                        <div class="circle" style="display: flex;flex-wrap: nowrap;justify-content: center;">
                                                                                                 <div class="half-circle">
                                                                                                         <img id="scream" width="350px" height="100%" src="https://ichef.bbci.co.uk/news/640/cpsprodpb/0E1B/production/_113111630_fruitandveg.jpg" alt="The Scream" style="object-fit: cover;">
 
                                                                                                 </div>
                                                                                                 <div class="half-circle-right">
-                                                                                                        <div class="circle-top2">
+                                                                                                        <div id="middleTop">
+                                                                                                                <div id="box">
+                                                                                                                        <div class="circle-top2">
 
+                                                                                                                        </div>
+                                                                                                                </div>
                                                                                                         </div>
-                                                                                                        <div class="circle-bottom2">
+                                                                                                        <div id="middleBottom">
+                                                                                                                <div id="box">
+                                                                                                                        <div class="circle-bottom2">
 
 
+                                                                                                                        </div>
+                                                                                                                </div>
                                                                                                         </div>
                                                                                                 </div>
                                                                                         </div>
@@ -1589,18 +1791,26 @@ if (!$_SESSION["Cid"]) {  //check session
 
                                                                                 </div>
                                                                                 <div class="d-grid gap-2">
-                                                                                        <div class="circle">
+                                                                                        <div class="circle" style="display: flex;flex-wrap: nowrap;justify-content: center;">
                                                                                                 <div class="half-circle">
                                                                                                         <img id="scream" width="350px" height="100%" src="https://ichef.bbci.co.uk/news/640/cpsprodpb/0E1B/production/_113111630_fruitandveg.jpg" alt="The Scream" style="object-fit: cover;">
 
                                                                                                 </div>
                                                                                                 <div class="half-circle-right">
-                                                                                                        <div class="circle-top3">
+                                                                                                        <div id="middleTop">
+                                                                                                                <div id="box">
+                                                                                                                        <div class="circle-top3">
 
+                                                                                                                        </div>
+                                                                                                                </div>
                                                                                                         </div>
-                                                                                                        <div class="circle-bottom3">
+                                                                                                        <div id="middleBottom">
+                                                                                                                <div id="box">
+                                                                                                                        <div class="circle-bottom3">
 
 
+                                                                                                                        </div>
+                                                                                                                </div>
                                                                                                         </div>
                                                                                                 </div>
                                                                                         </div>
@@ -1628,8 +1838,19 @@ if (!$_SESSION["Cid"]) {  //check session
                                         </div>
 
                                 </div>
+                                <br>
+                                <div class="foot">
+                                        <center>
+                                                <div class="d-flex justify-content-center">
+                                                        <div class="col-12 mx-auto">
+                                                                <button class="btn btn-primary btn-lg" type="submit">บันทึกสัดส่วนอาหาร <i class="bi bi-arrow-right-circle-fill"></i></button>
+                                                        </div>
+                                                </div>
+                                        </center>
+                                </div>
                 </form>
                 <!-- End Form -->
+
                 </section><!-- End Hero -->
 
                 <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>

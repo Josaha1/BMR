@@ -48,7 +48,7 @@ $(function () {
       var img = $(
         "<img src='" +
           src +
-          '\'  width="50" height="40" id="imageR1_' +
+          '\'  width="50" class="img-addon" height="40" id="imageR1_' +
           imageToADD +
           '">'
       );
