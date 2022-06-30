@@ -241,13 +241,16 @@
   );
   border-radius: 30px;
 }
+.hero .card5 h1{
+  font-size: 22px;
+}
 .hero .card5 .card5-content {
   background-color: #fff;
   padding-top: 20px;
   padding-bottom: 20px;
  
   padding-left: 10px;
-  padding-right: 10px;
+  padding-right: 40px;
   border-radius: 30px;
   margin-bottom: 20px;
   box-shadow: 0px 4px 12px -4px rgba(0, 0, 0, 0.35);
@@ -261,13 +264,16 @@
   );
   border-radius: 30px;
 }
+.hero .card6 h1{
+  font-size: 22px;
+}
 .hero .card6 .card6-content {
   background-color: #fff;
   padding-top: 20px;
   padding-bottom: 20px;
  
   padding-left: 10px;
-  padding-right: 10px;
+  padding-right: 40px;
   border-radius: 30px;
   margin-bottom: 20px;
   box-shadow: 0px 4px 12px -4px rgba(0, 0, 0, 0.35);
@@ -281,13 +287,16 @@
   );
   border-radius: 30px;
 }
+.hero .card7 h1{
+  font-size: 22px;
+}
 .hero .card7 .card7-content {
   background-color: #fff;
   padding-top: 20px;
   padding-bottom: 20px;
  
   padding-left: 10px;
-  padding-right: 10px;
+  padding-right: 40px;
   border-radius: 30px;
   margin-bottom: 20px;
   box-shadow: 0px 4px 12px -4px rgba(0, 0, 0, 0.35);

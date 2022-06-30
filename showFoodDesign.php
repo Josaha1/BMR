@@ -235,7 +235,7 @@ if (!$_SESSION["Cid"]) {  //check session
                                                 <li><a class="nav-link" href="showFoodDesign.php">คำนวนพลังงาน</a></li>
                                                 <li class="dropdown"><a href="#"><span>ผู้ใช้งาน</span> <i class="bi bi-chevron-down"></i></a>
                                                         <ul>
-                                                                <li><a href="#">ดูพลังงานที่ใช้</a></li>
+                                                                <li><a href="showFinishFood.php">ดูพลังงานที่ใช้</a></li>
                                                                 <li><a href="logout.php">ออกจากระบบ</a>
                                                                 </li>
                                                         </ul>
@@ -248,7 +248,7 @@ if (!$_SESSION["Cid"]) {  //check session
                 </header><!-- End Header -->
 
                 <!-- ======= Hero Section ======= -->
-                <form class="mb-3" name="AddFood" action="#" method="post">
+                <form class="mb-3" name="AddFood" action="assets/assesment/FoodSubmit.php" method="post">
                         <section id="hero" class="hero d-flex align-items-center">
                                 <div class="container">
                                         <div class="row">
@@ -295,7 +295,7 @@ if (!$_SESSION["Cid"]) {  //check session
                                                                                                                         </div>
                                                                                                                         <div class="col">
                                                                                                                                 <div class="input-group mb-3">
-                                                                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: black;">นม/แก้ว <input class="form-control" type="text" value="" size="20" name="totalMilk1" id="totalMilk1" readonly style="background-color: #fff;"></a><br>
+                                                                                                                                        <a href="#"  style="color: black;">นม/แก้ว <input class="form-control" type="text" value="" size="20" name="totalMilk1" id="totalMilk1" readonly style="background-color: #fff;"></a><br>
                                                                                                                                 </div>
                                                                                                                         </div>
 
@@ -338,7 +338,7 @@ if (!$_SESSION["Cid"]) {  //check session
                                                                                                                         </div>
                                                                                                                         <div class="col">
                                                                                                                                 <div class="input-group mb-3">
-                                                                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: black;">นม/แก้ว <input class="form-control" type="text" value="" size="20" name="totalMilk1" id="totalMilk1" readonly style="background-color: #fff;"></a><br>
+                                                                                                                                        <a href="#" style="color: black;">นม/แก้ว <input class="form-control" type="text" value="" size="20" name="totalMilk1" id="totalMilk1" readonly style="background-color: #fff;"></a><br>
                                                                                                                                 </div>
                                                                                                                         </div>
 
@@ -379,7 +379,7 @@ if (!$_SESSION["Cid"]) {  //check session
                                                                                                                         </div>
                                                                                                                         <div class="col">
                                                                                                                                 <div class="input-group mb-3">
-                                                                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: black;">นม/แก้ว <input class="form-control" type="text" value="" size="20" name="totalMilk1" id="totalMilk1" readonly style="background-color: #fff;"></a><br>
+                                                                                                                                        <a href="#"  style="color: black;">นม/แก้ว <input class="form-control" type="text" value="" size="20" name="totalMilk1" id="totalMilk1" readonly style="background-color: #fff;"></a><br>
                                                                                                                                 </div>
                                                                                                                         </div>
 
@@ -419,7 +419,7 @@ if (!$_SESSION["Cid"]) {  //check session
                                                                                                                         </div>
                                                                                                                         <div class="col">
                                                                                                                                 <div class="input-group mb-3">
-                                                                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: black;">นม/แก้ว <input class="form-control" type="text" value="" size="20" name="totalMilk1" id="totalMilk1" readonly style="background-color: #fff;"></a><br>
+                                                                                                                                        <a href="#"  style="color: black;">นม/แก้ว <input class="form-control" type="text" value="" size="20" name="totalMilk1" id="totalMilk1" readonly style="background-color: #fff;"></a><br>
                                                                                                                                 </div>
                                                                                                                         </div>
 
@@ -459,7 +459,7 @@ if (!$_SESSION["Cid"]) {  //check session
                                                                                                                         </div>
                                                                                                                         <div class="col">
                                                                                                                                 <div class="input-group mb-3">
-                                                                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: black;">นม/แก้ว <input class="form-control" type="text" value="" size="20" name="totalMilk1" id="totalMilk1" readonly style="background-color: #fff;"></a><br>
+                                                                                                                                        <a href="#"  style="color: black;">นม/แก้ว <input class="form-control" type="text" value="" size="20" name="totalMilk1" id="totalMilk1" readonly style="background-color: #fff;"></a><br>
                                                                                                                                 </div>
                                                                                                                         </div>
 
@@ -499,7 +499,7 @@ if (!$_SESSION["Cid"]) {  //check session
                                                                                                                         </div>
                                                                                                                         <div class="col">
                                                                                                                                 <div class="input-group mb-3">
-                                                                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: black;">นม/แก้ว <input class="form-control" type="text" value="" size="20" name="totalMilk1" id="totalMilk1" readonly style="background-color: #fff;"></a><br>
+                                                                                                                                        <a href="#" style="color: black;">นม/แก้ว <input class="form-control" type="text" value="" size="20" name="totalMilk1" id="totalMilk1" readonly style="background-color: #fff;"></a><br>
                                                                                                                                 </div>
                                                                                                                         </div>
 
@@ -539,7 +539,7 @@ if (!$_SESSION["Cid"]) {  //check session
                                                                                                                         </div>
                                                                                                                         <div class="col">
                                                                                                                                 <div class="input-group mb-3">
-                                                                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: black;">นม/แก้ว <input class="form-control" type="text" value="" size="20" name="totalMilk1" id="totalMilk1" readonly style="background-color: #fff;"></a><br>
+                                                                                                                                        <a href="#"  style="color: black;">นม/แก้ว <input class="form-control" type="text" value="" size="20" name="totalMilk1" id="totalMilk1" readonly style="background-color: #fff;"></a><br>
                                                                                                                                 </div>
                                                                                                                         </div>
 
@@ -579,7 +579,7 @@ if (!$_SESSION["Cid"]) {  //check session
                                                                                                                         </div>
                                                                                                                         <div class="col">
                                                                                                                                 <div class="input-group mb-3">
-                                                                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: black;">นม/แก้ว <input class="form-control" type="text" value="" size="20" name="totalMilk1" id="totalMilk1" readonly style="background-color: #fff;"></a><br>
+                                                                                                                                        <a href="#" style="color: black;">นม/แก้ว <input class="form-control" type="text" value="" size="20" name="totalMilk1" id="totalMilk1" readonly style="background-color: #fff;"></a><br>
                                                                                                                                 </div>
                                                                                                                         </div>
 
@@ -619,7 +619,7 @@ if (!$_SESSION["Cid"]) {  //check session
                                                                                                                         </div>
                                                                                                                         <div class="col">
                                                                                                                                 <div class="input-group mb-3">
-                                                                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: black;">นม/แก้ว <input class="form-control" type="text" value="" size="20" name="totalMilk1" id="totalMilk1" readonly style="background-color: #fff;"></a><br>
+                                                                                                                                        <a href="#"  style="color: black;">นม/แก้ว <input class="form-control" type="text" value="" size="20" name="totalMilk1" id="totalMilk1" readonly style="background-color: #fff;"></a><br>
                                                                                                                                 </div>
                                                                                                                         </div>
 
@@ -663,7 +663,7 @@ if (!$_SESSION["Cid"]) {  //check session
                                                                                                                         </div>
                                                                                                                         <div class="col">
                                                                                                                                 <div class="input-group mb-3">
-                                                                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: black;">นม/แก้ว <input class="form-control" type="text" value="" size="20" name="totalMilk1" id="totalMilk1" readonly style="background-color: #fff;"></a><br>
+                                                                                                                                        <a href="#"  style="color: black;">นม/แก้ว <input class="form-control" type="text" value="" size="20" name="totalMilk1" id="totalMilk1" readonly style="background-color: #fff;"></a><br>
                                                                                                                                 </div>
                                                                                                                         </div>
 
@@ -703,7 +703,7 @@ if (!$_SESSION["Cid"]) {  //check session
                                                                                                                         </div>
                                                                                                                         <div class="col">
                                                                                                                                 <div class="input-group mb-3">
-                                                                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: black;">นม/แก้ว <input class="form-control" type="text" value="" size="20" name="totalMilk1" id="totalMilk1" readonly style="background-color: #fff;"></a><br>
+                                                                                                                                        <a href="#"  style="color: black;">นม/แก้ว <input class="form-control" type="text" value="" size="20" name="totalMilk1" id="totalMilk1" readonly style="background-color: #fff;"></a><br>
                                                                                                                                 </div>
                                                                                                                         </div>
 
@@ -748,7 +748,7 @@ if (!$_SESSION["Cid"]) {  //check session
                                                                                                                         </div>
                                                                                                                         <div class="col">
                                                                                                                                 <div class="input-group mb-3">
-                                                                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: black;">นม/แก้ว <input class="form-control" type="text" value="" size="20" name="totalMilk1" id="totalMilk1" readonly style="background-color: #fff;"></a><br>
+                                                                                                                                        <a href="#"  style="color: black;">นม/แก้ว <input class="form-control" type="text" value="" size="20" name="totalMilk1" id="totalMilk1" readonly style="background-color: #fff;"></a><br>
                                                                                                                                 </div>
                                                                                                                         </div>
 
@@ -791,7 +791,7 @@ if (!$_SESSION["Cid"]) {  //check session
                                                                                                                         </div>
                                                                                                                         <div class="col">
                                                                                                                                 <div class="input-group mb-3">
-                                                                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: black;">นม/แก้ว <input class="form-control" type="text" value="" size="20" name="totalMilk1" id="totalMilk1" readonly style="background-color: #fff;"></a><br>
+                                                                                                                                        <a href="#"  style="color: black;">นม/แก้ว <input class="form-control" type="text" value="" size="20" name="totalMilk1" id="totalMilk1" readonly style="background-color: #fff;"></a><br>
                                                                                                                                 </div>
                                                                                                                         </div>
 
@@ -831,7 +831,7 @@ if (!$_SESSION["Cid"]) {  //check session
                                                                                                                         </div>
                                                                                                                         <div class="col">
                                                                                                                                 <div class="input-group mb-3">
-                                                                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: black;">นม/แก้ว <input class="form-control" type="text" value="" size="20" name="totalMilk1" id="totalMilk1" readonly style="background-color: #fff;"></a><br>
+                                                                                                                                        <a href="#"  style="color: black;">นม/แก้ว <input class="form-control" type="text" value="" size="20" name="totalMilk1" id="totalMilk1" readonly style="background-color: #fff;"></a><br>
                                                                                                                                 </div>
                                                                                                                         </div>
 
@@ -871,7 +871,7 @@ if (!$_SESSION["Cid"]) {  //check session
                                                                                                                         </div>
                                                                                                                         <div class="col">
                                                                                                                                 <div class="input-group mb-3">
-                                                                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: black;">นม/แก้ว <input class="form-control" type="text" value="" size="20" name="totalMilk1" id="totalMilk1" readonly style="background-color: #fff;"></a><br>
+                                                                                                                                        <a href="#" style="color: black;">นม/แก้ว <input class="form-control" type="text" value="" size="20" name="totalMilk1" id="totalMilk1" readonly style="background-color: #fff;"></a><br>
                                                                                                                                 </div>
                                                                                                                         </div>
 
@@ -912,7 +912,7 @@ if (!$_SESSION["Cid"]) {  //check session
                                                                                                                         </div>
                                                                                                                         <div class="col">
                                                                                                                                 <div class="input-group mb-3">
-                                                                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: black;">นม/แก้ว <input class="form-control" type="text" value="" size="20" name="totalMilk1" id="totalMilk1" readonly style="background-color: #fff;"></a><br>
+                                                                                                                                        <a href="#" style="color: black;">นม/แก้ว <input class="form-control" type="text" value="" size="20" name="totalMilk1" id="totalMilk1" readonly style="background-color: #fff;"></a><br>
                                                                                                                                 </div>
                                                                                                                         </div>
 
@@ -952,7 +952,7 @@ if (!$_SESSION["Cid"]) {  //check session
                                                                                                                         </div>
                                                                                                                         <div class="col">
                                                                                                                                 <div class="input-group mb-3">
-                                                                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: black;">นม/แก้ว <input class="form-control" type="text" value="" size="20" name="totalMilk1" id="totalMilk1" readonly style="background-color: #fff;"></a><br>
+                                                                                                                                        <a href="#"  style="color: black;">นม/แก้ว <input class="form-control" type="text" value="" size="20" name="totalMilk1" id="totalMilk1" readonly style="background-color: #fff;"></a><br>
                                                                                                                                 </div>
                                                                                                                         </div>
 
@@ -992,7 +992,7 @@ if (!$_SESSION["Cid"]) {  //check session
                                                                                                                         </div>
                                                                                                                         <div class="col">
                                                                                                                                 <div class="input-group mb-3">
-                                                                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: black;">นม/แก้ว <input class="form-control" type="text" value="" size="20" name="totalMilk1" id="totalMilk1" readonly style="background-color: #fff;"></a><br>
+                                                                                                                                        <a href="#"  style="color: black;">นม/แก้ว <input class="form-control" type="text" value="" size="20" name="totalMilk1" id="totalMilk1" readonly style="background-color: #fff;"></a><br>
                                                                                                                                 </div>
                                                                                                                         </div>
 
@@ -1037,7 +1037,7 @@ if (!$_SESSION["Cid"]) {  //check session
                                                                                                                         </div>
                                                                                                                         <div class="col">
                                                                                                                                 <div class="input-group mb-3">
-                                                                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: black;">นม/แก้ว <input class="form-control" type="text" value="" size="20" name="totalMilk1" id="totalMilk1" readonly style="background-color: #fff;"></a><br>
+                                                                                                                                        <a href="#"  style="color: black;">นม/แก้ว <input class="form-control" type="text" value="" size="20" name="totalMilk1" id="totalMilk1" readonly style="background-color: #fff;"></a><br>
                                                                                                                                 </div>
                                                                                                                         </div>
 
@@ -1079,7 +1079,7 @@ if (!$_SESSION["Cid"]) {  //check session
                                                                                                                         </div>
                                                                                                                         <div class="col">
                                                                                                                                 <div class="input-group mb-3">
-                                                                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: black;">นม/แก้ว <input class="form-control" type="text" value="" size="20" name="totalMilk1" id="totalMilk1" readonly style="background-color: #fff;"></a><br>
+                                                                                                                                        <a href="#"  style="color: black;">นม/แก้ว <input class="form-control" type="text" value="" size="20" name="totalMilk1" id="totalMilk1" readonly style="background-color: #fff;"></a><br>
                                                                                                                                 </div>
                                                                                                                         </div>
 
@@ -1120,7 +1120,7 @@ if (!$_SESSION["Cid"]) {  //check session
                                                                                                                         </div>
                                                                                                                         <div class="col">
                                                                                                                                 <div class="input-group mb-3">
-                                                                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: black;">นม/แก้ว <input class="form-control" type="text" value="" size="20" name="totalMilk1" id="totalMilk1" readonly style="background-color: #fff;"></a><br>
+                                                                                                                                        <a href="#"  style="color: black;">นม/แก้ว <input class="form-control" type="text" value="" size="20" name="totalMilk1" id="totalMilk1" readonly style="background-color: #fff;"></a><br>
                                                                                                                                 </div>
                                                                                                                         </div>
 
@@ -1160,7 +1160,7 @@ if (!$_SESSION["Cid"]) {  //check session
                                                                                                                         </div>
                                                                                                                         <div class="col">
                                                                                                                                 <div class="input-group mb-3">
-                                                                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: black;">นม/แก้ว <input class="form-control" type="text" value="" size="20" name="totalMilk1" id="totalMilk1" readonly style="background-color: #fff;"></a><br>
+                                                                                                                                        <a href="#"  style="color: black;">นม/แก้ว <input class="form-control" type="text" value="" size="20" name="totalMilk1" id="totalMilk1" readonly style="background-color: #fff;"></a><br>
                                                                                                                                 </div>
                                                                                                                         </div>
 
@@ -1200,7 +1200,7 @@ if (!$_SESSION["Cid"]) {  //check session
                                                                                                                         </div>
                                                                                                                         <div class="col">
                                                                                                                                 <div class="input-group mb-3">
-                                                                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: black;">นม/แก้ว <input class="form-control" type="text" value="" size="20" name="totalMilk1" id="totalMilk1" readonly style="background-color: #fff;"></a><br>
+                                                                                                                                        <a href="#"  style="color: black;">นม/แก้ว <input class="form-control" type="text" value="" size="20" name="totalMilk1" id="totalMilk1" readonly style="background-color: #fff;"></a><br>
                                                                                                                                 </div>
                                                                                                                         </div>
 
@@ -1240,7 +1240,7 @@ if (!$_SESSION["Cid"]) {  //check session
                                                                                                                         </div>
                                                                                                                         <div class="col">
                                                                                                                                 <div class="input-group mb-3">
-                                                                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: black;">นม/แก้ว <input class="form-control" type="text" value="" size="20" name="totalMilk1" id="totalMilk1" readonly style="background-color: #fff;"></a><br>
+                                                                                                                                        <a href="#"  style="color: black;">นม/แก้ว <input class="form-control" type="text" value="" size="20" name="totalMilk1" id="totalMilk1" readonly style="background-color: #fff;"></a><br>
                                                                                                                                 </div>
                                                                                                                         </div>
 
@@ -1280,7 +1280,7 @@ if (!$_SESSION["Cid"]) {  //check session
                                                                                                                         </div>
                                                                                                                         <div class="col">
                                                                                                                                 <div class="input-group mb-3">
-                                                                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: black;">นม/แก้ว <input class="form-control" type="text" value="" size="20" name="totalMilk1" id="totalMilk1" readonly style="background-color: #fff;"></a><br>
+                                                                                                                                        <a href="#"  style="color: black;">นม/แก้ว <input class="form-control" type="text" value="" size="20" name="totalMilk1" id="totalMilk1" readonly style="background-color: #fff;"></a><br>
                                                                                                                                 </div>
                                                                                                                         </div>
 
@@ -1320,7 +1320,7 @@ if (!$_SESSION["Cid"]) {  //check session
                                                                                                                         </div>
                                                                                                                         <div class="col">
                                                                                                                                 <div class="input-group mb-3">
-                                                                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: black;">นม/แก้ว <input class="form-control" type="text" value="" size="20" name="totalMilk1" id="totalMilk1" readonly style="background-color: #fff;"></a><br>
+                                                                                                                                        <a href="#"  style="color: black;">นม/แก้ว <input class="form-control" type="text" value="" size="20" name="totalMilk1" id="totalMilk1" readonly style="background-color: #fff;"></a><br>
                                                                                                                                 </div>
                                                                                                                         </div>
 
@@ -1360,7 +1360,7 @@ if (!$_SESSION["Cid"]) {  //check session
                                                                                                                         </div>
                                                                                                                         <div class="col">
                                                                                                                                 <div class="input-group mb-3">
-                                                                                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: black;">นม/แก้ว <input class="form-control" type="text" value="" size="20" name="totalMilk1" id="totalMilk1" readonly style="background-color: #fff;"></a><br>
+                                                                                                                                        <a href="#" style="color: black;">นม/แก้ว <input class="form-control" type="text" value="" size="20" name="totalMilk1" id="totalMilk1" readonly style="background-color: #fff;"></a><br>
                                                                                                                                 </div>
                                                                                                                         </div>
 
@@ -1412,7 +1412,7 @@ if (!$_SESSION["Cid"]) {  //check session
                                                                 </div>
                                                                 <div class="modal-body">
                                                                         <center>
-                                                                                <img src="assets/img/ผลไม้.png" style="max-width:300px;"><br>
+                                                                                <img src="assets/img/ผลไม้.png" style="width: 100%;;max-width:500px;"><br>
 
                                                                         </center>
                                                                 </div>
@@ -1433,7 +1433,7 @@ if (!$_SESSION["Cid"]) {  //check session
                                                                 </div>
                                                                 <div class="modal-body">
                                                                         <center>
-                                                                                <img src="assets/img/ข้าวแป้ง.png" style="max-width:300px;"><br>
+                                                                                <img src="assets/img/ข้าวแป้ง.png" style="width: 100%;;max-width:500px;"><br>
 
                                                                         </center>
                                                                 </div>
@@ -1454,7 +1454,7 @@ if (!$_SESSION["Cid"]) {  //check session
                                                                 </div>
                                                                 <div class="modal-body">
                                                                         <center>
-                                                                                <img src="assets/img/เนื้อสัตว์.png" style="max-width:300px;"><br>
+                                                                                <img src="assets/img/เนื้อสัตว์.png" style="width: 100%;;max-width:500px;"><br>
                                                                         </center>
                                                                 </div>
                                                                 <div class="modal-footer">
@@ -1475,7 +1475,7 @@ if (!$_SESSION["Cid"]) {  //check session
                                 <div class="container">
                                         <div class="row">
                                                 <div class="card5 text-center">
-                                                        <div class="card2-header">
+                                                        <div class="card5-header">
                                                                 <br>
                                                                 <h1>Step 1 : มื้อเช้า</h1>
 

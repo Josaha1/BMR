@@ -154,7 +154,7 @@ if (!$_SESSION["Cid"]) {  //check session
             <li><a class="nav-link" href="showFoodDesign.php">คำนวนพลังงาน</a></li>
             <li class="dropdown"><a href="#"><span>ผู้ใช้งาน</span> <i class="bi bi-chevron-down"></i></a>
               <ul>
-                <li><a href="#">ดูพลังงานที่ใช้</a></li>
+                <li><a href="showFinishFood.php">ดูพลังงานที่ใช้</a></li>
                 <li><a href="logout.php">ออกจากระบบ</a>
                 </li>
               </ul>
