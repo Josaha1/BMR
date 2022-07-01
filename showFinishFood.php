@@ -155,6 +155,20 @@ if (!$_SESSION["Cid"]) {  //check session
                                                 </div>
 
                                             </div>
+                                            <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+                                                <div class="col-md-4">
+                                                    <label for="DiffRice1" class="form-label">ผัก</label>
+                                                </div>
+
+                                                <div class="col-md-5">
+                                                    <div class="input-group w-auto justify-content-end align-items-center">
+
+                                                        <input type="text" step="1" max="10" value="ครึ่งจาน" class="quantity-field border-0 text-center w-25" name="DiffMilk3" id="DiffMilk3" onInput="addFood();" value="0" readonly>
+
+                                                    </div>
+                                                </div>
+
+                                            </div>
                                             <div class="d-grid gap-2">
                                                 <div class="circle" style="display: flex;flex-wrap: nowrap;justify-content: center;">
                                                     <div class="half-circle">
@@ -281,6 +295,20 @@ if (!$_SESSION["Cid"]) {  //check session
                                                 </div>
 
                                             </div>
+                                            <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+                                                <div class="col-md-4">
+                                                    <label for="DiffRice1" class="form-label">ผัก</label>
+                                                </div>
+
+                                                <div class="col-md-5">
+                                                    <div class="input-group w-auto justify-content-end align-items-center">
+
+                                                        <input type="text" step="1" max="10" value="ครึ่งจาน" class="quantity-field border-0 text-center w-25" name="DiffMilk3" id="DiffMilk3" onInput="addFood();" value="0" readonly>
+
+                                                    </div>
+                                                </div>
+
+                                            </div>
                                             <div class="d-grid gap-2">
                                                 <div class="circle" style="display: flex;flex-wrap: nowrap;justify-content: center;">
                                                     <div class="half-circle">
@@ -397,6 +425,20 @@ if (!$_SESSION["Cid"]) {  //check session
                                                     <div class="input-group w-auto justify-content-end align-items-center">
 
                                                         <input type="text" step="1" max="10" value="<?php echo ($rows['Milk3']); ?>" class="quantity-field border-0 text-center w-25" name="DiffMilk3" id="DiffMilk3" onInput="addFood();" value="0" readonly>
+
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+                                                <div class="col-md-4">
+                                                    <label for="DiffRice1" class="form-label">ผัก</label>
+                                                </div>
+
+                                                <div class="col-md-5">
+                                                    <div class="input-group w-auto justify-content-end align-items-center">
+
+                                                        <input type="text" step="1" max="10" value="ครึ่งจาน" class="quantity-field border-0 text-center w-25" name="DiffMilk3" id="DiffMilk3" onInput="addFood();" value="0" readonly>
 
                                                     </div>
                                                 </div>
