@@ -311,3 +311,8 @@
 
   box-shadow: 0px 4px 12px -4px rgba(0, 0, 0, 0.35);
 }
+@media print 
+{ 
+#non-printable { display: none; } 
+#printable { display: block; } 
+} 

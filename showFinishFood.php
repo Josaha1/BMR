@@ -78,267 +78,393 @@ if (!$_SESSION["Cid"]) {  //check session
 
             </div>
         </header><!-- End Header -->
-        <section id="" class="">
-
-
-            <div class="container">
-                <div class="d-flex justify-content-center">
-                    <div class="row row-cols-12 row-cols-lg-12 g-2 g-lg-3">
-                        <?php
-                        foreach ($db->to_Obj($sql) as $rows) {
-                        ?>
-                             <section >
-                                <div class="container">
-                                        <div class="row">
-                                                <div class="card5 text-center">
-                                                        <div class="card5-header">
-                                                                <br>
-                                                                <h1>Step 1 : มื้อเช้า</h1>
-
-                                                        </div>
-                                                        <div class="card-body">
-                                                                <div class="card5-content">
-
-                                                                        <div class="d-grid gap-4">
-                                                                                <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
-                                                                                        <div class="col-md-4">
-                                                                                                <label for="DiffRice1" class="form-label">ข้าว/แป้ง</label>
-                                                                                        </div>
-                                                                                        <div class="col-md-5">
-                                                                                                <div class="input-group w-auto justify-content-end align-items-center">
-                                                                                                        <input type="button" value="-" class="button-minus border rounded-circle  icon-shape icon-sm mx-1 " data-field="DiffRice1" id="decremR1">
-                                                                                                        <input type="text" step="1" max="10" value="0" class="quantity-field border-0 text-center w-25" name="DiffRice1" id="DiffRice1" onInput="addFood();" value="0" readonly>
-                                                                                                        <input type="button" value="+" class="button-plus border rounded-circle icon-shape icon-sm " data-field="DiffRice1" id="incremR1">
-                                                                                                </div>
-                                                                                        </div>
-
-
-
-                                                                                </div>
-                                                                                <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
-                                                                                        <div class="col-md-4">
-                                                                                                <label for="DiffRice1" class="form-label">เนื้อสัตว์</label>
-                                                                                        </div>
-
-                                                                                        <div class="col-md-5">
-                                                                                                <div class="input-group w-auto justify-content-end align-items-center">
-                                                                                                        <input type="button" value="-" class="button-minus border rounded-circle  icon-shape icon-sm mx-1 " data-field="DiffMeet1" id="decremM1">
-                                                                                                        <input type="text" step="1" max="10" value="0" class="quantity-field border-0 text-center w-25" name="DiffMeet1" id="DiffMeet1" onInput="addFood();" value="0" readonly>
-                                                                                                        <input type="button" value="+" class="button-plus border rounded-circle icon-shape icon-sm " data-field="DiffMeet1" id="incremM1">
-                                                                                                </div>
-                                                                                        </div>
-
-                                                                                </div>
-
-                                                                                <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
-                                                                                        <div class="col-md-4">
-                                                                                                <label for="DiffRice1" class="form-label">ผลไม้</label>
-                                                                                        </div>
-
-                                                                                        <div class="col-md-5">
-                                                                                                <div class="input-group w-auto justify-content-end align-items-center">
-                                                                                                        <input type="button" value="-" class="button-minus border rounded-circle  icon-shape icon-sm mx-1 " data-field="DiffFruit1" id="decremFruit1">
-                                                                                                        <input type="text" step="1" max="10" value="0" class="quantity-field border-0 text-center w-25" name="DiffFruit1" id="DiffFriut1" onInput="addFood();" value="0" readonly>
-                                                                                                        <input type="button" value="+" class="button-plus border rounded-circle icon-shape icon-sm " data-field="DiffFruit1" id="incremFruit1">
-                                                                                                </div>
-                                                                                        </div>
-
-                                                                                </div>
-
-                                                                                <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
-                                                                                        <div class="col-md-4">
-                                                                                                <label for="DiffRice1" class="form-label">นม</label>
-                                                                                        </div>
-
-                                                                                        <div class="col-md-5">
-                                                                                                <div class="input-group w-auto justify-content-end align-items-center">
-                                                                                                        <input type="button" value="-" class="button-minus border rounded-circle  icon-shape icon-sm mx-1 " data-field="DiffMilk1" id="decremMilk1">
-                                                                                                        <input type="text" step="1" max="10" value="0" class="quantity-field border-0 text-center w-25" name="DiffMilk1" id="DiffMilk1" onInput="addFood();" value="0" readonly>
-                                                                                                        <input type="button" value="+" class="button-plus border rounded-circle icon-shape icon-sm " data-field="DiffMilk1" id="incremMilk1">
-                                                                                                </div>
-                                                                                        </div>
-
-                                                                                </div>
-                                                                                <div class="d-grid gap-2">
-                                                                                        <div class="circle" style="display: flex;flex-wrap: nowrap;justify-content: center;">
-                                                                                                <div class="half-circle">
-                                                                                                        <img id="scream" width="350px" height="100%" src="https://ichef.bbci.co.uk/news/640/cpsprodpb/0E1B/production/_113111630_fruitandveg.jpg" alt="The Scream" style="object-fit: cover;">
-
-                                                                                                </div>
-
-
-                                                                                                <div class="half-circle-right">
-                                                                                                        <div id="middleTop">
-                                                                                                                <div id="box">
-                                                                                                                        <div class="circle-top1">
-
-                                                                                                                        </div>
-                                                                                                                </div>
-                                                                                                        </div>
-                                                                                                        <div id="middleBottom">
-                                                                                                                <div id="box">
-                                                                                                                        <div class="circle-bottom1">
-
-
-                                                                                                                        </div>
-                                                                                                                </div>
-                                                                                                        </div>
-                                                                                                </div>
-                                                                                        </div>
-
-                                                                                        <div class="d-flex justify-content-start">
-                                                                                                <div class="me-auto ps-3 bd-highlight">
-                                                                                                        <div class="Fruit1">
-
-                                                                                                        </div>
-                                                                                                </div>
-                                                                                                <div class="pe-3 bd-highlight">
-                                                                                                        <div class="Milk1">
-
-                                                                                                        </div>
-                                                                                                </div>
-
-
-
-                                                                                        </div>
-                                                                                </div>
-                                                                        </div>
-
-                                                                </div>
-                                                        </div>
-                                                </div>
-                                        </div>
+        <!-- ======= Hero Section 1 มื้อเช้า ======= -->
+        <div id="printable">
+            <?php
+            foreach ($db->to_Obj($sql) as $rows) {
+            ?>
+                <section id="hero" class="hero align-items-center">
+                    <div class="container">
+                        <div class="row">
+                            <div class="card5 text-center">
+                                <div class="card5-header">
+                                    <br>
+                                    <h1>Step 1 : มื้อเช้า</h1>
 
                                 </div>
+                                <div class="card-body">
+                                    <div class="card5-content">
 
-                        </section><!-- End Hero -->
-                         <!-- ======= Hero Section 2 มื้อกลางวัน ======= -->
-                         <section >
-                                <div class="container">
-                                        <div class="row">
-                                                <div class="card6 text-center">
-
-                                                        <br>
-                                                        <h1>Step 2 : มื้อกลางวัน</h1>
-
-
-                                                        <div class="card-body">
-                                                                <div class="card6-content">
-                                                                        <div class="d-grid gap-4">
-                                                                                <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
-                                                                                        <div class="col-md-4">
-                                                                                                <label for="DiffRice1" class="form-label">ข้าว/แป้ง</label>
-                                                                                        </div>
-                                                                                        <div class="col-md-5">
-                                                                                                <div class="input-group w-auto justify-content-end align-items-center">
-                                                                                                        <input type="button" value="-" class="button-minus border rounded-circle  icon-shape icon-sm mx-1 " data-field="DiffRice2" id="decremR2">
-                                                                                                        <input type="text" step="1" max="10" value="0" class="quantity-field border-0 text-center w-25" name="DiffRice2" id="DiffRice2" onInput="addFood();" value="0" readonly>
-                                                                                                        <input type="button" value="+" class="button-plus border rounded-circle icon-shape icon-sm " data-field="DiffRice2" id="incremR2">
-                                                                                                </div>
-                                                                                        </div>
-
-
-
-                                                                                </div>
-                                                                                <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
-                                                                                        <div class="col-md-4">
-                                                                                                <label for="DiffRice1" class="form-label">เนื้อสัตว์</label>
-                                                                                        </div>
-
-                                                                                        <div class="col-md-5">
-                                                                                                <div class="input-group w-auto justify-content-end align-items-center">
-                                                                                                        <input type="button" value="-" class="button-minus border rounded-circle  icon-shape icon-sm mx-1 " data-field="DiffMeet2" id="decremM2">
-                                                                                                        <input type="text" step="1" max="10" value="0" class="quantity-field border-0 text-center w-25" name="DiffMeet2" id="DiffMeet2" onInput="addFood();" value="0" readonly>
-                                                                                                        <input type="button" value="+" class="button-plus border rounded-circle icon-shape icon-sm " data-field="DiffMeet2" id="incremM2">
-                                                                                                </div>
-                                                                                        </div>
-
-                                                                                </div>
-
-                                                                                <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
-                                                                                        <div class="col-md-4">
-                                                                                                <label for="DiffRice1" class="form-label">ผลไม้</label>
-                                                                                        </div>
-
-                                                                                        <div class="col-md-5">
-                                                                                                <div class="input-group w-auto justify-content-end align-items-center">
-                                                                                                        <input type="button" value="-" class="button-minus border rounded-circle  icon-shape icon-sm mx-1 " data-field="DiffFruit2" id="decremFruit2">
-                                                                                                        <input type="text" step="1" max="10" value="0" class="quantity-field border-0 text-center w-25" name="DiffFruit2" id="DiffFruit2" onInput="addFood();" value="0" readonly>
-                                                                                                        <input type="button" value="+" class="button-plus border rounded-circle icon-shape icon-sm " data-field="DiffFruit2" id="incremFruit2">
-                                                                                                </div>
-                                                                                        </div>
-
-                                                                                </div>
-
-                                                                                <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
-                                                                                        <div class="col-md-4">
-                                                                                                <label for="DiffRice1" class="form-label">นม</label>
-                                                                                        </div>
-
-                                                                                        <div class="col-md-5">
-                                                                                                <div class="input-group w-auto justify-content-end align-items-center">
-                                                                                                        <input type="button" value="-" class="button-minus border rounded-circle  icon-shape icon-sm mx-1 " data-field="DiffMilk2" id="decremMilk2">
-                                                                                                        <input type="text" step="1" max="10" value="0" class="quantity-field border-0 text-center w-25" name="DiffMilk2" id="DiffMilk2" onInput="addFood();" value="0" readonly>
-                                                                                                        <input type="button" value="+" class="button-plus border rounded-circle icon-shape icon-sm " data-field="DiffMilk2" id="incremMilk2">
-                                                                                                </div>
-                                                                                        </div>
-
-                                                                                </div>
-                                                                                <div class="d-grid gap-2">
-                                                                                        <div class="circle" style="display: flex;flex-wrap: nowrap;justify-content: center;">
-                                                                                                <div class="half-circle">
-                                                                                                        <img id="scream" width="350px" height="100%" src="https://ichef.bbci.co.uk/news/640/cpsprodpb/0E1B/production/_113111630_fruitandveg.jpg" alt="The Scream" style="object-fit: cover;">
-
-                                                                                                </div>
-                                                                                                <div class="half-circle-right">
-                                                                                                        <div id="middleTop">
-                                                                                                                <div id="box">
-                                                                                                                        <div class="circle-top2">
-
-                                                                                                                        </div>
-                                                                                                                </div>
-                                                                                                        </div>
-                                                                                                        <div id="middleBottom">
-                                                                                                                <div id="box">
-                                                                                                                        <div class="circle-bottom2">
-
-
-                                                                                                                        </div>
-                                                                                                                </div>
-                                                                                                        </div>
-                                                                                                </div>
-                                                                                        </div>
-
-                                                                                        <div class="d-flex justify-content-start">
-                                                                                                <div class="me-auto ps-3 bd-highlight">
-                                                                                                        <div class="Fruit2">
-
-                                                                                                        </div>
-                                                                                                </div>
-                                                                                                <div class="pe-3 bd-highlight">
-                                                                                                        <div class="Milk2">
-
-                                                                                                        </div>
-                                                                                                </div>
-
-
-
-                                                                                        </div>
-                                                                                </div>
-                                                                        </div>
-                                                                </div>
-                                                        </div>
+                                        <div class="d-grid gap-4">
+                                            <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+                                                <div class="col-md-4">
+                                                    <label for="DiffRice1" class="form-label">ข้าว/แป้ง </label>
                                                 </div>
+                                                <div class="col-md-5">
+                                                    <div class="input-group w-auto justify-content-end align-items-center">
+
+                                                        <input type="text" step="1" max="10" value="<?php echo ($rows['Rice1']); ?>" class="quantity-field border-0 text-center w-25" name="DiffRice1" id="DiffRice1" onInput="addFood();"  readonly>
+
+                                                    </div>
+                                                </div>
+
+
+
+                                            </div>
+                                            <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+                                                <div class="col-md-4">
+                                                    <label for="DiffRice1" class="form-label">เนื้อสัตว์</label>
+                                                </div>
+
+                                                <div class="col-md-5">
+                                                    <div class="input-group w-auto justify-content-end align-items-center">
+
+                                                        <input type="text" step="1" max="10" value="<?php echo ($rows['Meet1']); ?>" class="quantity-field border-0 text-center w-25" name="DiffMeet1" id="DiffMeet1" onInput="addFood();"  readonly>
+
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+                                                <div class="col-md-4">
+                                                    <label for="DiffRice1" class="form-label">ผลไม้</label>
+                                                </div>
+
+                                                <div class="col-md-5">
+                                                    <div class="input-group w-auto justify-content-end align-items-center">
+
+                                                        <input type="text" step="1" max="10" value="<?php echo ($rows['Fruit1']); ?>" class="quantity-field border-0 text-center w-25" name="DiffFruit1" id="DiffFriut1" onInput="addFood();" value="0" readonly>
+
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+                                                <div class="col-md-4">
+                                                    <label for="DiffRice1" class="form-label">นม</label>
+                                                </div>
+
+                                                <div class="col-md-5">
+                                                    <div class="input-group w-auto justify-content-end align-items-center">
+
+                                                        <input type="text" step="1" max="10" value="<?php echo ($rows['Milk1']); ?>" class="quantity-field border-0 text-center w-25" name="DiffMilk1" id="DiffMilk1" onInput="addFood();" value="0" readonly>
+
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="d-grid gap-2">
+                                                <div class="circle" style="display: flex;flex-wrap: nowrap;justify-content: center;">
+                                                    <div class="half-circle">
+
+
+                                                    </div>
+
+
+                                                    <div class="half-circle-right">
+                                                        <div id="middleTop">
+                                                            <div id="box">
+                                                                <div class="circle-top1">
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div id="middleBottom">
+                                                            <div id="box">
+                                                                <div class="circle-bottom1">
+
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="d-flex justify-content-start">
+                                                    <div class="me-auto ps-3 bd-highlight">
+                                                        <div class="Fruit1">
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="pe-3 bd-highlight">
+                                                        <div class="Milk1">
+
+                                                        </div>
+                                                    </div>
+
+
+
+                                                </div>
+                                            </div>
                                         </div>
 
+                                    </div>
                                 </div>
-                        </section><!-- End Hero -->
-                        <?php } ?>
+                            </div>
+                        </div>
+
                     </div>
-                </div>
 
-            </div>
-        </section>
+                </section><!-- End Hero -->
+
+                <!-- ======= Hero Section 2 มื้อกลางวัน ======= -->
+                <section id="hero" class="hero align-items-center">
+                    <div class="container">
+                        <div class="row">
+                            <div class="card6 text-center">
+
+                                <br>
+                                <h1>Step 2 : มื้อกลางวัน</h1>
+
+
+                                <div class="card-body">
+                                    <div class="card6-content">
+                                        <div class="d-grid gap-4">
+                                            <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+                                                <div class="col-md-4">
+                                                    <label for="DiffRice1" class="form-label">ข้าว/แป้ง</label>
+                                                </div>
+                                                <div class="col-md-5">
+                                                    <div class="input-group w-auto justify-content-end align-items-center">
+
+                                                        <input type="text" step="1" max="10" value="<?php echo ($rows['Rice2']); ?>" class="quantity-field border-0 text-center w-25" name="DiffRice2" id="DiffRice2" onInput="addFood();" value="0" readonly>
+
+                                                    </div>
+                                                </div>
+
+
+
+                                            </div>
+                                            <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+                                                <div class="col-md-4">
+                                                    <label for="DiffRice1" class="form-label">เนื้อสัตว์</label>
+                                                </div>
+
+                                                <div class="col-md-5">
+                                                    <div class="input-group w-auto justify-content-end align-items-center">
+
+                                                        <input type="text" step="1" max="10" value="<?php echo ($rows['Meet2']); ?>" class="quantity-field border-0 text-center w-25" name="DiffMeet2" id="DiffMeet2" onInput="addFood();" value="0" readonly>
+
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+                                                <div class="col-md-4">
+                                                    <label for="DiffRice1" class="form-label">ผลไม้</label>
+                                                </div>
+
+                                                <div class="col-md-5">
+                                                    <div class="input-group w-auto justify-content-end align-items-center">
+
+                                                        <input type="text" step="1" max="10" value="<?php echo ($rows['Fruit2']); ?>" class="quantity-field border-0 text-center w-25" name="DiffFruit2" id="DiffFruit2" onInput="addFood();" value="0" readonly>
+
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+                                                <div class="col-md-4">
+                                                    <label for="DiffRice1" class="form-label">นม</label>
+                                                </div>
+
+                                                <div class="col-md-5">
+                                                    <div class="input-group w-auto justify-content-end align-items-center">
+
+                                                        <input type="text" step="1" max="10" value="<?php echo ($rows['Milk2']); ?>" class="quantity-field border-0 text-center w-25" name="DiffMilk2" id="DiffMilk2" onInput="addFood();" value="0" readonly>
+
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="d-grid gap-2">
+                                                <div class="circle" style="display: flex;flex-wrap: nowrap;justify-content: center;">
+                                                    <div class="half-circle">
+
+
+                                                    </div>
+                                                    <div class="half-circle-right">
+                                                        <div id="middleTop">
+                                                            <div id="box">
+                                                                <div class="circle-top2">
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div id="middleBottom">
+                                                            <div id="box">
+                                                                <div class="circle-bottom2">
+
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="d-flex justify-content-start">
+                                                    <div class="me-auto ps-3 bd-highlight">
+                                                        <div class="Fruit2">
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="pe-3 bd-highlight">
+                                                        <div class="Milk2">
+
+                                                        </div>
+                                                    </div>
+
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </section><!-- End Hero -->
+
+                <!-- ======= Hero Section 3 มืื้อเย็น ======= -->
+                <section id="hero" class="hero align-items-center">
+                    <div class="container">
+                        <div class="row">
+                            <div class="card7 text-center">
+
+                                <br>
+                                <h1>Step 3 : มื้อเย็น</h1>
+
+                                <div class="card-body">
+                                    <div class="card7-content">
+                                        <div class="d-grid gap-4">
+                                            <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+                                                <div class="col-md-4">
+                                                    <label for="DiffRice1" class="form-label">ข้าว/แป้ง</label>
+                                                </div>
+                                                <div class="col-md-5">
+                                                    <div class="input-group w-auto justify-content-end align-items-center">
+
+                                                        <input type="text" step="1" max="10" value="<?php echo ($rows['Rice3']); ?>" class="quantity-field border-0 text-center w-25" name="DiffRice3" id="DiffRice3" onInput="addFood();" value="0" readonly>
+
+                                                    </div>
+                                                </div>
+
+
+
+                                            </div>
+                                            <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+                                                <div class="col-md-4">
+                                                    <label for="DiffRice1" class="form-label">เนื้อสัตว์</label>
+                                                </div>
+
+                                                <div class="col-md-5">
+                                                    <div class="input-group w-auto justify-content-end align-items-center">
+
+                                                        <input type="text" step="1" max="10" value="<?php echo ($rows['Meet3']); ?>" class="quantity-field border-0 text-center w-25" name="DiffMeet3" id="DiffMeet3" onInput="addFood();" value="0" readonly>
+
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+                                                <div class="col-md-4">
+                                                    <label for="DiffRice1" class="form-label">ผลไม้</label>
+                                                </div>
+
+                                                <div class="col-md-5">
+                                                    <div class="input-group w-auto justify-content-end align-items-center">
+
+                                                        <input type="text" step="1" max="10" value="<?php echo ($rows['Fruit3']); ?>" class="quantity-field border-0 text-center w-25" name="DiffFruit3" id="DiffFruit3" onInput="addFood();" value="0" readonly>
+
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+                                                <div class="col-md-4">
+                                                    <label for="DiffRice1" class="form-label">นม</label>
+                                                </div>
+
+                                                <div class="col-md-5">
+                                                    <div class="input-group w-auto justify-content-end align-items-center">
+
+                                                        <input type="text" step="1" max="10" value="<?php echo ($rows['Milk3']); ?>" class="quantity-field border-0 text-center w-25" name="DiffMilk3" id="DiffMilk3" onInput="addFood();" value="0" readonly>
+
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="d-grid gap-2">
+                                                <div class="circle" style="display: flex;flex-wrap: nowrap;justify-content: center;">
+                                                    <div class="half-circle">
+
+
+                                                    </div>
+                                                    <div class="half-circle-right">
+                                                        <div id="middleTop">
+                                                            <div id="box">
+                                                                <div class="circle-top3">
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div id="middleBottom">
+                                                            <div id="box">
+                                                                <div class="circle-bottom3">
+
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="d-flex justify-content-start">
+                                                    <div class="me-auto ps-3 bd-highlight">
+                                                        <div class="Fruit3">
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="pe-3 bd-highlight">
+                                                        <div class="Milk3">
+
+                                                        </div>
+                                                    </div>
+
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="non-printable">
+                            <div class="foot">
+                                <br>
+                                <center>
+                                    <div class="d-flex justify-content-center">
+                                        <div class="col-12 mx-auto">
+
+                                        </div>
+                                    </div>
+                                </center>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                </section><!-- End Hero -->
+            <?php } ?>
+        </div>
     </body>
 
     </html>
