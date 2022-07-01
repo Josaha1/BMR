@@ -1836,10 +1836,8 @@ if (!$_SESSION["Cid"]) {  //check session
                                                         </div>
                                                 </div>
                                         </div>
-
-                                </div>
-                                <br>
-                                <div class="foot">
+                                        <div class="foot">
+                                                <br>
                                         <center>
                                                 <div class="d-flex justify-content-center">
                                                         <div class="col-12 mx-auto">
@@ -1848,6 +1846,9 @@ if (!$_SESSION["Cid"]) {  //check session
                                                 </div>
                                         </center>
                                 </div>
+                                </div>
+                                <br>
+                                
                 </form>
                 <!-- End Form -->
 

@@ -3,6 +3,7 @@
 }
 .hero {
   background: white;
+  margin-bottom: 150px;
 }
 .hero .card1 {
   background: rgb(254, 240, 214);
