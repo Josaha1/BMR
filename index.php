@@ -150,15 +150,19 @@ if (!$_SESSION["Cid"]) {  //check session
 
         <nav id="navbar" class="navbar">
           <ul>
-            <li><a class="nav-link scrollto active" href="#hero">หน้าหลัก</a></li>
-            <li><a class="nav-link" href="showFoodDesign.php">คำนวนพลังงาน</a></li>
-            <li class="dropdown"><a href="#"><span>ผู้ใช้งาน</span> <i class="bi bi-chevron-down"></i></a>
+            <li class="dropdown"><a class="nav-link scrollto active" href="showMyDetail.php"><span>หน้าหลัก</span> <i class="bi bi-chevron-down"></i></a>
               <ul>
-                <li><a href="showFinishFood.php">ดูพลังงานที่ใช้</a></li>
-                <li><a href="logout.php">ออกจากระบบ</a>
-                </li>
+                <li><a href="showMyDetail.php">ผลสรุปของผู้ใช้งาน</a></li>
+              </ul>
+            <li><a class="nav-link" href="index.php">คำนวนพลังงาน</a></li>
+            <li class="dropdown"><a href="showFoodDesign.php"><span>อาหารแนะนำ</span> <i class="bi bi-chevron-down"></i></a>
+              <ul>
+                <li><a href="showFoodDesign.php">ออกแบบอาหาร</a></li>
+                <li><a href="showFinishFood.php">ปริมาณอาหารต่อวัน</a></li>
+                <li><a href="#">ค้นหาอาหาร</a></li>
               </ul>
             </li>
+            <li><a class="nav-link" href="logout.php">ออกจากระบบ</a></li>
           </ul>
           <i class="bi bi-list mobile-nav-toggle"></i>
         </nav><!-- .navbar -->

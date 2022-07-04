@@ -44,11 +44,11 @@ $(function () {
       document.AddFood.DiffRice1.value = document.AddFood.DiffRice1.value - 1;
     } else {
       let imageToADD = 1;
-      var src = "assets/img/ทัพพีข้าว.png";
+      var src = "assets/img/Rice.png";
       var img = $(
         "<img src='" +
           src +
-          '\'  width="50" height="40" id="imageR1_' +
+          '\'  width="50" class="img-addon" height="40" id="imageR1_' +
           imageToADD +
           '">'
       );
@@ -107,7 +107,7 @@ $(function () {
       document.AddFood.DiffMeet1.value = document.AddFood.DiffMeet1.value - 1;
     } else {
       let imageToADD = 1;
-      var src = "assets/img/ไก่.png";
+      var src = "assets/img/Meet.png";
       var img = $(
         "<img src='" +
           src +
@@ -174,7 +174,7 @@ $(function () {
       var img = $(
         "<img src='" +
           src +
-          '\'  width="100" height="60%" id="imageF1_' +
+          '\'  width="125" height="60%" id="imageF1_' +
           imageToADD +
           '">'
       );
@@ -237,7 +237,7 @@ $(function () {
       var img = $(
         "<img src='" +
           src +
-          '\'  width="150" height="60%" id="imageMilk1_' +
+          '\'  width="80" height="60%" id="imageMilk1_' +
           imageToADD +
           '">'
       );
@@ -299,7 +299,7 @@ $(function () {
       document.AddFood.DiffRice2.value = document.AddFood.DiffRice2.value - 1;
     } else {
       let imageToADD = 1;
-      var src = "assets/img/ทัพพีข้าว.png";
+      var src = "assets/img/Rice.png";
       var img = $(
         "<img src='" +
           src +
@@ -363,7 +363,7 @@ $(function () {
       document.AddFood.DiffMeet2.value = document.AddFood.DiffMeet2.value - 1;
     } else {
       let imageToADD = 1;
-      var src = "assets/img/ไก่.png";
+      var src = "assets/img/Meet.png";
       var img = $(
         "<img src='" +
           src +
@@ -430,7 +430,7 @@ $(function () {
       var img = $(
         "<img src='" +
           src +
-          '\'  width="100" height="60%" id="imageF2_' +
+          '\'  width="125" height="60%" id="imageF2_' +
           imageToADD +
           '">'
       );
@@ -493,7 +493,7 @@ $(function () {
       var img = $(
         "<img src='" +
           src +
-          '\'  width="150" height="60%" id="imageMilk2_' +
+          '\'  width="80" height="60%" id="imageMilk2_' +
           imageToADD +
           '">'
       );
@@ -555,7 +555,7 @@ $(function () {
       document.AddFood.DiffRice3.value = document.AddFood.DiffRice3.value - 1;
     } else {
       let imageToADD = 1;
-      var src = "assets/img/ทัพพีข้าว.png";
+      var src = "assets/img/Rice.png";
       var img = $(
         "<img src='" +
           src +
@@ -619,7 +619,7 @@ $(function () {
       document.AddFood.DiffMeet3.value = document.AddFood.DiffMeet3.value - 1;
     } else {
       let imageToADD = 1;
-      var src = "assets/img/ไก่.png";
+      var src = "assets/img/Meet.png";
       var img = $(
         "<img src='" +
           src +
@@ -686,7 +686,7 @@ $(function () {
       var img = $(
         "<img src='" +
           src +
-          '\'  width="100" height="60%" id="imageF3_' +
+          '\'  width="125" height="60%" id="imageF3_' +
           imageToADD +
           '">'
       );
@@ -749,7 +749,7 @@ $(function () {
       var img = $(
         "<img src='" +
           src +
-          '\'  width="150" height="60%" id="imageMilk3_' +
+          '\'  width="80" height="60%" id="imageMilk3_' +
           imageToADD +
           '">'
       );

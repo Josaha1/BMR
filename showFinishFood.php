@@ -63,15 +63,19 @@ if (!$_SESSION["Cid"]) {  //check session
 
                 <nav id="navbar" class="navbar">
                     <ul>
-                        <li><a class="nav-link scrollto active" href="index.php">หน้าหลัก</a></li>
-                        <li><a class="nav-link" href="showFoodDesign.php">คำนวนพลังงาน</a></li>
-                        <li class="dropdown"><a href="#"><span>ผู้ใช้งาน</span> <i class="bi bi-chevron-down"></i></a>
+                        <li class="dropdown"><a class="nav-link scrollto active" href="showMyDetail.php"><span>หน้าหลัก</span> <i class="bi bi-chevron-down"></i></a>
+                        <ul>
+                                <li><a href="showMyDetail.php">ผลสรุปของผู้ใช้งาน</a></li>
+                            </ul>
+                        <li><a class="nav-link" href="index.php">คำนวนพลังงาน</a></li>
+                        <li class="dropdown"><a href="showFoodDesign.php"><span>อาหารแนะนำ</span> <i class="bi bi-chevron-down"></i></a>
                             <ul>
-                                <li><a href="showFinishFood.php">ดูพลังงานที่ใช้</a></li>
-                                <li><a href="logout.php">ออกจากระบบ</a>
-                                </li>
+                                <li><a href="showFoodDesign.php">ออกแบบอาหาร</a></li>
+                                <li><a href="showFinishFood.php">ปริมาณอาหารต่อวัน</a></li>
+                                <li><a href="#">ค้นหาอาหาร</a></li>
                             </ul>
                         </li>
+                        <li><a class="nav-link" href="logout.php">ออกจากระบบ</a></li>
                     </ul>
                     <i class="bi bi-list mobile-nav-toggle"></i>
                 </nav><!-- .navbar -->
@@ -85,6 +89,7 @@ if (!$_SESSION["Cid"]) {  //check session
             ?>
                 <section id="hero" class="hero align-items-center">
                     <div class="container">
+                        <a href="#"><button class="btn btn-primary" style="width:100%;border-radius:30px;margin-top:10px;margin-bottom:15px;font-size:20px;">เพิ่มปริมาณพลังงานที่ต้องการในแต่ละวัน</button></a>
                         <div class="row">
                             <div class="card5 text-center">
                                 <div class="card5-header">
@@ -100,10 +105,10 @@ if (!$_SESSION["Cid"]) {  //check session
                                                 <div class="col-md-4">
                                                     <label for="DiffRice1" class="form-label">ข้าว/แป้ง </label>
                                                 </div>
-                                                <div class="col-md-5">
+                                                <div class="col-md-7">
                                                     <div class="input-group w-auto justify-content-end align-items-center">
 
-                                                        <input type="text" step="1" max="10" value="<?php echo ($rows['Rice1']); ?>" class="quantity-field border-0 text-center w-25" name="DiffRice1" id="DiffRice1" onInput="addFood();"  readonly>
+                                                        <input type="text" step="1" max="10" value="<?php echo ($rows['Rice1']); ?>" class="quantity-field border-0 text-center w-50" name="DiffRice1" id="DiffRice1" onInput="addFood();"  readonly>
 
                                                     </div>
                                                 </div>
@@ -116,10 +121,10 @@ if (!$_SESSION["Cid"]) {  //check session
                                                     <label for="DiffRice1" class="form-label">เนื้อสัตว์</label>
                                                 </div>
 
-                                                <div class="col-md-5">
+                                                <div class="col-md-7">
                                                     <div class="input-group w-auto justify-content-end align-items-center">
 
-                                                        <input type="text" step="1" max="10" value="<?php echo ($rows['Meet1']); ?>" class="quantity-field border-0 text-center w-25" name="DiffMeet1" id="DiffMeet1" onInput="addFood();"  readonly>
+                                                        <input type="text" step="1" max="10" value="<?php echo ($rows['Meet1']); ?>" class="quantity-field border-0 text-center w-50" name="DiffMeet1" id="DiffMeet1" onInput="addFood();"  readonly>
 
                                                     </div>
                                                 </div>
@@ -131,10 +136,10 @@ if (!$_SESSION["Cid"]) {  //check session
                                                     <label for="DiffRice1" class="form-label">ผลไม้</label>
                                                 </div>
 
-                                                <div class="col-md-5">
+                                                <div class="col-md-7">
                                                     <div class="input-group w-auto justify-content-end align-items-center">
 
-                                                        <input type="text" step="1" max="10" value="<?php echo ($rows['Fruit1']); ?>" class="quantity-field border-0 text-center w-25" name="DiffFruit1" id="DiffFriut1" onInput="addFood();" value="0" readonly>
+                                                        <input type="text" step="1" max="10" value="<?php echo ($rows['Fruit1']); ?>" class="quantity-field border-0 text-center w-50" name="DiffFruit1" id="DiffFriut1" onInput="addFood();" value="0" readonly>
 
                                                     </div>
                                                 </div>
@@ -146,10 +151,10 @@ if (!$_SESSION["Cid"]) {  //check session
                                                     <label for="DiffRice1" class="form-label">นม</label>
                                                 </div>
 
-                                                <div class="col-md-5">
+                                                <div class="col-md-7">
                                                     <div class="input-group w-auto justify-content-end align-items-center">
 
-                                                        <input type="text" step="1" max="10" value="<?php echo ($rows['Milk1']); ?>" class="quantity-field border-0 text-center w-25" name="DiffMilk1" id="DiffMilk1" onInput="addFood();" value="0" readonly>
+                                                        <input type="text" step="1" max="10" value="<?php echo ($rows['Milk1']); ?>" class="quantity-field border-0 text-center w-50" name="DiffMilk1" id="DiffMilk1" onInput="addFood();" value="0" readonly>
 
                                                     </div>
                                                 </div>
@@ -160,10 +165,10 @@ if (!$_SESSION["Cid"]) {  //check session
                                                     <label for="DiffRice1" class="form-label">ผัก</label>
                                                 </div>
 
-                                                <div class="col-md-5">
+                                                <div class="col-md-7">
                                                     <div class="input-group w-auto justify-content-end align-items-center">
 
-                                                        <input type="text" step="1" max="10" value="ครึ่งจาน" class="quantity-field border-0 text-center w-25" name="DiffMilk3" id="DiffMilk3" onInput="addFood();" value="0" readonly>
+                                                        <input type="text"  value="ครึ่งจาน" class="quantity-field border-0 text-center w-50" name="DiffMilk3" id="DiffMilk3" onInput="addFood();" value="0" readonly>
 
                                                     </div>
                                                 </div>
@@ -240,10 +245,10 @@ if (!$_SESSION["Cid"]) {  //check session
                                                 <div class="col-md-4">
                                                     <label for="DiffRice1" class="form-label">ข้าว/แป้ง</label>
                                                 </div>
-                                                <div class="col-md-5">
+                                                <div class="col-md-7">
                                                     <div class="input-group w-auto justify-content-end align-items-center">
 
-                                                        <input type="text" step="1" max="10" value="<?php echo ($rows['Rice2']); ?>" class="quantity-field border-0 text-center w-25" name="DiffRice2" id="DiffRice2" onInput="addFood();" value="0" readonly>
+                                                        <input type="text" step="1" max="10" value="<?php echo ($rows['Rice2']); ?>" class="quantity-field border-0 text-center w-50" name="DiffRice2" id="DiffRice2" onInput="addFood();" value="0" readonly>
 
                                                     </div>
                                                 </div>
@@ -256,10 +261,10 @@ if (!$_SESSION["Cid"]) {  //check session
                                                     <label for="DiffRice1" class="form-label">เนื้อสัตว์</label>
                                                 </div>
 
-                                                <div class="col-md-5">
+                                                <div class="col-md-7">
                                                     <div class="input-group w-auto justify-content-end align-items-center">
 
-                                                        <input type="text" step="1" max="10" value="<?php echo ($rows['Meet2']); ?>" class="quantity-field border-0 text-center w-25" name="DiffMeet2" id="DiffMeet2" onInput="addFood();" value="0" readonly>
+                                                        <input type="text" step="1" max="10" value="<?php echo ($rows['Meet2']); ?>" class="quantity-field border-0 text-center w-50" name="DiffMeet2" id="DiffMeet2" onInput="addFood();" value="0" readonly>
 
                                                     </div>
                                                 </div>
@@ -271,10 +276,10 @@ if (!$_SESSION["Cid"]) {  //check session
                                                     <label for="DiffRice1" class="form-label">ผลไม้</label>
                                                 </div>
 
-                                                <div class="col-md-5">
+                                                <div class="col-md-7">
                                                     <div class="input-group w-auto justify-content-end align-items-center">
 
-                                                        <input type="text" step="1" max="10" value="<?php echo ($rows['Fruit2']); ?>" class="quantity-field border-0 text-center w-25" name="DiffFruit2" id="DiffFruit2" onInput="addFood();" value="0" readonly>
+                                                        <input type="text" step="1" max="10" value="<?php echo ($rows['Fruit2']); ?>" class="quantity-field border-0 text-center w-50" name="DiffFruit2" id="DiffFruit2" onInput="addFood();" value="0" readonly>
 
                                                     </div>
                                                 </div>
@@ -286,10 +291,10 @@ if (!$_SESSION["Cid"]) {  //check session
                                                     <label for="DiffRice1" class="form-label">นม</label>
                                                 </div>
 
-                                                <div class="col-md-5">
+                                                <div class="col-md-7">
                                                     <div class="input-group w-auto justify-content-end align-items-center">
 
-                                                        <input type="text" step="1" max="10" value="<?php echo ($rows['Milk2']); ?>" class="quantity-field border-0 text-center w-25" name="DiffMilk2" id="DiffMilk2" onInput="addFood();" value="0" readonly>
+                                                        <input type="text" step="1" max="10" value="<?php echo ($rows['Milk2']); ?>" class="quantity-field border-0 text-center w-50" name="DiffMilk2" id="DiffMilk2" onInput="addFood();" value="0" readonly>
 
                                                     </div>
                                                 </div>
@@ -300,10 +305,10 @@ if (!$_SESSION["Cid"]) {  //check session
                                                     <label for="DiffRice1" class="form-label">ผัก</label>
                                                 </div>
 
-                                                <div class="col-md-5">
+                                                <div class="col-md-7">
                                                     <div class="input-group w-auto justify-content-end align-items-center">
 
-                                                        <input type="text" step="1" max="10" value="ครึ่งจาน" class="quantity-field border-0 text-center w-25" name="DiffMilk3" id="DiffMilk3" onInput="addFood();" value="0" readonly>
+                                                        <input type="text" step="1" max="10" value="ครึ่งจาน" class="quantity-field border-0 text-center w-50" name="DiffMilk3" id="DiffMilk3" onInput="addFood();" value="0" readonly>
 
                                                     </div>
                                                 </div>
@@ -375,10 +380,10 @@ if (!$_SESSION["Cid"]) {  //check session
                                                 <div class="col-md-4">
                                                     <label for="DiffRice1" class="form-label">ข้าว/แป้ง</label>
                                                 </div>
-                                                <div class="col-md-5">
+                                                <div class="col-md-7">
                                                     <div class="input-group w-auto justify-content-end align-items-center">
 
-                                                        <input type="text" step="1" max="10" value="<?php echo ($rows['Rice3']); ?>" class="quantity-field border-0 text-center w-25" name="DiffRice3" id="DiffRice3" onInput="addFood();" value="0" readonly>
+                                                        <input type="text" step="1" max="10" value="<?php echo ($rows['Rice3']); ?>" class="quantity-field border-0 text-center w-50" name="DiffRice3" id="DiffRice3" onInput="addFood();" value="0" readonly>
 
                                                     </div>
                                                 </div>
@@ -391,10 +396,10 @@ if (!$_SESSION["Cid"]) {  //check session
                                                     <label for="DiffRice1" class="form-label">เนื้อสัตว์</label>
                                                 </div>
 
-                                                <div class="col-md-5">
+                                                <div class="col-md-7">
                                                     <div class="input-group w-auto justify-content-end align-items-center">
 
-                                                        <input type="text" step="1" max="10" value="<?php echo ($rows['Meet3']); ?>" class="quantity-field border-0 text-center w-25" name="DiffMeet3" id="DiffMeet3" onInput="addFood();" value="0" readonly>
+                                                        <input type="text" step="1" max="10" value="<?php echo ($rows['Meet3']); ?>" class="quantity-field border-0 text-center w-50" name="DiffMeet3" id="DiffMeet3" onInput="addFood();" value="0" readonly>
 
                                                     </div>
                                                 </div>
@@ -406,10 +411,10 @@ if (!$_SESSION["Cid"]) {  //check session
                                                     <label for="DiffRice1" class="form-label">ผลไม้</label>
                                                 </div>
 
-                                                <div class="col-md-5">
+                                                <div class="col-md-7">
                                                     <div class="input-group w-auto justify-content-end align-items-center">
 
-                                                        <input type="text" step="1" max="10" value="<?php echo ($rows['Fruit3']); ?>" class="quantity-field border-0 text-center w-25" name="DiffFruit3" id="DiffFruit3" onInput="addFood();" value="0" readonly>
+                                                        <input type="text" step="1" max="10" value="<?php echo ($rows['Fruit3']); ?>" class="quantity-field border-0 text-center w-50" name="DiffFruit3" id="DiffFruit3" onInput="addFood();" value="0" readonly>
 
                                                     </div>
                                                 </div>
@@ -421,10 +426,10 @@ if (!$_SESSION["Cid"]) {  //check session
                                                     <label for="DiffRice1" class="form-label">นม</label>
                                                 </div>
 
-                                                <div class="col-md-5">
+                                                <div class="col-md-7">
                                                     <div class="input-group w-auto justify-content-end align-items-center">
 
-                                                        <input type="text" step="1" max="10" value="<?php echo ($rows['Milk3']); ?>" class="quantity-field border-0 text-center w-25" name="DiffMilk3" id="DiffMilk3" onInput="addFood();" value="0" readonly>
+                                                        <input type="text" step="1" max="10" value="<?php echo ($rows['Milk3']); ?>" class="quantity-field border-0 text-center w-50" name="DiffMilk3" id="DiffMilk3" onInput="addFood();" value="0" readonly>
 
                                                     </div>
                                                 </div>
@@ -435,10 +440,10 @@ if (!$_SESSION["Cid"]) {  //check session
                                                     <label for="DiffRice1" class="form-label">ผัก</label>
                                                 </div>
 
-                                                <div class="col-md-5">
+                                                <div class="col-md-7">
                                                     <div class="input-group w-auto justify-content-end align-items-center">
 
-                                                        <input type="text" step="1" max="10" value="ครึ่งจาน" class="quantity-field border-0 text-center w-25" name="DiffMilk3" id="DiffMilk3" onInput="addFood();" value="0" readonly>
+                                                        <input type="text" step="1" max="10" value="ครึ่งจาน" class="quantity-field border-0 text-center w-50" name="DiffMilk3" id="DiffMilk3" onInput="addFood();" value="0" readonly>
 
                                                     </div>
                                                 </div>
@@ -507,6 +512,23 @@ if (!$_SESSION["Cid"]) {  //check session
                 </section><!-- End Hero -->
             <?php } ?>
         </div>
+         <!-- Vendor JS Files -->
+         <script src="assets/vendor/purecounter/purecounter.js"></script>
+                <script src="assets/vendor/aos/aos.js"></script>
+                <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+                <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+                <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+                <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+                <script src="assets/vendor/php-email-form/validate.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+                <!-- Template Main JS File -->
+
+                <script src="assets/js/main.js"></script>
+
     </body>
 
     </html>

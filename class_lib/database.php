@@ -1,3 +1,4 @@
+<?php include ('db_conf.php'); ?>
 <?php
 error_reporting(E_ALL ^ E_NOTICE);  
 	ini_set('display_errors', "1");
@@ -16,10 +17,7 @@ class Database {
             exit();
         }
 	}
-	public function __destruct()
-	{
-		$this->closeconnect();
-	}
+	
      
     public function query( $query )
     {
@@ -132,7 +130,10 @@ class Database {
 		mysqli_close( $this->link );
 	}
 
-   
+    public function __destruct()
+	{
+		$this->closeconnect();
+	}
 
 }
 ?>

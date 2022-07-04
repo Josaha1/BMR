@@ -87,7 +87,7 @@ if (!$_SESSION["Cid"]) {  //check session
                                 border-right: 0;
                                 display: inline-block;
 
-                                object-fit: cover;
+                                object-fit: fill;
 
                         }
 
@@ -231,15 +231,19 @@ if (!$_SESSION["Cid"]) {  //check session
 
                                 <nav id="navbar" class="navbar">
                                         <ul>
-                                                <li><a class="nav-link scrollto active" href="index.php">หน้าหลัก</a></li>
-                                                <li><a class="nav-link" href="showFoodDesign.php">คำนวนพลังงาน</a></li>
-                                                <li class="dropdown"><a href="#"><span>ผู้ใช้งาน</span> <i class="bi bi-chevron-down"></i></a>
+                                                <li class="dropdown"><a class="nav-link scrollto active" href="showMyDetail.php"><span>หน้าหลัก</span> <i class="bi bi-chevron-down"></i></a>
                                                         <ul>
-                                                                <li><a href="showFinishFood.php">ดูพลังงานที่ใช้</a></li>
-                                                                <li><a href="logout.php">ออกจากระบบ</a>
-                                                                </li>
+                                                                <li><a href="showMyDetail.php">ผลสรุปของผู้ใช้งาน</a></li>
+                                                        </ul>
+                                                <li><a class="nav-link" href="index.php">คำนวนพลังงาน</a></li>
+                                                <li class="dropdown"><a href="showFoodDesign.php"><span>อาหารแนะนำ</span> <i class="bi bi-chevron-down"></i></a>
+                                                        <ul>
+                                                                <li><a href="showFoodDesign.php">ออกแบบอาหาร</a></li>
+                                                                <li><a href="showFinishFood.php">ปริมาณอาหารต่อวัน</a></li>
+                                                                <li><a href="#">ค้นหาอาหาร</a></li>
                                                         </ul>
                                                 </li>
+                                                <li><a class="nav-link" href="logout.php">ออกจากระบบ</a></li>
                                         </ul>
                                         <i class="bi bi-list mobile-nav-toggle"></i>
                                 </nav><!-- .navbar -->
@@ -272,7 +276,7 @@ if (!$_SESSION["Cid"]) {  //check session
                                                                                 ?>
                                                                                                         <script src="assets/js/Drinkmilk0/1200/food.js"></script>
 
-                                                                                                        <img src="assets/img/D1-1400.jpeg" width="100%" style="max-width:500px;"><br>
+                                                                                                        <img src="assets/img/Milk 0/1.png" width="100%" style="max-width:500px;"><br>
                                                                                                         <div class="d-flex justify-content-center">
                                                                                                                 <div class="d-grid gap-1">
                                                                                                                         <div class="row">
@@ -315,7 +319,7 @@ if (!$_SESSION["Cid"]) {  //check session
 
                                                                                                         <script src="assets/js/Drinkmilk0/1200/food.js"></script>
 
-                                                                                                        <img src="assets/img/D1-1400.jpeg" width="100%" style="max-width:500px;"><br>
+                                                                                                        <img src="assets/img/Milk 0/1.png" width="100%" style="max-width:500px;"><br>
                                                                                                         <div class="d-flex justify-content-center">
                                                                                                                 <div class="d-grid gap-1">
                                                                                                                         <div class="row">
@@ -356,7 +360,7 @@ if (!$_SESSION["Cid"]) {  //check session
                                                                                                 ?>
                                                                                                         <script src="assets/js/Drinkmilk0/1400/food.js"></script>
 
-                                                                                                        <img src="assets/img/D1-1400.jpeg" width="100%" style="max-width:500px;"><br>
+                                                                                                        <img src="assets/img/Milk 0/2.png" width="100%" style="max-width:500px;"><br>
                                                                                                         <div class="d-flex justify-content-center">
                                                                                                                 <div class="d-grid gap-1">
                                                                                                                         <div class="row">
@@ -396,7 +400,7 @@ if (!$_SESSION["Cid"]) {  //check session
                                                                                                 ?>
                                                                                                         <script src="assets/js/Drinkmilk0/1600/food.js"></script>
 
-                                                                                                        <img src="assets/img/D1-1400.jpeg" width="100%" style="max-width:500px;"><br>
+                                                                                                        <img src="assets/img/Milk 0/3.png" width="100%" style="max-width:500px;"><br>
                                                                                                         <div class="d-flex justify-content-center">
                                                                                                                 <div class="d-grid gap-1">
                                                                                                                         <div class="row">
@@ -436,7 +440,7 @@ if (!$_SESSION["Cid"]) {  //check session
                                                                                                 ?>
                                                                                                         <script src="assets/js/Drinkmilk0/1800/food.js"></script>
 
-                                                                                                        <img src="assets/img/D1-1400.jpeg" width="100%" style="max-width:500px;"><br>
+                                                                                                        <img src="assets/img/Milk 0/4.png" width="100%" style="max-width:500px;"><br>
                                                                                                         <div class="d-flex justify-content-center">
                                                                                                                 <div class="d-grid gap-1">
                                                                                                                         <div class="row">
@@ -476,7 +480,7 @@ if (!$_SESSION["Cid"]) {  //check session
                                                                                                 ?>
                                                                                                         <script src="assets/js/Drinkmilk0/2000/food.js"></script>
 
-                                                                                                        <img src="assets/img/D1-1400.jpeg" width="100%" style="max-width:500px;"><br>
+                                                                                                        <img src="assets/img/Milk 0/5.png" width="100%" style="max-width:500px;"><br>
                                                                                                         <div class="d-flex justify-content-center">
                                                                                                                 <div class="d-grid gap-1">
                                                                                                                         <div class="row">
@@ -516,7 +520,7 @@ if (!$_SESSION["Cid"]) {  //check session
                                                                                                 ?>
                                                                                                         <script src="assets/js/Drinkmilk0/2200/food.js"></script>
 
-                                                                                                        <img src="assets/img/D1-1400.jpeg" width="100%" style="max-width:500px;"><br>
+                                                                                                        <img src="assets/img/Milk 0/6.png" width="100%" style="max-width:500px;"><br>
                                                                                                         <div class="d-flex justify-content-center">
                                                                                                                 <div class="d-grid gap-1">
                                                                                                                         <div class="row">
@@ -556,7 +560,7 @@ if (!$_SESSION["Cid"]) {  //check session
                                                                                                 ?>
                                                                                                         <script src="assets/js/Drinkmilk0/2400/food.js"></script>
 
-                                                                                                        <img src="assets/img/D1-1400.jpeg" width="100%" style="max-width:500px;"><br>
+                                                                                                        <img src="assets/img/Milk 0/7.png" width="100%" style="max-width:500px;"><br>
                                                                                                         <div class="d-flex justify-content-center">
                                                                                                                 <div class="d-grid gap-1">
                                                                                                                         <div class="row">
@@ -596,7 +600,7 @@ if (!$_SESSION["Cid"]) {  //check session
                                                                                                 ?>
                                                                                                         <script src="assets/js/Drinkmilk0/2600/food.js"></script>
 
-                                                                                                        <img src="assets/img/D1-1400.jpeg" width="100%" style="max-width:500px;"><br>
+                                                                                                        <img src="assets/img/Milk 0/8.png" width="100%" style="max-width:500px;"><br>
                                                                                                         <div class="d-flex justify-content-center">
                                                                                                                 <div class="d-grid gap-1">
                                                                                                                         <div class="row">
@@ -640,7 +644,7 @@ if (!$_SESSION["Cid"]) {  //check session
                                                                                                 ?>
                                                                                                         <script src="assets/js/Drinkmilk1/1200/food.js"></script>
 
-                                                                                                        <img src="assets/img/D1-1400.jpeg" width="100%" style="max-width:500px;"><br>
+                                                                                                        <img src="assets/img/Milk 1/1.png" width="100%" style="max-width:500px;"><br>
                                                                                                         <div class="d-flex justify-content-center">
                                                                                                                 <div class="d-grid gap-1">
                                                                                                                         <div class="row">
@@ -680,7 +684,7 @@ if (!$_SESSION["Cid"]) {  //check session
                                                                                                 ?>
                                                                                                         <script src="assets/js/Drinkmilk1/1200/food.js"></script>
 
-                                                                                                        <img src="assets/img/D1-1400.jpeg" width="100%" style="max-width:500px;"><br>
+                                                                                                        <img src="assets/img/Milk 1/1.png" width="100%" style="max-width:500px;"><br>
                                                                                                         <div class="d-flex justify-content-center">
                                                                                                                 <div class="d-grid gap-1">
                                                                                                                         <div class="row">
@@ -725,7 +729,7 @@ if (!$_SESSION["Cid"]) {  //check session
 
                                                                                                         <script src="assets/js/Drinkmilk1/1400/food.js"></script>
 
-                                                                                                        <img src="assets/img/D1-1400.jpeg" width="100%" style="max-width:500px;"><br>
+                                                                                                        <img src="assets/img/Milk 1/2.png" width="100%" style="max-width:500px;"><br>
                                                                                                         <div class="d-flex justify-content-center">
                                                                                                                 <div class="d-grid gap-1">
                                                                                                                         <div class="row">
@@ -768,7 +772,7 @@ if (!$_SESSION["Cid"]) {  //check session
                                                                                                 ?>
                                                                                                         <script src="assets/js/Drinkmilk1/1600/food.js"></script>
 
-                                                                                                        <img src="assets/img/D1-1400.jpeg" width="100%" style="max-width:500px;"><br>
+                                                                                                        <img src="assets/img/Milk 1/3.png" width="100%" style="max-width:500px;"><br>
                                                                                                         <div class="d-flex justify-content-center">
                                                                                                                 <div class="d-grid gap-1">
                                                                                                                         <div class="row">
@@ -808,7 +812,7 @@ if (!$_SESSION["Cid"]) {  //check session
                                                                                                 ?>
                                                                                                         <script src="assets/js/Drinkmilk1/1800/food.js"></script>
 
-                                                                                                        <img src="assets/img/D1-1400.jpeg" width="100%" style="max-width:500px;"><br>
+                                                                                                        <img src="assets/img/Milk 1/4.png" width="100%" style="max-width:500px;"><br>
                                                                                                         <div class="d-flex justify-content-center">
                                                                                                                 <div class="d-grid gap-1">
                                                                                                                         <div class="row">
@@ -848,7 +852,7 @@ if (!$_SESSION["Cid"]) {  //check session
                                                                                                 ?>
                                                                                                         <script src="assets/js/Drinkmilk1/2000/food.js"></script>
 
-                                                                                                        <img src="assets/img/D1-1400.jpeg" width="100%" style="max-width:500px;"><br>
+                                                                                                        <img src="assets/img/Milk 1/5.png" width="100%" style="max-width:500px;"><br>
                                                                                                         <div class="d-flex justify-content-center">
                                                                                                                 <div class="d-grid gap-1">
                                                                                                                         <div class="row">
@@ -889,7 +893,7 @@ if (!$_SESSION["Cid"]) {  //check session
                                                                                                 ?>
                                                                                                         <script src="assets/js/Drinkmilk1/2200/food.js"></script>
 
-                                                                                                        <img src="assets/img/D1-1400.jpeg" width="100%" style="max-width:500px;"><br>
+                                                                                                        <img src="assets/img/Milk 1/6.png" width="100%" style="max-width:500px;"><br>
                                                                                                         <div class="d-flex justify-content-center">
                                                                                                                 <div class="d-grid gap-1">
                                                                                                                         <div class="row">
@@ -929,7 +933,7 @@ if (!$_SESSION["Cid"]) {  //check session
                                                                                                 ?>
                                                                                                         <script src="assets/js/Drinkmilk1/2400/food.js"></script>
 
-                                                                                                        <img src="assets/img/D1-1400.jpeg" width="100%" style="max-width:500px;"><br>
+                                                                                                        <img src="assets/img/Milk 1/7.png" width="100%" style="max-width:500px;"><br>
                                                                                                         <div class="d-flex justify-content-center">
                                                                                                                 <div class="d-grid gap-1">
                                                                                                                         <div class="row">
@@ -969,7 +973,7 @@ if (!$_SESSION["Cid"]) {  //check session
                                                                                                 ?>
                                                                                                         <script src="assets/js/Drinkmilk1/2600/food.js"></script>
 
-                                                                                                        <img src="assets/img/D1-1400.jpeg" width="100%" style="max-width:500px;"><br>
+                                                                                                        <img src="assets/img/Milk 1/8.png" width="100%" style="max-width:500px;"><br>
                                                                                                         <div class="d-flex justify-content-center">
                                                                                                                 <div class="d-grid gap-1">
                                                                                                                         <div class="row">
@@ -1014,7 +1018,7 @@ if (!$_SESSION["Cid"]) {  //check session
                                                                                                 ?>
                                                                                                         <script src="assets/js/Drinkmilk2/1200/food.js"></script>
 
-                                                                                                        <img src="assets/img/D1-1400.jpeg" width="100%" style="max-width:500px;"><br>
+                                                                                                        <img src="assets/img/Milk 2/1.png" width="100%" style="max-width:500px;"><br>
                                                                                                         <div class="d-flex justify-content-center">
                                                                                                                 <div class="d-grid gap-1">
                                                                                                                         <div class="row">
@@ -1056,7 +1060,7 @@ if (!$_SESSION["Cid"]) {  //check session
 
                                                                                                         <script src="assets/js/Drinkmilk2/1200/food.js"></script>
 
-                                                                                                        <img src="assets/img/D1-1400.jpeg" width="100%" style="max-width:500px;"><br>
+                                                                                                        <img src="assets/img/Milk 2/1.png" width="100%" style="max-width:500px;"><br>
                                                                                                         <div class="d-flex justify-content-center">
                                                                                                                 <div class="d-grid gap-1">
                                                                                                                         <div class="row">
@@ -1097,7 +1101,7 @@ if (!$_SESSION["Cid"]) {  //check session
                                                                                                 ?>
                                                                                                         <script src="assets/js/Drinkmilk2/1400/food.js"></script>
 
-                                                                                                        <img src="assets/img/D1-1400.jpeg" width="100%" style="max-width:500px;"><br>
+                                                                                                        <img src="assets/img/Milk 2/2.png" width="100%" style="max-width:500px;"><br>
                                                                                                         <div class="d-flex justify-content-center">
                                                                                                                 <div class="d-grid gap-1">
                                                                                                                         <div class="row">
@@ -1137,7 +1141,7 @@ if (!$_SESSION["Cid"]) {  //check session
                                                                                                 ?>
                                                                                                         <script src="assets/js/Drinkmilk2/1600/food.js"></script>
 
-                                                                                                        <img src="assets/img/D1-1400.jpeg" width="100%" style="max-width:500px;"><br>
+                                                                                                        <img src="assets/img/Milk 2/3.png" width="100%" style="max-width:500px;"><br>
                                                                                                         <div class="d-flex justify-content-center">
                                                                                                                 <div class="d-grid gap-1">
                                                                                                                         <div class="row">
@@ -1177,7 +1181,7 @@ if (!$_SESSION["Cid"]) {  //check session
                                                                                                 ?>
                                                                                                         <script src="assets/js/Drinkmilk2/1800/food.js"></script>
 
-                                                                                                        <img src="assets/img/D1-1400.jpeg" width="100%" style="max-width:500px;"><br>
+                                                                                                        <img src="assets/img/Milk 2/4.png" width="100%" style="max-width:500px;"><br>
                                                                                                         <div class="d-flex justify-content-center">
                                                                                                                 <div class="d-grid gap-1">
                                                                                                                         <div class="row">
@@ -1217,7 +1221,7 @@ if (!$_SESSION["Cid"]) {  //check session
                                                                                                 ?>
                                                                                                         <script src="assets/js/Drinkmilk2/2000/food.js"></script>
 
-                                                                                                        <img src="assets/img/D1-1400.jpeg" width="100%" style="max-width:500px;"><br>
+                                                                                                        <img src="assets/img/Milk 2/5.png" width="100%" style="max-width:500px;"><br>
                                                                                                         <div class="d-flex justify-content-center">
                                                                                                                 <div class="d-grid gap-1">
                                                                                                                         <div class="row">
@@ -1257,7 +1261,7 @@ if (!$_SESSION["Cid"]) {  //check session
                                                                                                 ?>
                                                                                                         <script src="assets/js/Drinkmilk2/2200/food.js"></script>
 
-                                                                                                        <img src="assets/img/D1-1400.jpeg" width="100%" style="max-width:500px;"><br>
+                                                                                                        <img src="assets/img/Milk 2/6.png" width="100%" style="max-width:500px;"><br>
                                                                                                         <div class="d-flex justify-content-center">
                                                                                                                 <div class="d-grid gap-1">
                                                                                                                         <div class="row">
@@ -1297,7 +1301,7 @@ if (!$_SESSION["Cid"]) {  //check session
                                                                                                 ?>
                                                                                                         <script src="assets/js/Drinkmilk2/2400/food.js"></script>
 
-                                                                                                        <img src="assets/img/D1-1400.jpeg" width="100%" style="max-width:500px;"><br>
+                                                                                                        <img src="assets/img/Milk 2/7.png" width="100%" style="max-width:500px;"><br>
                                                                                                         <div class="d-flex justify-content-center">
                                                                                                                 <div class="d-grid gap-1">
                                                                                                                         <div class="row">
@@ -1337,7 +1341,7 @@ if (!$_SESSION["Cid"]) {  //check session
                                                                                                 ?>
                                                                                                         <script src="assets/js/Drinkmilk2/2600/food.js"></script>
 
-                                                                                                        <img src="assets/img/D1-1400.jpeg" width="100%" style="max-width:500px;"><br>
+                                                                                                        <img src="assets/img/Milk 2/8.png" width="100%" style="max-width:500px;"><br>
                                                                                                         <div class="d-flex justify-content-center">
                                                                                                                 <div class="d-grid gap-1">
                                                                                                                         <div class="row">
@@ -1546,7 +1550,7 @@ if (!$_SESSION["Cid"]) {  //check session
                                                                         <div class="d-grid gap-2">
                                                                                 <div class="circle" style="display: flex;flex-wrap: nowrap;justify-content: center;">
                                                                                         <div class="half-circle">
-                                                                                                <img id="scream" width="350px" height="100%" src="https://ichef.bbci.co.uk/news/640/cpsprodpb/0E1B/production/_113111630_fruitandveg.jpg" alt="The Scream" style="object-fit: cover;">
+                                                                                                <img id="scream" width="" height="320px" src="assets/img/fruit1.jpg" alt="The Scream" style="object-fit: scale-down;">
 
                                                                                         </div>
 
@@ -1672,7 +1676,7 @@ if (!$_SESSION["Cid"]) {  //check session
                                                                         <div class="d-grid gap-2">
                                                                                 <div class="circle" style="display: flex;flex-wrap: nowrap;justify-content: center;">
                                                                                         <div class="half-circle">
-                                                                                                <img id="scream" width="350px" height="100%" src="https://ichef.bbci.co.uk/news/640/cpsprodpb/0E1B/production/_113111630_fruitandveg.jpg" alt="The Scream" style="object-fit: cover;">
+                                                                                                <img id="scream" width="" height="320px" src="assets/img/fruit1.jpg" alt="The Scream" style="object-fit: cover;">
 
                                                                                         </div>
                                                                                         <div class="half-circle-right">
@@ -1793,7 +1797,7 @@ if (!$_SESSION["Cid"]) {  //check session
                                                                         <div class="d-grid gap-2">
                                                                                 <div class="circle" style="display: flex;flex-wrap: nowrap;justify-content: center;">
                                                                                         <div class="half-circle">
-                                                                                                <img id="scream" width="350px" height="100%" src="https://ichef.bbci.co.uk/news/640/cpsprodpb/0E1B/production/_113111630_fruitandveg.jpg" alt="The Scream" style="object-fit: cover;">
+                                                                                                <img id="scream" width="" height="320px" src="assets/img/fruit1.jpg" alt="The Scream" style="object-fit: cover;">
 
                                                                                         </div>
                                                                                         <div class="half-circle-right">
@@ -1841,8 +1845,14 @@ if (!$_SESSION["Cid"]) {  //check session
                                                 <br>
                                                 <center>
                                                         <div class="d-flex justify-content-center">
-                                                                <div class="col-12 mx-auto">
-                                                                        <button class="btn btn-primary btn-lg" type="submit" onclick="window.print();">บันทึกสัดส่วนอาหาร <i class="bi bi-arrow-right-circle-fill"></i></button>
+                                                                <div class="col-6 mx-auto">
+                                                                        <button class="btn btn-primary btn-lg" type="button" onclick="window.print();">พิมพ์หน้านี้ <i class="fa-solid fa-print"></i></button>
+                                                                </div>
+                                                        </div>
+                                                        <br>
+                                                        <div class="d-flex justify-content-center">
+                                                                <div class="col-6 mx-auto">
+                                                                        <button class="btn btn-primary btn-lg" type="submit">บันทึก <i class="bi bi-arrow-right-circle-fill"></i></button>
                                                                 </div>
                                                         </div>
                                                 </center>
@@ -1875,9 +1885,7 @@ if (!$_SESSION["Cid"]) {  //check session
 
                 <script src="assets/js/main.js"></script>
 
-                <script>
 
-                </script>
 
 
         </body>
