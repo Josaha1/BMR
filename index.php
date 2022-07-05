@@ -51,8 +51,8 @@ if (!$_SESSION["Cid"]) {  //check session
         var height = parseFloat(document.bmrform.height.value);
         var age = parseFloat(document.bmrform.age.value);
         //var bmr2 = parseFloat(document.bmrform.bmr2.value) ;
-        var gender = parseFloat(document.bmrform.gender.value);
-        if (gender == "1")
+        var gender = document.bmrform.gender.value;
+        if (gender == "ชาย")
         //English-BMR = 66 + ( 6.23 x weight in pounds ) + ( 12.7 x height in inches ) - ( 6.8 x age in year )
         //Metric-BMR = 66 + ( 13.7 x weight in kilos ) + ( 5 x height in cm ) - ( 6.8 x age in years )
         {
@@ -60,7 +60,7 @@ if (!$_SESSION["Cid"]) {  //check session
           //var plan = (66 + (13.7 * weight) + (5 * height) - (6.8 * age)) * bmr2;
         }
 
-        if (gender == "2")
+        if (gender == "หญิง")
         //English-Women: BMR = 655 + ( 4.35 x weight in pounds ) + ( 4.7 x height in inches ) - ( 4.7 x age in years)
         //Women: BMR = 655 + ( 9.6 x weight in kilos ) + ( 1.8 x height in cm ) - ( 4.7 x age in years )
         {
@@ -76,14 +76,14 @@ if (!$_SESSION["Cid"]) {  //check session
         var height = parseFloat(document.bmrform.height.value);
         var age = parseFloat(document.bmrform.age.value);
         var bmr2 = parseFloat(document.bmrform.bmr2.value);
-        var gender = parseFloat(document.bmrform.gender.value);
-        if (gender == "1")
+        var gender = document.bmrform.gender.value;
+        if (gender == "ชาย")
         //English-BMR = 66 + ( 6.23 x weight in pounds ) + ( 12.7 x height in inches ) - ( 6.8 x age in year )
         //Metric-BMR = 66 + ( 13.7 x weight in kilos ) + ( 5 x height in cm ) - ( 6.8 x age in years )
         {
           var bmr = (66 + (13.7 * weight) + (5 * height) - (6.8 * age));
           var plan = (66 + (13.7 * weight) + (5 * height) - (6.8 * age)) * bmr2;
-        } else if (gender == "2")
+        } else if (gender == "หญิง")
         //English-Women: BMR = 655 + ( 4.35 x weight in pounds ) + ( 4.7 x height in inches ) - ( 4.7 x age in years)
         //Women: BMR = 655 + ( 9.6 x weight in kilos ) + ( 1.8 x height in cm ) - ( 4.7 x age in years )
         {
@@ -99,10 +99,10 @@ if (!$_SESSION["Cid"]) {  //check session
         var height = parseFloat(document.bmrform.height.value);
         var age = parseFloat(document.bmrform.age.value);
         var bmr2 = parseFloat(document.bmrform.bmr2.value);
-        var gender = parseFloat(document.bmrform.gender.value);
+        var gender = document.bmrform.gender.value;
         var Futureweight = parseFloat(document.bmrform.Futureweight.value);
         var FixDay = parseFloat(document.bmrform.FixDay.value);
-        if (gender == "1")
+        if (gender == "ชาย")
         //English-BMR = 66 + ( 6.23 x weight in pounds ) + ( 12.7 x height in inches ) - ( 6.8 x age in year )
         //Metric-BMR = 66 + ( 13.7 x weight in kilos ) + ( 5 x height in cm ) - ( 6.8 x age in years )
         {
@@ -115,7 +115,7 @@ if (!$_SESSION["Cid"]) {  //check session
           var DiffKcal = (KcalTarget) * (KcalPerDay * DayPerWeek);
           var RecommendKcal = plan - DiffKcal;
 
-        } else if (gender == "2")
+        } else if (gender == "หญิง")
         //English-Women: BMR = 655 + ( 4.35 x weight in pounds ) + ( 4.7 x height in inches ) - ( 4.7 x age in years)
         //Women: BMR = 655 + ( 9.6 x weight in kilos ) + ( 1.8 x height in cm ) - ( 4.7 x age in years )
         {
@@ -159,7 +159,7 @@ if (!$_SESSION["Cid"]) {  //check session
               <ul>
                 <li><a href="showFoodDesign.php">ออกแบบอาหาร</a></li>
                 <li><a href="showFinishFood.php">ปริมาณอาหารต่อวัน</a></li>
-                <li><a href="#">ค้นหาอาหาร</a></li>
+                <li><a href="carorie.php">ค้นหาอาหาร</a></li>
               </ul>
             </li>
             <li><a class="nav-link" href="logout.php">ออกจากระบบ</a></li>
@@ -184,19 +184,13 @@ if (!$_SESSION["Cid"]) {  //check session
 
                 <div class="app-paper">
                   <form class="mb-3" name="bmrform" action="update.php" method="post">
-
-                    <input type="radio" name="gender" id="1" class="hidebx" value="1" style="">
-                    <label for="1" class="lbl-radio">
-                      <div class="display-box">
-                        <div class="size"> <i class="fas fa-male" style="font-size: 40px;"></i><br>ผู้ชาย</div>
-                      </div>
-                    </label>
-                    <input type="radio" name="gender" id="2" class="hidebx" value="2" style="">
-                    <label for="2" class="lbl-radio">
-                      <div class="display-box">
-                        <div class="size"><i class="fas fa-female" style="font-size: 40px;"></i><br>ผู้หญิง</div>
-                      </div>
-                    </label>
+                    <?php
+                    $sqlCheckSex = "SELECT * FROM `predmregis` WHERE `Cid` = '1679900445379' ORDER BY `Cid` DESC LIMIT 1";
+                    foreach ($db->to_Obj($sqlCheckSex) as $rows) {
+                    ?>
+                      
+                      <input type="text" name="gender" id="2" class="form-control" value="<?php echo($rows['sex']) ?>" style="display:none;">
+                    <?php } ?>
                 </div>
                 <div class="card1-content">
                   <div class="content">

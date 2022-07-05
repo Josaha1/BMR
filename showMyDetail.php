@@ -12,7 +12,7 @@ if (!$_SESSION["Cid"]) {  //check session
     <?php $db = new Database(); ?>
     <?php
     $Cid = $_SESSION['Cid'];
-    $sql = "SELECT bmrcal.RegisId,predmregis.Cid, predmregis.FName, predmregis.LName, predmregis.sex,bmrcal.weight,bmrcal.height,bmrcal.age,bmrcal.bmr2,bmrcal.bmr,bmrcal.plan,bmrcal.Futureweight,bmrcal.FixDay,bmrcal.RecommendKcal,bmrcal.DrinkMike FROM `predmregis` INNER JOIN bmrcal ON predmregis.Cid = bmrcal.Cid WHERE `predmregis`.`Cid` = '1679900445379' ORDER BY `bmrcal`.`RegisId` DESC LIMIT 1 ";
+    $sql = "SELECT bmrcal.RegisId,predmregis.Cid, predmregis.FName, predmregis.LName, predmregis.sex,bmrcal.weight,bmrcal.height,bmrcal.age,bmrcal.bmr2,bmrcal.bmr,bmrcal.plan,bmrcal.Futureweight,bmrcal.FixDay,bmrcal.RecommendKcal,bmrcal.DrinkMike FROM `predmregis` INNER JOIN bmrcal ON predmregis.Cid = bmrcal.Cid WHERE `predmregis`.`Cid` = '$Cid' ORDER BY `bmrcal`.`RegisId` DESC LIMIT 1 ";
     ?>
 
     <!DOCTYPE html>
@@ -70,7 +70,7 @@ if (!$_SESSION["Cid"]) {  //check session
                             <ul>
                                 <li><a href="showFoodDesign.php">ออกแบบอาหาร</a></li>
                                 <li><a href="showFinishFood.php">ปริมาณอาหารต่อวัน</a></li>
-                                <li><a href="#">ค้นหาอาหาร</a></li>
+                                <li><a href="carorie.php">ค้นหาอาหาร</a></li>
                             </ul>
                         </li>
                         <li><a class="nav-link" href="logout.php">ออกจากระบบ</a></li>

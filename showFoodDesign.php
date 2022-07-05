@@ -51,7 +51,7 @@ if (!$_SESSION["Cid"]) {  //check session
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/css/select2.min.css">
                 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.3/Chart.min.js"></script>
-
+                <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
                 <!-- =======================================================
   * Template Name: FlexStart - v1.9.0
   * Template URL: https://bootstrapmade.com/flexstart-bootstrap-startup-template/
@@ -240,7 +240,7 @@ if (!$_SESSION["Cid"]) {  //check session
                                                         <ul>
                                                                 <li><a href="showFoodDesign.php">ออกแบบอาหาร</a></li>
                                                                 <li><a href="showFinishFood.php">ปริมาณอาหารต่อวัน</a></li>
-                                                                <li><a href="#">ค้นหาอาหาร</a></li>
+                                                                <li><a href="carorie.php">ค้นหาอาหาร</a></li>
                                                         </ul>
                                                 </li>
                                                 <li><a class="nav-link" href="logout.php">ออกจากระบบ</a></li>

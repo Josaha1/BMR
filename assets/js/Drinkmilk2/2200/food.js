@@ -38,7 +38,11 @@ $(function () {
     document.AddFood.totalRice1.value = Math.round(totalRice1) - 1;
 
     if (document.AddFood.totalRice1.value < 0) {
-      alert("จำนวนเกิน"); // fail
+      Swal.fire({
+        icon: "error",
+
+        text: "จำนวนเกิน",
+      });
       document.AddFood.totalRice1.value = 0;
 
       document.AddFood.DiffRice1.value = document.AddFood.DiffRice1.value - 1;
@@ -101,7 +105,11 @@ $(function () {
     document.AddFood.totalMeet1.value = Math.round(totalMeet1) - 1;
 
     if (document.AddFood.totalMeet1.value < 0) {
-      alert("จำนวนเกิน"); // fail
+      Swal.fire({
+        icon: "error",
+
+        text: "จำนวนเกิน",
+      });
       document.AddFood.totalMeet1.value = 0;
 
       document.AddFood.DiffMeet1.value = document.AddFood.DiffMeet1.value - 1;
@@ -164,7 +172,11 @@ $(function () {
     document.AddFood.totalFruit1.value = Math.round(totalFruit1) - 1;
 
     if (document.AddFood.totalFruit1.value < 0) {
-      alert("จำนวนเกิน"); // fail
+      Swal.fire({
+        icon: "error",
+
+        text: "จำนวนเกิน",
+      });
       document.AddFood.totalFruit1.value = 0;
 
       document.AddFood.DiffFruit1.value = document.AddFood.DiffFruit1.value - 1;
@@ -227,7 +239,11 @@ $(function () {
     document.AddFood.totalMilk1.value = Math.round(totalMilk1) - 1;
 
     if (document.AddFood.totalMilk1.value < 0) {
-      alert("จำนวนเกิน"); // fail
+      Swal.fire({
+        icon: "error",
+
+        text: "จำนวนเกิน",
+      });
       document.AddFood.totalMilk1.value = 0;
 
       document.AddFood.DiffMilk1.value = document.AddFood.DiffMilk1.value - 1;
@@ -293,7 +309,11 @@ $(function () {
     document.AddFood.totalRice1.value = Math.round(totalRice1) - 1;
 
     if (document.AddFood.totalRice1.value < 0) {
-      alert("จำนวนเกิน"); // fail
+      Swal.fire({
+        icon: "error",
+
+        text: "จำนวนเกิน",
+      });
       document.AddFood.totalRice1.value = 0;
 
       document.AddFood.DiffRice2.value = document.AddFood.DiffRice2.value - 1;
@@ -357,7 +377,11 @@ $(function () {
     document.AddFood.totalMeet1.value = Math.round(totalMeet1) - 1;
 
     if (document.AddFood.totalMeet1.value < 0) {
-      alert("จำนวนเกิน"); // fail
+      Swal.fire({
+        icon: "error",
+
+        text: "จำนวนเกิน",
+      });
       document.AddFood.totalMeet1.value = 0;
 
       document.AddFood.DiffMeet2.value = document.AddFood.DiffMeet2.value - 1;
@@ -420,7 +444,11 @@ $(function () {
     document.AddFood.totalFruit1.value = Math.round(totalFruit1) - 1;
 
     if (document.AddFood.totalFruit1.value < 0) {
-      alert("จำนวนเกิน"); // fail
+      Swal.fire({
+        icon: "error",
+
+        text: "จำนวนเกิน",
+      });
       document.AddFood.totalFruit1.value = 0;
 
       document.AddFood.DiffFruit2.value = document.AddFood.DiffFruit2.value - 1;
@@ -483,7 +511,11 @@ $(function () {
     document.AddFood.totalMilk1.value = Math.round(totalMilk1) - 1;
 
     if (document.AddFood.totalMilk1.value < 0) {
-      alert("จำนวนเกิน"); // fail
+      Swal.fire({
+        icon: "error",
+
+        text: "จำนวนเกิน",
+      });
       document.AddFood.totalMilk1.value = 0;
 
       document.AddFood.DiffMilk2.value = document.AddFood.DiffMilk2.value - 1;
@@ -549,7 +581,11 @@ $(function () {
     document.AddFood.totalRice1.value = Math.round(totalRice1) - 1;
 
     if (document.AddFood.totalRice1.value < 0) {
-      alert("จำนวนเกิน"); // fail
+      Swal.fire({
+        icon: "error",
+
+        text: "จำนวนเกิน",
+      });
       document.AddFood.totalRice1.value = 0;
 
       document.AddFood.DiffRice3.value = document.AddFood.DiffRice3.value - 1;
@@ -613,7 +649,11 @@ $(function () {
     document.AddFood.totalMeet1.value = Math.round(totalMeet1) - 1;
 
     if (document.AddFood.totalMeet1.value < 0) {
-      alert("จำนวนเกิน"); // fail
+      Swal.fire({
+        icon: "error",
+
+        text: "จำนวนเกิน",
+      });
       document.AddFood.totalMeet1.value = 0;
 
       document.AddFood.DiffMeet3.value = document.AddFood.DiffMeet3.value - 1;
@@ -676,7 +716,11 @@ $(function () {
     document.AddFood.totalFruit1.value = Math.round(totalFruit1) - 1;
 
     if (document.AddFood.totalFruit1.value < 0) {
-      alert("จำนวนเกิน"); // fail
+      Swal.fire({
+        icon: "error",
+
+        text: "จำนวนเกิน",
+      });
       document.AddFood.totalFruit1.value = 0;
 
       document.AddFood.DiffFruit3.value = document.AddFood.DiffFruit3.value - 1;
@@ -739,7 +783,11 @@ $(function () {
     document.AddFood.totalMilk1.value = Math.round(totalMilk1) - 1;
 
     if (document.AddFood.totalMilk1.value < 0) {
-      alert("จำนวนเกิน"); // fail
+      Swal.fire({
+        icon: "error",
+
+        text: "จำนวนเกิน",
+      });
       document.AddFood.totalMilk1.value = 0;
 
       document.AddFood.DiffMilk3.value = document.AddFood.DiffMilk3.value - 1;

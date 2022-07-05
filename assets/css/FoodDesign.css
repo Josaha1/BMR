@@ -1,0 +1,69 @@
+.ReCal {
+  margin-top: 100px;
+}
+.ReCal .card {
+  text-align: center;
+}
+.card {
+  text-align: center;
+  max-width: 900px;
+  width: 100%;
+  margin: 5px;
+  border-radius: 20px;
+  padding: 10px;
+}
+.card .card-body {
+  width: 100%;
+  padding-top: 5px;
+  border: 2px;
+}
+
+.list-group-item2{
+  list-style-type: none;
+}
+.list-group-item3{
+  list-style-type: none;
+}
+.card .card-body button {
+  text-align: justify;
+  font-size: 18px;
+  font-weight: 1;
+  padding: 20px;
+  max-width: 900px;
+  height: 100px;
+  width: 100%;
+  background: #fff;
+  border: none;
+  color: black;
+  box-shadow: 3px 3px 19px -1px rgba(0, 0, 0, 0.54);
+  -webkit-box-shadow: 3px 3px 19px -1px rgba(0, 0, 0, 0.54);
+  -moz-box-shadow: 3px 3px 19px -1px rgba(0, 0, 0, 0.54);
+  border-radius: 20px;
+}
+.card2 {
+  margin-top: 30px;
+}
+
+.card .card1-body {
+  width: 100%;
+  padding: 20px;
+  border: 2px;
+  text-align: center;
+  font-size: 18px;
+}
+.card .card1-body input[type="text"] {
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+  padding: 20px;
+  border: 2px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.footButton button {
+  margin: 20px;
+  max-width: 400px;
+  width: 100%;
+  height: 60px;
+  font-weight: 1;
+}

@@ -72,7 +72,7 @@ if (!$_SESSION["Cid"]) {  //check session
                             <ul>
                                 <li><a href="showFoodDesign.php">ออกแบบอาหาร</a></li>
                                 <li><a href="showFinishFood.php">ปริมาณอาหารต่อวัน</a></li>
-                                <li><a href="#">ค้นหาอาหาร</a></li>
+                                <li><a href="carorie.php">ค้นหาอาหาร</a></li>
                             </ul>
                         </li>
                         <li><a class="nav-link" href="logout.php">ออกจากระบบ</a></li>
@@ -89,7 +89,7 @@ if (!$_SESSION["Cid"]) {  //check session
             ?>
                 <section id="hero" class="hero align-items-center">
                     <div class="container">
-                        <a href="#"><button class="btn btn-primary" style="width:100%;border-radius:30px;margin-top:10px;margin-bottom:15px;font-size:20px;">เพิ่มปริมาณพลังงานที่ต้องการในแต่ละวัน</button></a>
+                        <a href="carorie.php"><button class="btn btn-primary" style="width:100%;border-radius:30px;margin-top:10px;margin-bottom:15px;font-size:20px;">เพิ่มปริมาณพลังงานที่ต้องการในแต่ละวัน</button></a>
                         <div class="row">
                             <div class="card5 text-center">
                                 <div class="card5-header">
