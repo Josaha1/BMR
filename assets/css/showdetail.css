@@ -24,9 +24,9 @@
 
   height: 100%;
   text-align: justify;
-  padding-top: 20px;
-  padding-left: 20px;
+ 
   border-radius: 10px;
   line-height: 2;
+  padding: 10px;
 }
 

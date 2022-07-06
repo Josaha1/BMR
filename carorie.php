@@ -113,7 +113,10 @@ if (!$_SESSION["Cid"]) {  //check session
                                                     <input type="text" class="form-control" id="total" name="total" value="<?php echo ($rows['CalForFood']); ?>" placeholder="พลังงานจากอาหารที่เลือก" readonly>
                                                 <?php } ?>
                                             </div>
-                                            <input type="text" class="form-control" id="FoodName" name="FoodName" placeholder="รายการอาหาร" value="" readonly>
+
+                                        </div>
+                                        <div class="d-flex justify-content-center">
+                                            <textarea class="form-control" id="FoodName" name="FoodName" rows="3" placeholder="<?php echo ($rows['FoodName']); ?>" readonly></textarea>
                                         </div>
                             </div>
                         </div>
@@ -144,7 +147,7 @@ if (!$_SESSION["Cid"]) {  //check session
                                                     <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
 
 
-                                                        <input type="checkbox" class="btn-check" name="Food" id="btncheck<?php echo ($rows['FID']) ?>" autocomplete="off" value="<?php echo ($rows['KCal']) ?>">
+                                                        <input type="checkbox" class="btn-check" name="Food" data-name="<?php echo ($rows['FoodName']) ?>" id="btncheck<?php echo ($rows['FID']) ?>" autocomplete="off" value="<?php echo ($rows['KCal']) ?>">
                                                         <label class="btn btn-outline-primary" for="btncheck<?php echo ($rows['FID']) ?>">
                                                             <div class="row row-cols-2 row-cols-lg-2">
                                                                 <div class="col">
@@ -186,7 +189,7 @@ if (!$_SESSION["Cid"]) {  //check session
                                                         <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
 
 
-                                                            <input type="checkbox" class="btn-check" name="Food" id="btncheck<?php echo ($rows['FID']) ?>" autocomplete="off" value="<?php echo ($rows['KCal']) ?>">
+                                                            <input type="checkbox" class="btn-check" name="Food" data-name="<?php echo ($rows['FoodName']) ?>"  id="btncheck<?php echo ($rows['FID']) ?>" autocomplete="off" value="<?php echo ($rows['KCal']) ?>">
                                                             <label class="btn btn-outline-primary" for="btncheck<?php echo ($rows['FID']) ?>">
                                                                 <div class="row row-cols-2 row-cols-lg-2">
                                                                     <div class="col">
@@ -221,19 +224,19 @@ if (!$_SESSION["Cid"]) {  //check session
 
                                 <div>
                                     <div class="collapse collapse-horizontal" id="collapseWidthExample3">
-                                    <br>
-                                    <input type="text" class="form-control mb-3 p-3" placeholder="Search" id="search-input3">
+                                        <br>
+                                        <input type="text" class="form-control mb-3 p-3" placeholder="Search" id="search-input3">
                                         <?php
                                         $sql3 = "SELECT * FROM `food` WHERE `Catagorie` = '4'";
                                         foreach ($db->to_Obj($sql3) as $rows) {
                                         ?>
-                                           <ul class="list-group list-group-flush text-primary h5">
+                                            <ul class="list-group list-group-flush text-primary h5">
                                                 <li class="list-group-item3">
                                                     <div class="card card-body" style="width: 100%">
                                                         <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
 
 
-                                                            <input type="checkbox" class="btn-check" name="Food" id="btncheck<?php echo ($rows['FID']) ?>" autocomplete="off" value="<?php echo ($rows['KCal']) ?>">
+                                                            <input type="checkbox" class="btn-check" name="Food" data-name="<?php echo ($rows['FoodName']) ?>"  id="btncheck<?php echo ($rows['FID']) ?>" autocomplete="off" value="<?php echo ($rows['KCal']) ?>">
                                                             <label class="btn btn-outline-primary" for="btncheck<?php echo ($rows['FID']) ?>">
                                                                 <div class="row row-cols-2 row-cols-lg-2">
                                                                     <div class="col">
@@ -289,6 +292,7 @@ if (!$_SESSION["Cid"]) {  //check session
             document.querySelector('#search-input').addEventListener('input', filterList);
             document.querySelector('#search-input2').addEventListener('input', filterList2);
             document.querySelector('#search-input3').addEventListener('input', filterList3);
+
             function filterList() {
                 const searchInput = document.querySelector('#search-input');
                 const filter = searchInput.value.toLowerCase();
@@ -303,6 +307,7 @@ if (!$_SESSION["Cid"]) {  //check session
                     }
                 })
             }
+
             function filterList2() {
                 const searchInput = document.querySelector('#search-input2');
                 const filter = searchInput.value.toLowerCase();
@@ -317,6 +322,7 @@ if (!$_SESSION["Cid"]) {  //check session
                     }
                 })
             }
+
             function filterList3() {
                 const searchInput = document.querySelector('#search-input3');
                 const filter = searchInput.value.toLowerCase();
@@ -331,19 +337,30 @@ if (!$_SESSION["Cid"]) {  //check session
                     }
                 })
             }
+            var listUsedFood = [];
             $('input:checkbox').change(function() {
                 var RecomCal = document.FoodRecom.RecomCal.value;
                 var total = 0;
-               
-                
-                
+                var name = $(this).attr('data-name')
+
+                if ($(this).prop('checked')) {
+                    listUsedFood.push(name)
+                } else {
+                    listUsedFood = $.grep(listUsedFood, function(i) {
+                        return i != name
+                    })
+                }
+                $("#FoodName").val(listUsedFood.join(', '))
+                console.log(listUsedFood)
+
+
                 $('input:checkbox:checked').each(function() {
                     total += isNaN(parseInt($(this).val())) ? 0 : parseInt($(this).val());
-                   
+
                 });
-          
+
                 $("#total").val(total);
-               
+
                 if (total > RecomCal) {
 
                     Swal.fire({

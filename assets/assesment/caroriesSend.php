@@ -14,8 +14,8 @@ if (!$_SESSION["Cid"]) {  //check session
     <?php
     $CalForFood = $_POST['total'];
     $Cid = $_SESSION['Cid'];
-
-    $sql = "UPDATE `bmrcal` SET `CalForFood`='$CalForFood' WHERE `Cid` = '$Cid' ORDER BY `bmrcal`.`RegisId`  DESC
+    $FoodName = $_POST['FoodName'];
+    $sql = "UPDATE `bmrcal` SET `CalForFood`='$CalForFood',`FoodName`='$FoodName' WHERE `Cid` = '$Cid' ORDER BY `bmrcal`.`RegisId`  DESC
     LIMIT 1";
     if ($db->todb($sql)) {
         echo "<meta http-equiv='refresh' content='2;url=../../carorie.php'>";

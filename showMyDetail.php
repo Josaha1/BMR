@@ -128,33 +128,30 @@ if (!$_SESSION["Cid"]) {  //check session
                     <div class="d-flex justify-content-center">
                         <div class="card">
                             <div class="card2-body">
-                                <div class="row row-cols-3 row-cols-lg-5 g-2 g-lg-3">
-                                    <div class="col-md-4">
+                                <div class="row row-cols-2">
+                                    <div class="col-md-8">
                                         น้ำหนัก
                                     </div>
                                     <div class="col-md-4">
-                                        <p class="card2-text"> <?php echo ($rows['weight']); ?></p>
+                                        <p class="card2-text"> <?php echo ($rows['weight']); ?>&nbsp;&nbsp; กิโลกรัม</p>
                                     </div>
-                                    <div class="col-md-4">
-                                        กิโลกรัม
-                                    </div>
+                                    
                                 </div>
-                                <div class="row row-cols-3 row-cols-lg-5 g-2 g-lg-3">
-                                    <div class="col-md-4">
+                                <div class="row row-cols-2 ">
+                                    <div class="col-md-8">
                                         ส่วนสูง
                                     </div>
                                     <div class="col-md-4">
-                                        <p class="card2-text"> <?php echo ($rows['height']); ?></p>
+                                        <p class="card2-text"> <?php echo ($rows['height']); ?>&nbsp;&nbsp; เซนติเมตร</p>
                                     </div>
-                                    <div class="col-md-4">
-                                        เซนติเมตร
-                                    </div>
+                                   
+                                    
                                 </div>
-                                <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
-                                    <div class="col-md-4">
+                                <div class="row row-cols-2">
+                                    <div class="col-md-8">
                                         การดื่มนม
                                     </div>
-                                    <div class="col-md-8">
+                                    <div class="col-md-4">
                                         <?php if ($rows['DrinkMike'] == "0") { ?>
                                             <p class="card2-text">ไม่ดื่มนม</p>
                                         <?php } elseif ($rows['DrinkMike'] == "1") { ?>
@@ -164,22 +161,20 @@ if (!$_SESSION["Cid"]) {  //check session
                                         <?php } ?>
                                     </div>
                                 </div>
-                                <div class="row row-cols-3 row-cols-lg-5 g-2 g-lg-3">
-                                    <div class="col-md-4">
+                                <div class="row row-cols-2 ">
+                                    <div class="col-md-8">
                                         BMR :
                                     </div>
                                     <div class="col-md-4">
-                                        <p class="card2-text"> <?php echo ($rows['bmr']); ?></p>
+                                        <p class="card2-text"> <?php echo ($rows['bmr']); ?>&nbsp;&nbsp; กิโลแคลอรี่</p>
                                     </div>
-                                    <div class="col-md-4">
-                                        กิโลแคลอรี่
-                                    </div>
+                                    
                                 </div>
-                                <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
-                                    <div class="col-md-4">
+                                <div class="row row-cols-2">
+                                    <div class="col-md-8">
                                         กิจกรรมที่ทำ :
                                     </div>
-                                    <div class="col-md-8">
+                                    <div class="col-md-4">
                                         <?php if ($rows['bmr2'] == "1.2") { ?>
                                             <p class="card2-text">ไม่ออกกำลังกายหรือออกกำลังกายน้อยมาก</p>
                                         <?php } elseif ($rows['bmr2'] == "1.375") { ?>
@@ -194,49 +189,41 @@ if (!$_SESSION["Cid"]) {  //check session
                                     </div>
 
                                 </div>
-                                <div class="row row-cols-3 row-cols-lg-5 g-2 g-lg-3">
-                                    <div class="col-md-4">
+                                <div class="row row-cols-2">
+                                    <div class="col-md-8">
                                         TDEE :
                                     </div>
                                     <div class="col-md-4">
-                                        <p class="card2-text"> <?php echo ($rows['plan']); ?></p>
+                                        <p class="card2-text"> <?php echo ($rows['plan']); ?>&nbsp;&nbsp;  กิโลแคลอรี่</p>
                                     </div>
-                                    <div class="col-md-4">
-                                        กิโลแคลอรี่
-                                    </div>
+                                   
                                 </div>
-                                <div class="row row-cols-3 row-cols-lg-5 g-2 g-lg-3">
-                                    <div class="col-md-4">
+                                <div class="row row-cols-2">
+                                    <div class="col-md-8">
                                         น้ำหนักที่ต้องการลด
                                     </div>
                                     <div class="col-md-4">
-                                        <p class="card2-text"> <?php echo ($rows['Futureweight']); ?></p>
+                                        <p class="card2-text"> <?php echo ($rows['Futureweight']); ?>&nbsp;&nbsp;  กิโลกรัม</p>
                                     </div>
-                                    <div class="col-md-4">
-                                        กิโลกรัม
-                                    </div>
+                                    
                                 </div>
-                                <div class="row row-cols-3 row-cols-lg-5 g-2 g-lg-3">
-                                    <div class="col-md-4">
+                                <div class="row row-cols-2">
+                                    <div class="col-md-8">
                                         จำนวนวันที่กำหนด
                                     </div>
                                     <div class="col-md-4">
-                                        <p class="card2-text"> <?php echo ($rows['FixDay']); ?></p>
+                                        <p class="card2-text"> <?php echo ($rows['FixDay']); ?> วัน</p>
                                     </div>
-                                    <div class="col-md-4">
-                                        วัน
-                                    </div>
+                                   
                                 </div>
-                                <div class="row row-cols-3 row-cols-lg-5 g-2 g-lg-3">
-                                    <div class="col-md-4">
-                                        พลังงานที่แนะนำในแต่ละวัน
+                                <div class="row row-cols-2">
+                                    <div class="col-md-8">
+                                        พลังงานที่แนะนำ
                                     </div>
                                     <div class="col-md-4">
-                                        <p class="card2-text"> <?php echo ($rows['RecommendKcal']); ?></p>
+                                        <p class="card2-text"> <?php echo ($rows['RecommendKcal']); ?>&nbsp;&nbsp; กิโลแคลอรี่</p>
                                     </div>
-                                    <div class="col-md-4">
-                                        กิโลแคลอรี่
-                                    </div>
+                                    
                                 </div>
                             </div>
                         </div>
