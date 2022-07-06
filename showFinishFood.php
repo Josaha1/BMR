@@ -89,7 +89,7 @@ if (!$_SESSION["Cid"]) {  //check session
             ?>
                 <section id="hero" class="hero align-items-center">
                     <div class="container">
-                        <a href="carorie.php"><button class="btn btn-primary" style="width:100%;border-radius:30px;margin-top:10px;margin-bottom:15px;font-size:20px;">เพิ่มปริมาณพลังงานที่ต้องการในแต่ละวัน</button></a>
+                        <a href="carorie.php"><button class="btn btn-primary" style="width:100%;border-radius:30px;margin-top:10px;margin-bottom:15px;font-size:20px;">คำนวนแคลอรี่ในอาหารต่อวัน</button></a>
                         <div class="row">
                             <div class="card5 text-center">
                                 <div class="card5-header">

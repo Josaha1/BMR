@@ -97,7 +97,7 @@ if (!$_SESSION["Cid"]) {  //check session
                                     foreach ($db->to_Obj($sqlCal) as $rows) {
                                     ?>
                                         <div class="d-flex justify-content-center">
-                                            <input type="text" class="form-control" id="RecomCal" name="RecomCal" placeholder="พลังงานที่ต้องการในแต่ละวัน" value="<?php echo ($rows['RecommendKcal']) ?>" readonly>
+                                            <input type="text" class="form-control" id="" name="RecomCal" placeholder="พลังงานที่ต้องการในแต่ละวัน" value="<?php echo ($rows['RecommendKcal']) ?>" readonly>
                                         <?php } ?>
                                         </div>
                                         <div class="CalFood">
@@ -113,6 +113,7 @@ if (!$_SESSION["Cid"]) {  //check session
                                                     <input type="text" class="form-control" id="total" name="total" value="<?php echo ($rows['CalForFood']); ?>" placeholder="พลังงานจากอาหารที่เลือก" readonly>
                                                 <?php } ?>
                                             </div>
+                                            <input type="text" class="form-control" id="FoodName" name="FoodName" placeholder="รายการอาหาร" value="" readonly>
                                         </div>
                             </div>
                         </div>
@@ -333,11 +334,16 @@ if (!$_SESSION["Cid"]) {  //check session
             $('input:checkbox').change(function() {
                 var RecomCal = document.FoodRecom.RecomCal.value;
                 var total = 0;
+               
+                
+                
                 $('input:checkbox:checked').each(function() {
                     total += isNaN(parseInt($(this).val())) ? 0 : parseInt($(this).val());
+                   
                 });
-
+          
                 $("#total").val(total);
+               
                 if (total > RecomCal) {
 
                     Swal.fire({

@@ -14,7 +14,7 @@ if (!$_SESSION["Cid"]) {  //check session
         $Cid = $_SESSION['Cid'];
         isset($_GET['DrinkMike']) ? $DrinkMike = $_GET['DrinkMike'] : $DrinkMike = "";
         isset($_GET['Date']) ? $Date = $_GET['Date'] : $Date = "";
-        $sql = "SELECT * FROM `bmrcal` WHERE `Cid` = '$Cid' GROUP BY `RegisId`  
+        $sql = "SELECT * FROM `bmrcal` WHERE `Cid` = '$Cid' 
     ORDER BY `bmrcal`.`RegisId`  DESC
     LIMIT 1 ";
         ?>
